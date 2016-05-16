@@ -11,7 +11,8 @@ Combine with app-hybrid-core, we need to complete these tasks:
 
 # Folder and Files
 
-* ..\app-hybrid-demo\         //the folder for the script git pull into
+* ..\app-hybrid-demo\         
+//the folder for the script git pull into
 * build\                      //things for build but not in repository
 * lib-ios\
 * lib-ios\szu-bdi-hybrid-demo_msgbox\      //demo api _demo_msgbox for ios
