@@ -9,7 +9,7 @@ Combine with app-hybrid-core, we need to complete these tasks:
 2. SHELL SCRIPT: build and pack target apk/ipa to build\ base on $my_project\config.json
 3. SHELL SCRIPT: sign and deploy binary to app store. [user/pass/cert would be prompted]
 
-# Folder
+# Folder and Files
 
 * ..\app-hybrid-demo\         //the folder for the script git pull into
 * build\                      //things for build but not in repository
