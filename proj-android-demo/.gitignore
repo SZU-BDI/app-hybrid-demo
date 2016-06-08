@@ -1,10 +1,8 @@
-/local.properties
-*.iml
-.idea
 .gradle
 gradle
+*.iml
+.idea
 local.properties
 .DS_Store
 build
 captures
-/gradle.properties

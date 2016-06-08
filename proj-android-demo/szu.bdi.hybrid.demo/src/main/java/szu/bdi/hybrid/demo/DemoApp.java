@@ -1,4 +1,4 @@
-package szu.bdi.hybrid.coretest;
+package szu.bdi.hybrid.demo;
 
 import android.app.Application;
 import android.content.Context;
@@ -7,7 +7,7 @@ import android.util.Log;
 
 //import com.hybrid.core.UiRoot;
 
-public class TestApp2 extends Application {
+public class DemoApp extends Application {
     final private static String LOGTAG = "" + (new Object() {
         public String getClassName() {
             String clazzName = this.getClass().getName();

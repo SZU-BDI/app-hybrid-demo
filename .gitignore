@@ -1,4 +1,11 @@
 
-proj-android-demo/local.properties
+local.properties
 
-proj-android-demo/local.properties
+gradle.properties
+
+*.iml
+
+
+*.iml
+
+proj-android-demo/szu.bdi.hybrid.demo/proguard-rules.pro
