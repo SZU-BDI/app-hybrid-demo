@@ -1,1 +1,9 @@
-include ':../../app-hybrid-core/lib-android:szu.bdi.hybrid.core',':../.' + './app-hybrid-core/lib-android:JsBridge', ':szu.bdi.hybrid.demo'
+include ':szu.bdi.hybrid.demo'
+
+include ':JsBridge'
+project(':JsBridge').projectDir = new File(settingsDir,
+        '../app-hybrid-core/lib-android/JsBridge')
+
+include ':szu.bdi.hybrid.core'
+project(':szu.bdi.hybrid.core').projectDir =
+        new File(settingsDir, '../app-hybrid-core/lib-android/szu.bdi.hybrid.core')
