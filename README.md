@@ -23,8 +23,8 @@ demo api _demo_msgbox for ios
 * lib-android\szu.bdi.hybrid.demo_msgbox\  
 demo api _demo_msgbox for android
 
-* $proj = ./demoproj-hybrod-demo/
-* 
+* $proj = ./proj-{$os}-demo/
+
 * $proj/assets/
 
 * $proj/config.json                 
