@@ -30,8 +30,8 @@
         <!-- register the HybridUI -->
         <activity
             android:name="szu.bdi.hybrid.core.HybridUi"
-            android:logo="@drawable/back3x"
             >
+            <!--android:logo="@drawable/back3x"-->
             <!--android:parentActivityName=".EntryActivity"-->
             <!--<meta-data-->
             <!--android:name="android.support.PARENT_ACTIVITY"-->

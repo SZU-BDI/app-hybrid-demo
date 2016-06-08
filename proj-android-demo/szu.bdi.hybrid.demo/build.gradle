@@ -17,7 +17,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:21.0.3'
 //    compile project(':JsBridge')
     compile project(':szu.bdi.hybrid.core')
-    compile project(':szu.bdi.hybrid.demo')
 }
 //compile files('libs/core.jar')
 //compile files('libs/robotium-solo-5.3.1.jar')
