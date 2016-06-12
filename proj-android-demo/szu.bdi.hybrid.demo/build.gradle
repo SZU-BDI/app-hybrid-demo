@@ -10,6 +10,15 @@ android {
         minSdkVersion 9 //10 is 2.3.3
         targetSdkVersion 21
     }
+    sourceSets {
+        main {
+            //java.srcDirs = ['src']
+            //assets.srcDirs = ['assets']
+            //res.srcDirs = ['res']
+            //manifest.srcFile 'AndroidManifest.xml'
+            assets.srcDirs = ['../assets','../config']
+        }
+    }
 }
 
 dependencies {

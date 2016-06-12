@@ -1,0 +1,24 @@
+{
+  "ui_mapping": {
+    "UiRoot": {
+      "type": "WebView",
+      "class": "szu.bdi.hybrid.core.HybridUiActivity",
+      "url": "file:///android_asset/root.htm"
+    },
+    "UiContent": {
+      "type": "WebView",
+      "class": "szu.bdi.hybrid.core.HybridUiActivity"
+      //,"url": "file://android_assets/root.htm"
+    }
+  },
+  "api_mapping": {
+    "_app_activity_open": "szu.bdi.hybrid.core.ApiUiOpen"
+  },
+  "api_auth": {
+    "UiRoot": {
+      "file:///android_asset/root.htm": [
+        "_app_activity_open"
+      ]
+    }
+  }
+}

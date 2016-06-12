@@ -4,3 +4,4 @@ gradle.properties
 *.iml
 
 proj-android-demo/szu.bdi.hybrid.demo/proguard-rules.pro
+/proj-android-demo/szu.bdi.hybrid.core
