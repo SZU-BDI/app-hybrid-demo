@@ -13,7 +13,7 @@
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
-    <application android:name=".DemoApp">
+    <application android:name="android.app.Application">
 
         <!-- android:icon="@drawable/logo" -->
         <!-- TOOL:  http://www.iconres.com/tool/drawable.php -->
@@ -27,7 +27,7 @@
         </activity>
 
         <!-- register the HybridUI -->
-        <activity android:name="szu.bdi.hybrid.core.HybridUiActivity">
+        <activity android:name="szu.bdi.hybrid.core.HybridUi">
 
             <!-- android:logo="@drawable/back3x" -->
             <!-- android:parentActivityName=".EntryActivity" -->
@@ -36,7 +36,7 @@
             <!-- android:value=".EntryActivity"/> -->
             <!-- TODO design a theme of Blue (the color as ACE) -->
         </activity>
-        <activity android:name="szu.bdi.hybrid.core.HybridUi"/>
+        <activity android:name="szu.bdi.hybrid.core.WebViewUi"/>
     </application>
 
 </manifest>

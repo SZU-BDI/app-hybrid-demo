@@ -1,23 +1,30 @@
 {
   "ui_mapping": {
     "UiRoot": {
-      "type": "WebView",
-      "class": "szu.bdi.hybrid.core.HybridUiActivity",
-      "url": "file:///android_asset/root.htm"
+      "type": "WebViewUi",
+      "topbar": "N",
+      "class": "szu.bdi.hybrid.core.WebViewUi"
+      //,"url": "file:///android_asset/root.htm"
     },
     "UiContent": {
-      "type": "WebView",
-      "class": "szu.bdi.hybrid.core.HybridUiActivity"
-      //,"url": "file://android_assets/root.htm"
+      "type": "WebViewUi",
+      "topbar": "Y",
+      "class": "szu.bdi.hybrid.core.WebViewUi"
+    },
+    "UiHome": {
+      "type": "NativeUi",
+      "class": "szu.bdi.hybrid.core.NativeUi"
     }
   },
   "api_mapping": {
-    "_app_activity_open": "szu.bdi.hybrid.core.ApiUiOpen"
+    "_app_activity_open": "szu.bdi.hybrid.core.ApiHybridUiOpen",
+    "_app_activity_close": "szu.bdi.hybrid.core.ApiHybridUiClose"
   },
   "api_auth": {
     "UiRoot": {
       "file:///android_asset/root.htm": [
-        "_app_activity_open"
+        "_app_activity_open",
+        "_app_activity_close",
       ]
     }
   }
