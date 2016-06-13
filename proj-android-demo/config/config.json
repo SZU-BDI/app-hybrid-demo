@@ -1,18 +1,18 @@
 {
   "ui_mapping": {
     "UiRoot": {
-      "type": "WebViewUi",
+      "type": "WebView",
       "topbar": "N",
       "class": "szu.bdi.hybrid.core.WebViewUi"
       //,"url": "file:///android_asset/root.htm"
     },
     "UiContent": {
-      "type": "WebViewUi",
+      "type": "WebView",
       "topbar": "Y",
       "class": "szu.bdi.hybrid.core.WebViewUi"
     },
     "UiHome": {
-      "type": "NativeUi",
+      "type": "Native",
       "class": "szu.bdi.hybrid.core.NativeUi"
     }
   },

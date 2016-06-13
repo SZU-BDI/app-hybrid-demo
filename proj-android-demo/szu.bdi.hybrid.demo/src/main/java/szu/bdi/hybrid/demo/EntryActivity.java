@@ -3,7 +3,6 @@ package szu.bdi.hybrid.demo;
 import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Build;
 import android.os.StrictMode;
 import android.util.Log;
@@ -40,15 +39,14 @@ public class EntryActivity extends Activity {
         }
 
         //get the config
-        String sJsonConf = HybridTools.getFileIntoStr("config.json");
-
-        Log.v(LOGTAG, "config.json=" + sJsonConf);
-        JSONObject o = HybridTools.s2o(sJsonConf);
-        Log.v(LOGTAG, "config.json.o=" + o);
+        final String sJsonConf = HybridTools.getFileIntoStr("config.json");
+        final JSONObject o = HybridTools.s2o(sJsonConf);
         if (!HybridTools.isEmptyString(o.optString("errmsg"))) {
             HybridTools.appAlert(entryAct, "Wrong Config File", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
+                    Log.v(LOGTAG, "config.json=" + sJsonConf);
+                    Log.v(LOGTAG, "config.json.o=" + o);
                     //HybridTools.quit(false);
                     HybridTools.KillAppSelf();//so violent
                 }
@@ -59,12 +57,14 @@ public class EntryActivity extends Activity {
             HybridTools.jsonConfig = o;
 
             HybridUi ui = HybridTools.getHybridUi("UiRoot");
+            HybridTools.showUi(ui);
+            //ui.setUiData("url", "file:///android_asset/root.htm");
 
-            Context _ctx = HybridTools.getAppContext();
-            Intent intent = new Intent(_ctx, ui.getClass());
-            //intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            _ctx.startActivity(intent);
+////            Context _ctx = HybridTools.getAppContext();
+//            Intent intent = new Intent(_appContext, ui.getClass());
+//            //intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//            _appContext.startActivity(intent);
 
             entryAct.finish();
 
