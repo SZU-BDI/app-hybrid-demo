@@ -2,7 +2,7 @@
   "ui_mapping": {
     "UiRoot": {
       "type": "WebView",
-      "topbar": "N",
+      "topbar": "N",/*FYMN*/
       "class": "szu.bdi.hybrid.core.WebViewUi"
       //,"url": "file:///android_asset/root.htm"
     },
