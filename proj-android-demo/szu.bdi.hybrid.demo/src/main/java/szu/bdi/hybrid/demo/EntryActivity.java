@@ -10,6 +10,7 @@ import android.util.Log;
 import org.json.JSONObject;
 
 import szu.bdi.hybrid.core.HybridTools;
+import szu.bdi.hybrid.core.WebViewUi;
 
 public class EntryActivity extends Activity {
     final private static String LOGTAG = "" + (new Object() {
@@ -58,7 +59,7 @@ public class EntryActivity extends Activity {
 //            HybridUi ui = HybridTools.getHybridUi("UiRoot");
 //            HybridTools.showUi(ui);
 
-            HybridTools.startUi("UiRoot", "{topbar:'N',url:'file:///android_asset/root.htm'}", entryAct);
+            HybridTools.startUi("UiRoot", "{topbar:'N',url:'file:///android_asset/root.htm'}", entryAct, WebViewUi.class);
             //ui.setUiData("url", "file:///android_asset/root.htm");
 
 ////            Context _ctx = HybridTools.getAppContext();
