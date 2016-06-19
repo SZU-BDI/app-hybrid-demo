@@ -1,9 +1,4 @@
 .DS_Store
 local.properties
-gradle.properties
 *.iml
-
-proj-android-demo/szu.bdi.hybrid.demo/proguard-rules.pro
-/proj-android-demo/szu.bdi.hybrid.core
-
 *.rar
