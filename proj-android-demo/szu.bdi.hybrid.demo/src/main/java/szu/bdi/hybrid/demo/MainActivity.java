@@ -64,21 +64,9 @@ public class MainActivity extends Activity {
                     }
                 });
             } else {
-                //load the first ui
-
                 HybridTools.localWebRoot = app_cache_dir_s + "/web/";
-                String root_htm_s = "file://" + HybridTools.localWebRoot + "root.htm";
-                Log.v(LOGTAG, "root_htm_s=" + root_htm_s);
-                HybridTools.startUi("UiRoot", "{topbar:'N',url:'" + root_htm_s + "'}", entryAct, WebViewUi.class);
 
-                entryAct.finish();
-                //start a splash to overlap (which will auto close after seconds)
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        entryAct.startActivity(new Intent(entryAct, SplashActivity.class));
-                    }
-                }, 1);
+                resumeUi(entryAct);
 
                 //TODO
 // to run a backgroup service to check network
@@ -91,6 +79,21 @@ public class MainActivity extends Activity {
         }
     }
 
+    private static void resumeUi(final Activity entryAct) {
+        String root_htm_s = "file://" + HybridTools.localWebRoot + "root.htm";
+        Log.v(LOGTAG, "root_htm_s=" + root_htm_s);
+        HybridTools.startUi("UiRoot", "{topbar:'N',url:'" + root_htm_s + "'}", entryAct, WebViewUi.class);
+
+        entryAct.finish();
+        //start a splash to overlap (which will auto close after seconds)
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                entryAct.startActivity(new Intent(entryAct, SplashActivity.class));
+            }
+        }, 1);
+    }
+
     protected void fwdToMain() {
         main(this);
     }
@@ -101,11 +104,13 @@ public class MainActivity extends Activity {
     protected void onStart() {
         super.onStart();
         synchronized (_is_main_init) {
-            if (_is_main_init == true) return;
-            _is_main_init = true;
+            if (_is_main_init == false) {
+                _is_main_init = true;
+                fwdToMain();
+            }
         }
         Log.v(LOGTAG, ".onStart()");
-        fwdToMain();
+
     }
 
     @Override
@@ -113,10 +118,14 @@ public class MainActivity extends Activity {
         Log.v(LOGTAG, ".onResume()");
         super.onResume();
         synchronized (_is_main_init) {
-            if (_is_main_init == true) return;
-            _is_main_init = true;
+            if (_is_main_init == false) {
+                _is_main_init = true;
+                fwdToMain();
+            } else {
+                //resumeUi(this);
+            }
         }
-        fwdToMain();
+
     }
 
 }
