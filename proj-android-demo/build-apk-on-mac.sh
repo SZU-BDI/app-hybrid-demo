@@ -1,7 +1,10 @@
 echo Please do following before continue:
 
-echo touch ~/.gradle/gradle.properties && echo "org.gradle.daemon=true" \>\> ~/.gradle/gradle.properties
-echo "cp local.properties.eg => local.properties"
+echo git clone https://github.com/SZU-BDI/app-hybrid-core.git
+
+#echo touch ~/.gradle/gradle.properties && echo "org.gradle.daemon=true" \>\> ~/.gradle/gradle.properties
+
+echo "cp local.properties.eg => local.properties and edit it if sdk pos is not correct..."
 
 # ===
 # gradlew
