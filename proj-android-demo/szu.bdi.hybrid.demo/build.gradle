@@ -20,7 +20,7 @@ android {
     //}
     signingConfigs {
         release {
-            storeFile file("szu.bdi.hybrid.demo.jks")
+            storeFile file("../szu.bdi.hybrid.demo.jks")
             storePassword "654321" //System.console().readLine("\nKeystore password: ")
             keyAlias "release"
             keyPassword "123456" //System.console().readLine("\nKey password: ")
