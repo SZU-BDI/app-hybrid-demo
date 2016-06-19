@@ -2,7 +2,9 @@ package szu.bdi.hybrid.demo;
 
 import android.app.Activity;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Build;
+import android.os.Handler;
 import android.util.Log;
 
 import org.json.JSONObject;
@@ -12,7 +14,7 @@ import java.io.File;
 import szu.bdi.hybrid.core.HybridTools;
 import szu.bdi.hybrid.core.WebViewUi;
 
-public class EntryActivity extends Activity {
+public class MainActivity extends Activity {
     final private static String LOGTAG = "" + (new Object() {
         public String getClassName() {
             String clazzName = this.getClass().getName();
@@ -20,7 +22,7 @@ public class EntryActivity extends Activity {
         }
     }.getClassName());
 
-    public static void main(Activity entryAct) {
+    public static void main(final Activity entryAct) {
 
         //IMPORTANT...STORE the app context into the hybrid service for later use.
         HybridTools.setAppContext(entryAct.getApplicationContext());
@@ -69,13 +71,20 @@ public class EntryActivity extends Activity {
                 Log.v(LOGTAG, "root_htm_s=" + root_htm_s);
                 HybridTools.startUi("UiRoot", "{topbar:'N',url:'" + root_htm_s + "'}", entryAct, WebViewUi.class);
 
+                //start a splash to overlap (which will auto close after seconds)
+                entryAct.finish();
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        entryAct.startActivity(new Intent(entryAct, SplashActivity.class));
+                    }
+                }, 1);
                 //TODO
 // to run a backgroup service to check network
 //HybridTools.startService(??)
 ////Intent bg = new Intent(getApplicationContext(), DemoBackgroundService.class);
 ////this.startService(bg);
 
-                entryAct.finish();
             }
 
         }

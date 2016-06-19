@@ -18,16 +18,22 @@
         <!-- android:icon="@drawable/logo" -->
         <!-- TOOL:  http://www.iconres.com/tool/drawable.php -->
         <activity
-            android:name=".EntryActivity"
-            android:theme="@style/android:Theme.Light.NoTitleBar">
+            android:name=".MainActivity"
+            android:theme="@style/android:Theme.Translucent.NoTitleBar.Fullscreen"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
 
-        <!-- register the HybridUI -->
-        <activity android:name="szu.bdi.hybrid.core.HybridUi"></activity>
+        <!-- register the other HybridUI -->
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/android:Theme.Light.NoTitleBar"
+            />
+        <activity android:name="szu.bdi.hybrid.core.HybridUi"/>
         <activity android:name="szu.bdi.hybrid.core.WebViewUi"/>
     </application>
 

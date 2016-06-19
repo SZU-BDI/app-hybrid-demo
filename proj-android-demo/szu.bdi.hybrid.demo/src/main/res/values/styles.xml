@@ -1,0 +1,7 @@
+<resources>
+
+    <style name="Theme.SplashAct" parent="android:Theme">
+        <!--<item name="android:windowBackground">@drawable/antelope_canyon</item>-->
+        <item name="android:windowNoTitle">true</item>
+    </style>
+</resources>
