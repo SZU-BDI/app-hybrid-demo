@@ -122,7 +122,7 @@ public class MainActivity extends Activity {
                 _is_main_init = true;
                 fwdToMain();
             } else {
-                //resumeUi(this);
+                resumeUi(this);
             }
         }
 
