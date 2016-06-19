@@ -71,14 +71,15 @@ public class MainActivity extends Activity {
                 Log.v(LOGTAG, "root_htm_s=" + root_htm_s);
                 HybridTools.startUi("UiRoot", "{topbar:'N',url:'" + root_htm_s + "'}", entryAct, WebViewUi.class);
 
-                //start a splash to overlap (which will auto close after seconds)
                 entryAct.finish();
+                //start a splash to overlap (which will auto close after seconds)
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
                         entryAct.startActivity(new Intent(entryAct, SplashActivity.class));
                     }
                 }, 1);
+
                 //TODO
 // to run a backgroup service to check network
 //HybridTools.startService(??)
