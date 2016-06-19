@@ -44,20 +44,16 @@ public class EntryActivity extends Activity {
                 }
             });
         } else {
-            HybridTools.jsonConfig = o;
+            HybridTools.initAppConfig(o);
 
-//            HybridUi ui = HybridTools.getHybridUi("UiRoot");
-//            HybridTools.showUi(ui);
-
+            //if the init htm not exists, copy from assets
             File app_cache_dir_f = HybridTools.getAppContext().getCacheDir();
             String app_cache_dir_s = app_cache_dir_f.getAbsolutePath();
-
             File root_htm_f = new File(app_cache_dir_s + "/web/root.htm");
-//            if (!root_htm_f.exists()) {
-            //Log.v(LOGTAG, "copy files to " + app_cache_dir_s);
-            HybridTools.copyAssetFolder(HybridTools.getAppContext().getAssets(), "web", app_cache_dir_s + "/web");
-            //HybridTools.copyAsset(HybridTools.getAppContext().getAssets(), "root.htm", app_cache_dir_s + "/root.htm");
-//            }
+            if (!root_htm_f.exists()) {
+                Log.v(LOGTAG, "copy files to " + app_cache_dir_s);
+                HybridTools.copyAssetFolder(HybridTools.getAppContext().getAssets(), "web", app_cache_dir_s + "/web");
+            }
             if (!root_htm_f.exists()) {
                 HybridTools.appAlert(entryAct, "Failed Init", new DialogInterface.OnClickListener() {
                     @Override
@@ -65,18 +61,23 @@ public class EntryActivity extends Activity {
                         HybridTools.KillAppSelf();//so violent
                     }
                 });
-            }
-            String root_htm_s = "file://" + root_htm_f.getAbsolutePath();
-            Log.v(LOGTAG, "root_htm_s=" + root_htm_s);
-            HybridTools.startUi("UiRoot", "{topbar:'N',url:" + root_htm_s + "}", entryAct, WebViewUi.class);
+            } else {
+                //load the first ui
 
-            entryAct.finish();
+                HybridTools.localWebRoot = app_cache_dir_s + "/web/";
+                String root_htm_s = "file://" + HybridTools.localWebRoot + "root.htm";
+                Log.v(LOGTAG, "root_htm_s=" + root_htm_s);
+                HybridTools.startUi("UiRoot", "{topbar:'N',url:'" + root_htm_s + "'}", entryAct, WebViewUi.class);
 
-//TODO
+                //TODO
 // to run a backgroup service to check network
 //HybridTools.startService(??)
-//Intent bg = new Intent(getApplicationContext(), DemoBackgroundService.class);
-//this.startService(bg);
+////Intent bg = new Intent(getApplicationContext(), DemoBackgroundService.class);
+////this.startService(bg);
+
+                entryAct.finish();
+            }
+
         }
     }
 

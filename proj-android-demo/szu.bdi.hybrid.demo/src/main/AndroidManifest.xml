@@ -27,15 +27,7 @@
         </activity>
 
         <!-- register the HybridUI -->
-        <activity android:name="szu.bdi.hybrid.core.HybridUi">
-
-            <!-- android:logo="@drawable/back3x" -->
-            <!-- android:parentActivityName=".EntryActivity" -->
-            <!-- <meta-data -->
-            <!-- android:name="android.support.PARENT_ACTIVITY" -->
-            <!-- android:value=".EntryActivity"/> -->
-            <!-- TODO design a theme of Blue (the color as ACE) -->
-        </activity>
+        <activity android:name="szu.bdi.hybrid.core.HybridUi"></activity>
         <activity android:name="szu.bdi.hybrid.core.WebViewUi"/>
     </application>
 
