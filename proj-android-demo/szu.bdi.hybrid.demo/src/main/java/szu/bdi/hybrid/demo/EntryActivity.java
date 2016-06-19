@@ -1,13 +1,13 @@
 package szu.bdi.hybrid.demo;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Build;
-import android.os.StrictMode;
 import android.util.Log;
 
 import org.json.JSONObject;
+
+import java.io.File;
 
 import szu.bdi.hybrid.core.HybridTools;
 import szu.bdi.hybrid.core.WebViewUi;
@@ -21,9 +21,9 @@ public class EntryActivity extends Activity {
     }.getClassName());
 
     public static void main(Activity entryAct) {
+
         //IMPORTANT...STORE the app context into the hybrid service for later use.
-        Context _appContext = entryAct.getApplicationContext();
-        HybridTools.setAppContext(_appContext);
+        HybridTools.setAppContext(entryAct.getApplicationContext());
 
         int _sdk_int = android.os.Build.VERSION.SDK_INT;
 
@@ -31,47 +31,50 @@ public class EntryActivity extends Activity {
             HybridTools.quickShowMsgMain("Your Phone is too old (API " + _sdk_int + ")... May not stable");
         }
 
-        //NOTES: for main thread (could) using network, do a policy hack config
-        if (_sdk_int > 9) {
-            Log.d(LOGTAG, "setThreadPolicy for " + _sdk_int);
-            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-            StrictMode.setThreadPolicy(policy);
-        }
+        HybridTools.uiNeedNetworkPolicyHack();
 
-        //get the config
-        final String sJsonConf = HybridTools.getFileIntoStr("config.json");
+        final String sJsonConf = HybridTools.readAssetInStr("config.json");
         final JSONObject o = HybridTools.s2o(sJsonConf);
-        if (!HybridTools.isEmptyString(o.optString("errmsg"))) {
+        if (o == null) {
             HybridTools.appAlert(entryAct, "Wrong Config File", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     Log.v(LOGTAG, "config.json=" + sJsonConf);
-                    Log.v(LOGTAG, "config.json.o=" + o);
-                    //HybridTools.quit(false);
-                    HybridTools.KillAppSelf();//so violent
+                    HybridTools.KillAppSelf();//violent
                 }
             });
-            //HybridTools.quickShowMsgMain("Wrong Config File");
-//            HybridTools.quit(false);
         } else {
             HybridTools.jsonConfig = o;
 
 //            HybridUi ui = HybridTools.getHybridUi("UiRoot");
 //            HybridTools.showUi(ui);
 
-            HybridTools.startUi("UiRoot", "{topbar:'N',url:'file:///android_asset/root.htm'}", entryAct, WebViewUi.class);
-            //ui.setUiData("url", "file:///android_asset/root.htm");
+            File app_cache_dir_f = HybridTools.getAppContext().getCacheDir();
+            String app_cache_dir_s = app_cache_dir_f.getAbsolutePath();
 
-////            Context _ctx = HybridTools.getAppContext();
-//            Intent intent = new Intent(_appContext, ui.getClass());
-//            //intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-//            _appContext.startActivity(intent);
+            File root_htm_f = new File(app_cache_dir_s + "/web/root.htm");
+//            if (!root_htm_f.exists()) {
+            //Log.v(LOGTAG, "copy files to " + app_cache_dir_s);
+            HybridTools.copyAssetFolder(HybridTools.getAppContext().getAssets(), "web", app_cache_dir_s + "/web");
+            //HybridTools.copyAsset(HybridTools.getAppContext().getAssets(), "root.htm", app_cache_dir_s + "/root.htm");
+//            }
+            if (!root_htm_f.exists()) {
+                HybridTools.appAlert(entryAct, "Failed Init", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        HybridTools.KillAppSelf();//so violent
+                    }
+                });
+            }
+            String root_htm_s = "file://" + root_htm_f.getAbsolutePath();
+            Log.v(LOGTAG, "root_htm_s=" + root_htm_s);
+            HybridTools.startUi("UiRoot", "{topbar:'N',url:" + root_htm_s + "}", entryAct, WebViewUi.class);
 
             entryAct.finish();
 
 //TODO
 // to run a backgroup service to check network
+//HybridTools.startService(??)
 //Intent bg = new Intent(getApplicationContext(), DemoBackgroundService.class);
 //this.startService(bg);
         }
@@ -81,9 +84,15 @@ public class EntryActivity extends Activity {
         main(this);
     }
 
+    protected static Object _is_main_init = false;
+
     @Override
     protected void onStart() {
         super.onStart();
+        synchronized (_is_main_init) {
+            if (_is_main_init == true) return;
+            _is_main_init = true;
+        }
         Log.v(LOGTAG, ".onStart()");
         fwdToMain();
     }
@@ -92,6 +101,10 @@ public class EntryActivity extends Activity {
     protected void onResume() {
         Log.v(LOGTAG, ".onResume()");
         super.onResume();
+        synchronized (_is_main_init) {
+            if (_is_main_init == true) return;
+            _is_main_init = true;
+        }
         fwdToMain();
     }
 

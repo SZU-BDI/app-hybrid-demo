@@ -27,7 +27,7 @@
                 <a href="javascript:test_app_activity_open_1();">
                     Test _app_activity_open (topbar:Y)</a>&nbsp;&nbsp;&nbsp;&nbsp;<br/>
                 <a href="javascript:test_app_activity_open_2();">
-                Test _app_activity_open (topbar:N)</a>&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+                    Test _app_activity_open (topbar:N)</a>&nbsp;&nbsp;&nbsp;&nbsp;<br/>
                 <a href="javascript:test_app_activity_open_3();">
                     Test _app_activity_open (topbar:M)</a>&nbsp;&nbsp;&nbsp;&nbsp;<br/>
                 <a href="javascript:test_app_activity_open_4();">
@@ -203,7 +203,7 @@ alert('open2='+rt);
 }
 function test_app_activity_open_4(){
 window.cmpjsbridge.callHandler('_app_activity_open', {topbar:'F',mode:'WebView',address:'http://app.jump.ws/core/apitest.htm?'+Math.random()},function( rt ){
-alert('open2='+rt);
+alert('open4='+o2s(rt));
 //alert(o2s(rt));
 });
 }
@@ -213,12 +213,6 @@ alert(rt);
 //alert(o2s(rt));
 });
 }
-
-
-
-
-
-
                 </script>
                 <img id="loading_gif" src='root.gif' onclick='location.reload();'/></td>
         </tr>
@@ -256,6 +250,11 @@ alert(o2s(a)+";"+o2s(b));
 		}
 	},15000);
 */
+
+
+
+
+
 
 
 
