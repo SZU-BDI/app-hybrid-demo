@@ -66,10 +66,21 @@ public class MainActivity extends Activity {
             } else {
                 HybridTools.localWebRoot = app_cache_dir_s + "/web/";
 
-                resumeUi(entryAct);
+                String root_htm_s = "file://" + HybridTools.localWebRoot + "root.htm";
+                Log.v(LOGTAG, "root_htm_s=" + root_htm_s);
+                HybridTools.startUi("UiRoot", "{topbar:'N',url:'" + root_htm_s + "'}", entryAct, WebViewUi.class);
+
+                //start a splash to overlap (which will auto close after seconds)
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        entryAct.startActivity(new Intent(entryAct, SplashActivity.class));
+                    }
+                }, 1);
+                entryAct.finish();
 
                 //TODO
-// to run a backgroup service to check network
+// to run a backgroup service
 //HybridTools.startService(??)
 ////Intent bg = new Intent(getApplicationContext(), DemoBackgroundService.class);
 ////this.startService(bg);
@@ -79,58 +90,14 @@ public class MainActivity extends Activity {
         }
     }
 
-    private static void resumeUi(final Activity entryAct) {
-        String root_htm_s = "file://" + HybridTools.localWebRoot + "root.htm";
-        Log.v(LOGTAG, "root_htm_s=" + root_htm_s);
-        HybridTools.startUi("UiRoot", "{topbar:'N',url:'" + root_htm_s + "'}", entryAct, WebViewUi.class);
-
-        entryAct.finish();
-        //start a splash to overlap (which will auto close after seconds)
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                entryAct.startActivity(new Intent(entryAct, SplashActivity.class));
-            }
-        }, 1);
-    }
-
-    protected void fwdToMain() {
-        main(this);
-    }
-
-//    protected static Object _is_main_init = false;
 
     @Override
     protected void onStart() {
         super.onStart();
         Log.v(LOGTAG, ".onStart()");
-//        synchronized (_is_main_init) {
-//            if (_is_main_init == null) {
-//                _is_main_init = true;
-//                fwdToMain();
-//            }
-//        }
-        fwdToMain();
+
+        main(this);
     }
 
-    @Override
-    protected void onResume() {
-        Log.v(LOGTAG, ".onResume()");
-        super.onResume();
-        //fwdToMain();
-//        resumeUi(this);
-
-//        synchronized (_is_main_init) {
-//            if (_is_main_init == null) {
-//                _is_main_init = true;
-//                fwdToMain();
-//            } else {
-//                HybridTools.setAppContext(getApplicationContext());
-//
-//                resumeUi(this);
-//            }
-//        }
-
-    }
 
 }

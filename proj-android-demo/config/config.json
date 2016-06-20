@@ -1,4 +1,10 @@
 {
+  //map the api to the class
+  "api_mapping": {
+    "_app_activity_open": "szu.bdi.hybrid.core.ApiHybridUiOpen",
+    "_app_activity_close": "szu.bdi.hybrid.core.ApiHybridUiClose"
+  },
+  //map the ui to the class
   "ui_mapping": {
     "UiRoot": {
       "type": "WebView",
@@ -10,20 +16,25 @@
       "topbar": "Y",
       "class": "szu.bdi.hybrid.core.WebViewUi"
     },
+    "UiGestureUnlock": {
+      "type": "Native",
+      "class": "szu.bdi.hybrid.demo.UiGestureUnlock"
+    },
+    "UiGestureSetup": {
+      "type": "Native",
+      "class": "szu.bdi.hybrid.demo.UiGestureSetup"
+    },
     "UiHome": {
       "type": "Native",
-      "class": "szu.bdi.hybrid.core.NativeUi"
+      "class": "szu.bdi.hybrid.demo.UiHome"
     }
   },
-  "api_mapping": {
-    "_app_activity_open": "szu.bdi.hybrid.core.ApiHybridUiOpen",
-    "_app_activity_close": "szu.bdi.hybrid.core.ApiHybridUiClose"
-  },
+  //auth: bind api to ui
   "api_auth": {
     "UiRoot": {
       "file:///android_asset/root.htm": [
         "_app_activity_open",
-        "_app_activity_close",
+        "_app_activity_close"
       ]
     },
     "UiContent": {
