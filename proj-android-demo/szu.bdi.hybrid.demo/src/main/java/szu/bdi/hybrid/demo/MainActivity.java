@@ -98,33 +98,38 @@ public class MainActivity extends Activity {
         main(this);
     }
 
-    protected static Object _is_main_init = false;
+//    protected static Object _is_main_init = false;
 
     @Override
     protected void onStart() {
         super.onStart();
-        synchronized (_is_main_init) {
-            if (_is_main_init == null) {
-                _is_main_init = true;
-                fwdToMain();
-            }
-        }
         Log.v(LOGTAG, ".onStart()");
-
+//        synchronized (_is_main_init) {
+//            if (_is_main_init == null) {
+//                _is_main_init = true;
+//                fwdToMain();
+//            }
+//        }
+        fwdToMain();
     }
 
     @Override
     protected void onResume() {
         Log.v(LOGTAG, ".onResume()");
         super.onResume();
-        synchronized (_is_main_init) {
-            if (_is_main_init == null) {
-                _is_main_init = true;
-                fwdToMain();
-            } else {
-                resumeUi(this);
-            }
-        }
+        //fwdToMain();
+//        resumeUi(this);
+
+//        synchronized (_is_main_init) {
+//            if (_is_main_init == null) {
+//                _is_main_init = true;
+//                fwdToMain();
+//            } else {
+//                HybridTools.setAppContext(getApplicationContext());
+//
+//                resumeUi(this);
+//            }
+//        }
 
     }
 
