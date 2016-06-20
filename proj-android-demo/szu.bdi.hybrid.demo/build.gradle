@@ -18,6 +18,11 @@ android {
     //		keyPassword System.console().readLine("\nKey password: ")
     //	}
     //}
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
     signingConfigs {
         release {
             storeFile file("../szu.bdi.hybrid.demo.jks")

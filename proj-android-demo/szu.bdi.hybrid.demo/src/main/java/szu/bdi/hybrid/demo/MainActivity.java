@@ -104,7 +104,7 @@ public class MainActivity extends Activity {
     protected void onStart() {
         super.onStart();
         synchronized (_is_main_init) {
-            if (_is_main_init == false) {
+            if (_is_main_init == null) {
                 _is_main_init = true;
                 fwdToMain();
             }
@@ -118,7 +118,7 @@ public class MainActivity extends Activity {
         Log.v(LOGTAG, ".onResume()");
         super.onResume();
         synchronized (_is_main_init) {
-            if (_is_main_init == false) {
+            if (_is_main_init == null) {
                 _is_main_init = true;
                 fwdToMain();
             } else {
