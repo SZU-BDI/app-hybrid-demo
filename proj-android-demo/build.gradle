@@ -10,7 +10,7 @@ buildscript {
         //If the specified plugin version has not been downloaded,
         // Gradle downloads it the next time you build your project or
         // click Tools > Android > Sync Project with Gradle Files from the Android Studio main menu
-        classpath 'com.android.tools.build:gradle:1.5.0'
+        classpath 'com.android.tools.build:gradle:2.2.0-alpha3'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files

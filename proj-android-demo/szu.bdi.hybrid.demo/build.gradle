@@ -48,7 +48,7 @@ android {
             //def fileName = "${project.name}.apk";
             //output.outputFile = new File(output.outputFile.parent, fileName)
             //output.outputFile = new File(output.outputFile.parent, output.outputFile.name.replace(".apk", "-" + defaultConfig.versionName + ".apk"))
-            output.assemble.doLast {
+            if (null != output.assemble) output.assemble.doLast {
                 copy {
                     from output.outputFile.getAbsolutePath()
                     into "../build/"

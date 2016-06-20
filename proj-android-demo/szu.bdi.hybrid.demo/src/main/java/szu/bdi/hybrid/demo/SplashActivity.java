@@ -10,16 +10,15 @@ public class SplashActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
 
         //close self after 3 sec
-        int secondsDelayed = 3;
         new Handler().postDelayed(new Runnable() {
             public void run() {
                 finish();
             }
-        }, secondsDelayed * 1000);
+        }, 3 * 1000);
 
         setContentView(R.layout.splash);
 
-        //IMPORTANT call super after mine is done is better feel
+        //IMPORTANT： call super at last
         super.onCreate(savedInstanceState);
     }
 }
