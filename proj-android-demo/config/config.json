@@ -1,4 +1,5 @@
 {
+  "app_ver": "1",
   //map the api to the class
   "api_mapping": {
     "_app_activity_open": "szu.bdi.hybrid.core.ApiHybridUiOpen",

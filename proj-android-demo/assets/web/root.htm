@@ -141,8 +141,11 @@ false
 }
 };
 
+console.log("browser.versions", this.browser.versions)
+
 //Android need a init call...  A Bug to fix!!
 if(this.browser.versions.android){
+
 this.android_js_bridge(function(bridge) {
 bridge.init(function(message, responseCallback) {
 });
@@ -213,6 +216,7 @@ alert(rt);
 //alert(o2s(rt));
 });
 }
+
                 </script>
                 <img id="loading_gif" src='root.gif' onclick='location.reload();'/></td>
         </tr>
@@ -250,6 +254,7 @@ alert(o2s(a)+";"+o2s(b));
 		}
 	},15000);
 */
+
 
 
 
