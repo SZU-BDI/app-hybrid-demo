@@ -8,32 +8,34 @@
   //map the ui to the class
   "ui_mapping": {
     "UiRoot": {
-      "type": "WebView",
+      "mode": "WebView",
       "topbar": "N",
+      "address": "root.htm",
+      //default address
       "class": "szu.bdi.hybrid.core.WebViewUi"
     },
     "UiContent": {
-      "type": "WebView",
+      "mode": "WebView",
       "topbar": "Y",
       "class": "szu.bdi.hybrid.core.WebViewUi"
     },
     "UiGestureUnlock": {
-      "type": "Native",
+      "mode": "Native",
       "class": "szu.bdi.hybrid.demo.UiGestureUnlock"
     },
     "UiGestureSetup": {
-      "type": "Native",
+      "mode": "Native",
       "class": "szu.bdi.hybrid.demo.UiGestureSetup"
     },
     "UiHome": {
-      "type": "Native",
+      "mode": "Native",
       "class": "szu.bdi.hybrid.demo.UiHome"
     }
   },
   //auth: bind api to ui
   "api_auth": {
     "UiRoot": {
-      "file:///android_asset/root.htm": [
+      "root.htm": [
         "_app_activity_open",
         "_app_activity_close"
       ]

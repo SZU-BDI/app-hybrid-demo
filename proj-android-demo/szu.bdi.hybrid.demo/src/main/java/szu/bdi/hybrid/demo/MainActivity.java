@@ -22,6 +22,8 @@ public class MainActivity extends Activity {
     }.getClassName());
 
     public static void main(final Activity _act) {
+        Log.v(LOGTAG, "main()");
+
         //IMPORTANT...STORE the app context into the hybrid service for later use.
         HybridTools.setAppContext(_act.getApplicationContext());
 
@@ -54,14 +56,13 @@ public class MainActivity extends Activity {
             String app_ver_saved = HybridTools.getSavedSetting(_appContext, "APP", "app_ver");
             if (app_ver_saved == null) app_ver_saved = "";
 
-            HybridTools.saveSetting(_appContext, "APP", "isFirstLoad", "N");
-
             String isFirstLoad = HybridTools.getSavedSetting(_appContext, "APP", "isFirstLoad");
-            //isFirstLoad = "";//debug test only
-            //HybridTools.quickShowMsgMain("isFirstLoad=" + isFirstLoad);
 
             HybridTools.saveSetting(_appContext, "APP", "isFirstLoad", "N");
             HybridTools.saveSetting(_appContext, "APP", "app_ver", app_ver);
+
+            //isFirstLoad = "";//test only
+            //HybridTools.quickShowMsgMain("isFirstLoad=" + isFirstLoad);
 
             //if the init htm not exists, copy from assets
             File app_cache_dir_f = HybridTools.getAppContext().getCacheDir();
@@ -83,27 +84,22 @@ public class MainActivity extends Activity {
             } else {
                 HybridTools.localWebRoot = app_cache_dir_s + "/web/";
 
-                String root_htm_s = "file://" + HybridTools.localWebRoot + "root.htm";
-                Log.v(LOGTAG, "root_htm_s=" + root_htm_s);
-                HybridTools.startUi("UiRoot", "{topbar:'N',url:'" + root_htm_s + "'}", _act);
+//                String root_htm_s = "file://" + HybridTools.localWebRoot + "root.htm";
+//                Log.v(LOGTAG, "root_htm_s=" + root_htm_s);
+//                HybridTools.startUi("UiRoot", "{address:'" + root_htm_s + "'}", _act);
 
-//                //start a splash to overlap (which will auto close after seconds)
-//                new Handler().postDelayed(new Runnable() {
-//                    @Override
-//                    public void run() {
-//                        _act.startActivity(new Intent(_act, SplashActivity.class));
-//                    }
-//                }, 1);
+                HybridTools.startUi("UiRoot", "", _act);
 
+                ///////
                 //NOTES call a splash to cover the UI for view seconds
                 _act.startActivity(new Intent(_act, SplashActivity.class));
 
                 //TODO
-// to run a backgroup service
-//HybridTools.startService(??)
-////Intent bg = new Intent(getApplicationContext(), DemoBackgroundService.class);
-////this.startService(bg);
+                // to run a longtime backgroup service if needed...
+                //Intent bg = new Intent(getApplicationContext(), DemoBackgroundService.class);
+                //_act.startService(bg);
 
+                //close the entry act (so that the UiRoot is on top now)
                 _act.finish();
 
             }

@@ -143,14 +143,6 @@ false
 
 console.log("browser.versions", this.browser.versions)
 
-//Android need a init call...  A Bug to fix!!
-if(this.browser.versions.android){
-
-this.android_js_bridge(function(bridge) {
-bridge.init(function(message, responseCallback) {
-});
-});
-}
 
 //this.js_bridge=function(callback){
 //if(this.bridge.versions.android){
