@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Build;
+import android.os.Handler;
 import android.util.Log;
 
 import org.json.JSONObject;
@@ -87,16 +88,21 @@ public class MainActivity extends Activity {
 
                 HybridTools.startUi("UiRoot", "", _entryAct);
 
-                //call a splash to cover the UI for view seconds
-                _entryAct.startActivity(new Intent(_entryAct, SplashActivity.class));
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        //call a splash to cover the UI for view seconds
+                        _entryAct.startActivity(new Intent(_entryAct, SplashActivity.class));
 
-                //TODO
-                // to run a longtime backgroup service if needed...
-                //Intent bg = new Intent(getApplicationContext(), DemoBackgroundService.class);
-                //_entryAct.startService(bg);
+                        //TODO
+                        // to run a longtime backgroup service if needed...
+                        //Intent bg = new Intent(getApplicationContext(), DemoBackgroundService.class);
+                        //_entryAct.startService(bg);
 
-                //close the entry act (so that the UiRoot is on top now)
-                _entryAct.finish();
+                        //close the entry act (so that the UiRoot is on top now)
+                        _entryAct.finish();
+                    }
+                }, 1);
 
             }
 
