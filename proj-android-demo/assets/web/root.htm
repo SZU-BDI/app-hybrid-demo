@@ -32,6 +32,8 @@
                     Test _app_activity_open (topbar:M)</a>&nbsp;&nbsp;&nbsp;&nbsp;<br/>
                 <a href="javascript:test_app_activity_open_4();">
                     Test _app_activity_open (topbar:F)</a>&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+                <a href="javascript:test_app_activity_open_5();">
+                    Test _app_activity_open (UiHome)</a>&nbsp;&nbsp;&nbsp;&nbsp;<br/>
                 <a href="javascript:test_app_activity_close();">Test test_app_activity_close</a>&nbsp;&nbsp;&nbsp;&nbsp;<br/>
                 <script>
 function s2o(strJson){ try{ var myjson=null; return (new Function('return '+strJson))(); }catch(ex){} };
@@ -197,8 +199,14 @@ alert('open2='+rt);
 });
 }
 function test_app_activity_open_4(){
-window.cmpjsbridge.callHandler('_app_activity_open', {topbar:'F',mode:'WebView',address:'http://app.jump.ws/core/apitest.htm?'+Math.random()},function( rt ){
+window.cmpjsbridge.callHandler('_app_activity_open', {topbar:'F',address:'http://app.jump.ws/core/apitest.htm?'+Math.random()},function( rt ){
 alert('open4='+o2s(rt));
+//alert(o2s(rt));
+});
+}
+function test_app_activity_open_5(){
+window.cmpjsbridge.callHandler('_app_activity_open', {name:'UiHome'}, function( rt ){
+alert('open5='+o2s(rt));
 //alert(o2s(rt));
 });
 }
@@ -208,6 +216,8 @@ alert(rt);
 //alert(o2s(rt));
 });
 }
+
+
 
                 </script>
                 <img id="loading_gif" src='root.gif' onclick='location.reload();'/></td>
@@ -246,6 +256,8 @@ alert(o2s(a)+";"+o2s(b));
 		}
 	},15000);
 */
+
+
 
 
 

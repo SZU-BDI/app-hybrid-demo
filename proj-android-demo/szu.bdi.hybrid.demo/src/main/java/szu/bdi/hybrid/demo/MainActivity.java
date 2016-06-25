@@ -69,7 +69,10 @@ public class MainActivity extends Activity {
             File app_cache_dir_f = HybridTools.getAppContext().getCacheDir();
             String app_cache_dir_s = app_cache_dir_f.getAbsolutePath();
             File root_htm_f = new File(app_cache_dir_s + "/web/root.htm");
+
 //TODO if exists, check file size...
+            //TODO also check the version, if version different, copy too!
+
             if (!root_htm_f.exists() || !"N".equals(isFirstLoad) || !app_ver_saved.equals(app_ver)) {
                 Log.v(LOGTAG, "copy files to " + app_cache_dir_s);
                 HybridTools.copyAssetFolder(HybridTools.getAppContext().getAssets(), "web", app_cache_dir_s + "/web");

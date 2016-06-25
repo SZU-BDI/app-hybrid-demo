@@ -11,6 +11,7 @@
       "mode": "WebView",
       "topbar": "N",
       "address": "root.htm",
+      //"address": "http://www.google.com",//test only...no use at all
       //default address
       "class": "szu.bdi.hybrid.core.WebViewUi"
     },

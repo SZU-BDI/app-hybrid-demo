@@ -35,6 +35,8 @@
             />
         <activity android:name="szu.bdi.hybrid.core.HybridUi"/>
         <activity android:name="szu.bdi.hybrid.core.WebViewUi"/>
+
+        <activity android:name="szu.bdi.hybrid.demo.UiHome"/>
     </application>
 
 </manifest>
