@@ -1,6 +1,6 @@
 package szu.bdi.hybrid.demo;
 
-import szu.bdi.hybrid.core.HybridUi;
+import szu.bdi.hybrid.core.NativeUi;
 
-public class UiHome extends HybridUi {
+public class UiHome extends NativeUi {
 }
