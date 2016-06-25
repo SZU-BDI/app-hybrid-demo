@@ -179,19 +179,19 @@ break;
 });//cmpjsbridge
 
 function test_app_activity_open_1(){
-window.cmpjsbridge.callHandler('_app_activity_open', {topbar:'Y',mode:'WebView',address:'http://app.jump.ws/core/apitest.htm?'+Math.random()},function( rt ){
+window.cmpjsbridge.callHandler('_app_activity_open', {topbar:'Y',address:'http://app.jump.ws/core/apitest.htm?'+Math.random()},function( rt ){
 alert('open1='+rt);
 //alert(o2s(rt));
 });
 }
 function test_app_activity_open_2(){
-window.cmpjsbridge.callHandler('_app_activity_open', {topbar:'N',mode:'WebView',address:'http://app.jump.ws/core/apitest.htm?'+Math.random()},function( rt ){
+window.cmpjsbridge.callHandler('_app_activity_open', {topbar:'N',address:'http://app.jump.ws/core/apitest.htm?'+Math.random()},function( rt ){
 alert('open2='+rt);
 //alert(o2s(rt));
 });
 }
 function test_app_activity_open_3(){
-window.cmpjsbridge.callHandler('_app_activity_open', {topbar:'M',mode:'WebView',address:'http://app.jump.ws/core/apitest.htm?'+Math.random()},function( rt ){
+window.cmpjsbridge.callHandler('_app_activity_open', {topbar:'M',address:'http://app.jump.ws/core/apitest.htm?'+Math.random()},function( rt ){
 alert('open2='+rt);
 //alert(o2s(rt));
 });

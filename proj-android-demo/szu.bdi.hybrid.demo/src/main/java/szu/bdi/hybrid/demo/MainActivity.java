@@ -21,11 +21,11 @@ public class MainActivity extends Activity {
         }
     }.getClassName());
 
-    public static void main(final Activity _act) {
+    public static void main(final Activity _entryAct) {
         Log.v(LOGTAG, "main()");
 
         //IMPORTANT...STORE the app context into the hybrid service for later use.
-        HybridTools.setAppContext(_act.getApplicationContext());
+        HybridTools.setAppContext(_entryAct.getApplicationContext());
 
         int _sdk_int = android.os.Build.VERSION.SDK_INT;
 
@@ -39,7 +39,7 @@ public class MainActivity extends Activity {
         final String sJsonConf = HybridTools.readAssetInStr("config.json");
         final JSONObject o = HybridTools.s2o(sJsonConf);
         if (o == null) {
-            HybridTools.appAlert(_act, "Wrong Config File", new DialogInterface.OnClickListener() {
+            HybridTools.appAlert(_entryAct, "Wrong Config File", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     Log.v(LOGTAG, "config.json=" + sJsonConf);
@@ -68,39 +68,35 @@ public class MainActivity extends Activity {
             File app_cache_dir_f = HybridTools.getAppContext().getCacheDir();
             String app_cache_dir_s = app_cache_dir_f.getAbsolutePath();
             File root_htm_f = new File(app_cache_dir_s + "/web/root.htm");
-
+//TODO if exists, check file size...
             if (!root_htm_f.exists() || !"N".equals(isFirstLoad) || !app_ver_saved.equals(app_ver)) {
                 Log.v(LOGTAG, "copy files to " + app_cache_dir_s);
                 HybridTools.copyAssetFolder(HybridTools.getAppContext().getAssets(), "web", app_cache_dir_s + "/web");
             }
 
             if (!root_htm_f.exists()) {
-                HybridTools.appAlert(_act, "Failed Init", new DialogInterface.OnClickListener() {
+                HybridTools.appAlert(_entryAct, "Failed Init", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         HybridTools.KillAppSelf();//so violent
                     }
                 });
             } else {
+                //important: store the localWebRoot for later usage
                 HybridTools.localWebRoot = app_cache_dir_s + "/web/";
 
-//                String root_htm_s = "file://" + HybridTools.localWebRoot + "root.htm";
-//                Log.v(LOGTAG, "root_htm_s=" + root_htm_s);
-//                HybridTools.startUi("UiRoot", "{address:'" + root_htm_s + "'}", _act);
+                HybridTools.startUi("UiRoot", "", _entryAct);
 
-                HybridTools.startUi("UiRoot", "", _act);
-
-                ///////
-                //NOTES call a splash to cover the UI for view seconds
-                _act.startActivity(new Intent(_act, SplashActivity.class));
+                //call a splash to cover the UI for view seconds
+                _entryAct.startActivity(new Intent(_entryAct, SplashActivity.class));
 
                 //TODO
                 // to run a longtime backgroup service if needed...
                 //Intent bg = new Intent(getApplicationContext(), DemoBackgroundService.class);
-                //_act.startService(bg);
+                //_entryAct.startService(bg);
 
                 //close the entry act (so that the UiRoot is on top now)
-                _act.finish();
+                _entryAct.finish();
 
             }
 
