@@ -2,8 +2,8 @@
   "app_ver": "1",
   //map the api to the class
   "api_mapping": {
-    "_app_activity_open": "szu.bdi.hybrid.core.ApiHybridUiOpen",
-    "_app_activity_close": "szu.bdi.hybrid.core.ApiHybridUiClose"
+    "_app_activity_open": "szu.bdi.hybrid.core.ApiUiOpen",
+    "_app_activity_close": "szu.bdi.hybrid.core.ApiUiClose"
   },
   //map the ui to the class
   "ui_mapping": {
@@ -11,8 +11,6 @@
       "mode": "WebView",
       "topbar": "N",
       "address": "root.htm",
-      //"address": "http://www.google.com",//test only...no use at all
-      //default address
       "class": "szu.bdi.hybrid.core.WebViewUi"
     },
     "UiContent": {
@@ -20,18 +18,6 @@
       "topbar": "Y",
       "class": "szu.bdi.hybrid.core.WebViewUi"
     },
-    "UiGestureUnlock": {
-      "mode": "Native",
-      "class": "szu.bdi.hybrid.demo.UiGestureUnlock"
-    },
-    "UiGestureSetup": {
-      "mode": "Native",
-      "class": "szu.bdi.hybrid.demo.UiGestureSetup"
-    },
-    "UiHome": {
-      "mode": "Native",
-      "class": "szu.bdi.hybrid.demo.UiHome"
-    }
   },
   //auth: bind api to ui
   "api_auth": {
@@ -42,6 +28,10 @@
       ]
     },
     "UiContent": {
+      ".*": [
+        "_app_activity_open",
+        "_app_activity_close"
+      ]
     }
   }
 }
