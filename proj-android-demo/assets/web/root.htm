@@ -25,17 +25,17 @@
                         >alert AndroidWebView._send</a>-->
                 <a href="javascript:alert('content');">alert</a><br/>
                 <a href="javascript:test_app_activity_open_1();">
-                     _app_activity_open (topbar:Y)</a>&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+                    _app_activity_open (topbar:Y)</a>&nbsp;&nbsp;&nbsp;&nbsp;<br/>
                 <a href="javascript:test_app_activity_open_2();">
-                     _app_activity_open (topbar:N)</a>&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+                    _app_activity_open (topbar:N)</a>&nbsp;&nbsp;&nbsp;&nbsp;<br/>
                 <a href="javascript:test_app_activity_open_3();">
-                     _app_activity_open (topbar:M)</a>&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+                    _app_activity_open (topbar:M)</a>&nbsp;&nbsp;&nbsp;&nbsp;<br/>
                 <a href="javascript:test_app_activity_open_4();">
-                     _app_activity_open (topbar:F)</a>&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+                    _app_activity_open (topbar:F)</a>&nbsp;&nbsp;&nbsp;&nbsp;<br/>
                 <a href="javascript:test_app_activity_open_5();">
-                     _app_activity_open (UiHome)</a>&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+                    _app_activity_open (UiHome)</a>&nbsp;&nbsp;&nbsp;&nbsp;<br/>
                 <a href="javascript:test_app_activity_open_6();">
-                     _app_activity_open (UiHome topbar:N)</a>&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+                    _app_activity_open (UiHome topbar:N)</a>&nbsp;&nbsp;&nbsp;&nbsp;<br/>
                 <a href="javascript:test_app_activity_close();">Test test_app_activity_close</a>&nbsp;&nbsp;&nbsp;&nbsp;<br/>
                 <script>
 function s2o(strJson){ try{ var myjson=null; return (new Function('return '+strJson))(); }catch(ex){} };
@@ -184,32 +184,27 @@ break;
 
 function test_app_activity_open_1(){
 window.cmpjsbridge.callHandler('_app_activity_open', {topbar:'Y',address:'http://app.jump.ws/core/apitest.htm?'+Math.random()},function( rt ){
-alert('open1='+rt);
-//alert(o2s(rt));
+alert('open1='+o2s(rt));
 });
 }
 function test_app_activity_open_2(){
 window.cmpjsbridge.callHandler('_app_activity_open', {topbar:'N',address:'http://app.jump.ws/core/apitest.htm?'+Math.random()},function( rt ){
-alert('open2='+rt);
-//alert(o2s(rt));
+alert('open2='+o2s(rt));
 });
 }
 function test_app_activity_open_3(){
 window.cmpjsbridge.callHandler('_app_activity_open', {topbar:'M',address:'http://app.jump.ws/core/apitest.htm?'+Math.random()},function( rt ){
 alert('open2='+rt);
-//alert(o2s(rt));
 });
 }
 function test_app_activity_open_4(){
 window.cmpjsbridge.callHandler('_app_activity_open', {topbar:'F',address:'http://app.jump.ws/core/apitest.htm?'+Math.random()},function( rt ){
 alert('open4='+o2s(rt));
-//alert(o2s(rt));
 });
 }
 function test_app_activity_open_5(){
 window.cmpjsbridge.callHandler('_app_activity_open', {name:'UiHome'}, function( rt ){
 alert('open5='+o2s(rt));
-//alert(o2s(rt));
 });
 }
 function test_app_activity_open_6(){
@@ -219,10 +214,10 @@ alert('open6='+o2s(rt));
 }
 function test_app_activity_close(){
 window.cmpjsbridge.callHandler('_app_activity_close', {},function( rt ){
-alert(rt);
-//alert(o2s(rt));
+alert(o2s(rt));
 });
 }
+
 
 
 
@@ -265,6 +260,7 @@ alert(o2s(a)+";"+o2s(b));
 		}
 	},15000);
 */
+
 
 
 
