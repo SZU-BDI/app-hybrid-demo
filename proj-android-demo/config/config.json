@@ -17,7 +17,7 @@
       "mode": "WebView",
       "topbar": "Y",
       "class": "szu.bdi.hybrid.core.WebViewUi"
-    },
+    }
   },
   //auth: bind api to ui
   "api_auth": {
