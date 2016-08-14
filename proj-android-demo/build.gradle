@@ -1,29 +1,24 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
-    repositories {
-        //for gradle:
-        jcenter()
-    }
-    dependencies {
-        //https://developer.android.com/studio/releases/gradle-plugin.html#updating-gradle
-        //If the specified plugin version has not been downloaded,
-        // Gradle downloads it the next time you build your project or
-        // click Tools > Android > Sync Project with Gradle Files from the Android Studio main menu
-        //classpath 'com.android.tools.build:gradle:2.2.0-alpha3'
-        classpath 'com.android.tools.build:gradle:2.1.0'
+	repositories {
+		//for gradle:
+		jcenter()
+	}
+	dependencies {
+		classpath 'com.android.tools.build:gradle:1.5.0'
 
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
-    }
+			// NOTE: Do not place your application dependencies here; they belong
+			// in the individual module build.gradle files
+	}
 }
 
 allprojects {
-    repositories {
-        jcenter()
-    }
+	repositories {
+		jcenter()
+	}
 }
 
 task clean(type: Delete) {
-    delete rootProject.buildDir
+	delete rootProject.buildDir
 }

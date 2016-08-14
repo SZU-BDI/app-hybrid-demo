@@ -25,25 +25,34 @@ android {
 
     signingConfigs {
         release {
-            storeFile file("../szu.bdi.hybrid.demo.jks")
-            storePassword "654321" //System.console().readLine("\nKeystore password: ")
-            keyAlias "release"
-            keyPassword "123456" //System.console().readLine("\nKey password: ")
+					storeFile file(RELEASE_STORE_FILE)
+					storePassword RELEASE_STORE_PASS //NOTES: remember change at V2
+					keyAlias RELEASE_KEY_ALIAS //NOTES please change at V2
+					keyPassword RELEASE_KEY_PASS //NOTES: remember change at V2
         }
     }
+		//TODO if need as pwd:
+		//myConfig {  
+		//	storeFile file("stone.keystore")  
+		//		storePassword System.console().readLine("\nKeystore password: ")  
+		//		keyAlias "stone"  
+		//		keyPassword System.console().readLine("\nKey password: ")  
+		//}  
     defaultConfig {
         applicationId 'szu.bdi.hybrid.demo'
 
         minSdkVersion Integer.parseInt(project.ANDROID_BUILD_MIN_SDK_VERSION)
-        targetSdkVersion Integer.parseInt(project.ANDROID_BUILD_TARGET_SDK_VERSION)
+        targetSdkVersion ANDROID_BUILD_TARGET_SDK_VERSION
 
-        //For app store
-        versionCode 1
-        versionName "1.0.0"
+        versionCode Integer.parseInt(project.ANDROID_BUILD_VERSION_CODE)
+        versionName ANDROID_BUILD_VERSION_NAME
     }
     buildTypes {
         release {
-            minifyEnabled false
+				manifestPlaceholders = [build_type:"L"]
+		    //minifyEnabled false
+					minifyEnabled true
+					shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.release
         }
@@ -60,16 +69,67 @@ android {
                 }
             }
         }
+			    }
+	    }
+			demo {
+				manifestPlaceholders = [build_type:"D"]
+					applicationIdSuffix ".demo"
+					debuggable false
+					minifyEnabled true
+					shrinkResources true
+					signingConfig signingConfigs.release
+					proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+			}
+			debug {
+				manifestPlaceholders = [build_type:"D"]
+					applicationIdSuffix ".debug"
+					debuggable true
+					minifyEnabled true
+					shrinkResources true
+					signingConfig signingConfigs.debug
+					proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+			}
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
     }
     sourceSets {
         main {
-            //java.srcDirs = ['src']
-            //assets.srcDirs = ['assets']
-            //res.srcDirs = ['res']
-            //manifest.srcFile 'AndroidManifest.xml'
-            assets.srcDirs = ['../assets', '../config']
+            java.srcDirs = ['src/main/java', 'src/main/java/NewStylePassword', 'src/main/java/Fragment', 'src/main/java/MyImageButton', 'src/main/java/com.bignerdranch.android.mfailab/Receivers', 'src/main/java/2', 'src/main/java/com.bignerdranch.android.mfailab/GestruePassword', 'src/main/java/com.bignerdranch.android.mfailab/Fragments', 'src/main/java/com.bignerdranch.android.mfailab/ButtonStyles', 'src/main/java/com.bignerdranch.android.mfailab/ActivitiesForExtends', 'src/main/java/com.bignerdranch.android.mfailab/InternetClassesAndThreads', 'src/main/java/com.bignerdranch.android.mfailab/SharedPreference', 'src/main/java/com.bignerdranch.android.mfailab/ExitApplication', 'src/main/java/com.bignerdranch.android.mfailab/Keyboard', 'src/main/java/com.bignerdranch.android.mfailab/setting']
+            res.srcDirs = ['src/main/res', 'src/main/res/drawable/Function', 'src/main/res/xml']
         }
     }
+    productFlavors {
+    }
+    packagingOptions {
+	    exclude 'META-INF/LICENSE'
+		    exclude 'META-INF/NOTICE'
+    }
+//    applicationVariants.all { variant ->
+//
+//	    def apk = variant.outputFile;
+//	    def newName;
+//
+//	    // newName = apk.name.replace(".apk", "-v" + defaultConfig.versionName + "-" + variant.buildType.name.toUpperCase() + ".apk");
+//	    if (variant.buildType.name == "release") {
+//		    newName = apk.name.replace(".apk", "-v" + defaultConfig.versionName + "-release.apk");
+//	    } else {
+//		    newName = apk.name.replace(".apk", "-v" + defaultConfig.versionName + "-beta.apk");
+//	    }
+//
+//	    //        newName = newName
+//	    //                .replace("-" + variant.buildType.name, "")
+//	    //                .replace(project.name, "MyCoolCompany-MyGreatProduct");
+//
+//	    variant.outputFile = new File(apk.parentFile, newName);
+//
+//	    if (variant.zipAlign) {
+//		    variant.outputFile = new File(apk.parentFile, newName.replace("-unaligned", ""));
+//	    }
+//
+//	    //logger.info('INFO: Set outputFile to ' + variant.outputFile + " for [" + variant.name + "]");
+//    }
 }
 
 dependencies {
