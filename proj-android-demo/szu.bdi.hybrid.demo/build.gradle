@@ -30,13 +30,7 @@ android {
 					keyPassword RELEASE_KEY_PASS //NOTES: remember change at V2
         }
     }
-		//TODO if need as pwd:
-		//myConfig {  
-		//	storeFile file("stone.keystore")  
-		//		storePassword System.console().readLine("\nKeystore password: ")  
-		//		keyAlias "stone"  
-		//		keyPassword System.console().readLine("\nKey password: ")  
-		//}  
+
     defaultConfig {
         applicationId 'szu.bdi.hybrid.demo'
 
@@ -50,8 +44,8 @@ android {
         release {
 				manifestPlaceholders = [build_type:"L"]
 		    //minifyEnabled false
-					minifyEnabled true
-					shrinkResources true
+					//inifyEnabled true
+					//shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.release
         }
@@ -68,7 +62,8 @@ android {
 				manifestPlaceholders = [build_type:"D"]
 					applicationIdSuffix ".debug"
 					debuggable true
-					minifyEnabled true
+					////wanjo: minifyEnabled seems problem
+					//minifyEnabled true
 					shrinkResources true
 					signingConfig signingConfigs.debug
 					proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
@@ -93,8 +88,14 @@ android {
     }
     sourceSets {
         main {
-            java.srcDirs = ['src/main/java', 'src/main/java/NewStylePassword', 'src/main/java/Fragment', 'src/main/java/MyImageButton', 'src/main/java/com.bignerdranch.android.mfailab/Receivers', 'src/main/java/2', 'src/main/java/com.bignerdranch.android.mfailab/GestruePassword', 'src/main/java/com.bignerdranch.android.mfailab/Fragments', 'src/main/java/com.bignerdranch.android.mfailab/ButtonStyles', 'src/main/java/com.bignerdranch.android.mfailab/ActivitiesForExtends', 'src/main/java/com.bignerdranch.android.mfailab/InternetClassesAndThreads', 'src/main/java/com.bignerdranch.android.mfailab/SharedPreference', 'src/main/java/com.bignerdranch.android.mfailab/ExitApplication', 'src/main/java/com.bignerdranch.android.mfailab/Keyboard', 'src/main/java/com.bignerdranch.android.mfailab/setting']
-            res.srcDirs = ['src/main/res', 'src/main/res/drawable/Function', 'src/main/res/xml']
+            //java.srcDirs = ['src/main/java', 'src/main/java/NewStylePassword', 'src/main/java/Fragment', 'src/main/java/MyImageButton', 'src/main/java/com.bignerdranch.android.mfailab/Receivers', 'src/main/java/2', 'src/main/java/com.bignerdranch.android.mfailab/GestruePassword', 'src/main/java/com.bignerdranch.android.mfailab/Fragments', 'src/main/java/com.bignerdranch.android.mfailab/ButtonStyles', 'src/main/java/com.bignerdranch.android.mfailab/ActivitiesForExtends', 'src/main/java/com.bignerdranch.android.mfailab/InternetClassesAndThreads', 'src/main/java/com.bignerdranch.android.mfailab/SharedPreference', 'src/main/java/com.bignerdranch.android.mfailab/ExitApplication', 'src/main/java/com.bignerdranch.android.mfailab/Keyboard', 'src/main/java/com.bignerdranch.android.mfailab/setting']
+            //res.srcDirs = ['src/main/res', 'src/main/res/drawable/Function', 'src/main/res/xml']
+            //java.srcDirs = ['src']
+            //assets.srcDirs = ['assets']
+            //res.srcDirs = ['res']
+            //manifest.srcFile 'AndroidManifest.xml'
+	    //wanjo: important, we need the folders as assets:
+            assets.srcDirs = ['../assets', '../config']
         }
     }
     productFlavors {

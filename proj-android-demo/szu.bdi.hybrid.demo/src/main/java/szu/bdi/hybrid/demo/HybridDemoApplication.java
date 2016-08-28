@@ -1,5 +1,6 @@
 package szu.bdi.hybrid.demo;
 
+import android.app.Application;
 import android.util.Log;
 
 import szu.bdi.hybrid.core.HybridApplication;
@@ -7,7 +8,10 @@ import szu.bdi.hybrid.core.HybridTools;
 
 //NOTES: must have an applicaton, otherwise data e.g.  app context maybe cleaned up by GC !!!!
 
-public class HybridDemoApplication extends HybridApplication {
+public class HybridDemoApplication
+        extends HybridApplication
+    //extends Application
+        {
     final private static String LOGTAG = "" + (new Object() {
         public String getClassName() {
             String clazzName = this.getClass().getName();
