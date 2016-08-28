@@ -89,6 +89,9 @@ public class MainActivity extends Activity {
                 //important: store the localWebRoot for later usage
                 HybridTools.localWebRoot = app_cache_dir_s + "/web/";
 
+								//HybridUi testUi = HybridTools.getHybruidUi("UiRoot");//从config.json中找到UiRoot对应的类，并实例后返回
+								//HybridTools.startUi("UiEntry", "{topbar:true}", testUi);//把这个实例显示出来，命名为 uiEntry，发送参数为 topbar:true
+
                 HybridTools.startUi("UiRoot", "", _entryAct);
 
                 new Handler().postDelayed(new Runnable() {
@@ -121,3 +124,4 @@ public class MainActivity extends Activity {
     }
 
 }
+

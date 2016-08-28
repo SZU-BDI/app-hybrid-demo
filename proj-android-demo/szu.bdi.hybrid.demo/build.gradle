@@ -1,27 +1,26 @@
 apply plugin: 'com.android.application'
 
 android {
-//    compileSdkVersion 21
+//compileSdkVersion 21
     compileSdkVersion Integer.parseInt(project.ANDROID_BUILD_SDK_VERSION)
-//    buildToolsVersion '23.0.3'
+//buildToolsVersion '23.0.3'
     buildToolsVersion project.ANDROID_BUILD_TOOLS_VERSION
 
     //useLibrary 'org.apache.http.legacy'//if using target sdk 23, use this to reuse some old lib
 
-    //for sign the apk:
-
-    //signingConfigs {
-    //	release {
-    //		storeFile file("xxx.jks")
-    //		storePassword System.console().readLine("\nKeystore password: ")
-    //		keyAlias "release"
-    //		keyPassword System.console().readLine("\nKey password: ")
-    //	}
-    //}
-//    compileOptions {
-//        sourceCompatibility JavaVersion.VERSION_1_7
-//        targetCompatibility JavaVersion.VERSION_1_7
-//    }
+		//for sign the apk:
+		//signingConfigs {
+		//	release {
+		//		storeFile file("xxx.jks")
+		//		storePassword System.console().readLine("\nKeystore password: ")
+		//		keyAlias "release"
+		//		keyPassword System.console().readLine("\nKey password: ")
+		//	}
+		//}
+		//compileOptions {
+		//    sourceCompatibility JavaVersion.VERSION_1_7
+		//    targetCompatibility JavaVersion.VERSION_1_7
+		//}
 
     signingConfigs {
         release {
@@ -56,21 +55,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.release
         }
-    }
-    applicationVariants.all { variant ->
-        variant.outputs.each { output ->
-            //def fileName = "${project.name}.apk";
-            //output.outputFile = new File(output.outputFile.parent, fileName)
-            //output.outputFile = new File(output.outputFile.parent, output.outputFile.name.replace(".apk", "-" + defaultConfig.versionName + ".apk"))
-            if (null != output.assemble) output.assemble.doLast {
-                copy {
-                    from output.outputFile.getAbsolutePath()
-                    into "../build/"
-                }
-            }
-        }
-			    }
-	    }
 			demo {
 				manifestPlaceholders = [build_type:"D"]
 					applicationIdSuffix ".demo"
@@ -88,6 +72,19 @@ android {
 					shrinkResources true
 					signingConfig signingConfigs.debug
 					proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+			}
+			applicationVariants.all { variant ->
+				variant.outputs.each { output ->
+					//def fileName = "${project.name}.apk";
+					//output.outputFile = new File(output.outputFile.parent, fileName)
+					//output.outputFile = new File(output.outputFile.parent, output.outputFile.name.replace(".apk", "-" + defaultConfig.versionName + ".apk"))
+					if (null != output.assemble) output.assemble.doLast {
+						copy {
+							from output.outputFile.getAbsolutePath()
+								into "../build/"
+						}
+					}
+				}
 			}
     }
     lintOptions {
