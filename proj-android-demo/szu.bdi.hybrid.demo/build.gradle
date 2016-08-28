@@ -6,7 +6,7 @@ android {
 //buildToolsVersion '23.0.3'
     buildToolsVersion project.ANDROID_BUILD_TOOLS_VERSION
 
-    //useLibrary 'org.apache.http.legacy'//if using target sdk 23, use this to reuse some old lib
+    useLibrary 'org.apache.http.legacy'//if using target sdk 23, use this to reuse some old lib
 
 		//for sign the apk:
 		//signingConfigs {
