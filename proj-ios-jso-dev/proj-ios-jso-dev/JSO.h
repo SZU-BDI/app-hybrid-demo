@@ -8,14 +8,21 @@
 
 #import <Foundation/Foundation.h>
 
-@interface JSO : NSObject
+@interface JSO : NSObject{
+ id innerid;//store the obj here
+}
 
-+ (JSO *)o2s:(NSString *)str;
-+ (NSString *)s2o:(JSO *)jso;
++ (id)s2id:(NSString *)s;
++ (NSString *)id2s:(id)id;
 
-- (void)toString;
++ (JSO *)s2o:(NSString *)str;
++ (NSString *)o2s:(JSO *)jso;
+
+
+- (NSString *)toString;
 - (void)fromString:(NSString *)str;
 
+//TODO:
 - (JSO *)getChild:(NSString *)key;
 - (void)setChild:(JSO *)jso forKey:(NSString *)key;
 

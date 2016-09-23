@@ -11,29 +11,62 @@
 // 抽象类
 @implementation JSO
 
-//class static method o2s
-+ (JSO *)o2s:(NSString *)str{
-    // subclass doing 该方法必须有返回值
-    return nil;
+
+//@ref https://danielsaidi.wordpress.com/2012/07/04/handling-json-in-ios/
++ (id)s2id:(NSString *)s
+{
+    //TODO shuanghu, 要补异常处理（解析失败时）
+    
+    NSData *data = [s dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *error = nil;
+    id result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
+    if (!result) {
+        NSLog(@"%@", error.description);
+    }
+    return result;
 }
 
-+ (NSString *)s2o:(JSO *)jso{
-    // subclass doing 该方法必须有返回值
-    return @"null";
++ (NSString *)id2s:(id)idid
+{
+    NSError *error;
+    NSData *result = [NSJSONSerialization dataWithJSONObject:idid options:NSJSONReadingAllowFragments|NSJSONWritingPrettyPrinted error:&error];
+    if (!result) {
+        NSLog(@"%@", error.description);
+    }
+   
+    NSString *rt= [[NSString alloc] initWithData:result encoding:NSUTF8StringEncoding];
+    return rt;
 }
 
-- (void)toString{
++ (JSO *)s2o:(NSString *)s{
+    id idid=[self s2id:s];
+    JSO *jso=[[JSO alloc] init];
+    [jso setValue:idid forKey:@"innerid"];
+    return jso;
+}
+
++ (NSString *)o2s:(JSO *)jso{
+    id idid=[jso valueForKey:@"innerid"];
+    NSString *s=[self id2s:idid];
+    return s;
+}
+
+- (NSString *)toString{
     // subclass doing
+    return [JSO o2s:self];
 }
 
-- (void)fromString:(NSString *)str{
-    // subclass doing
+- (void)fromString:(NSString *)s{
+    id idid=[JSO s2id:s];
+    [self setValue:idid forKey:@"innerid"];
 }
 
+//TODO
 - (JSO *)getChild:(NSString *)key{
     // subclass doing  该方法必须有返回值
     return nil;
 }
+//TODO
 - (void)setChild:(JSO *)jso forKey:(NSString *)key{
     // subclass doing
 }

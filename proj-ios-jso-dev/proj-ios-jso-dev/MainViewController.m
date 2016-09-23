@@ -8,7 +8,6 @@
 
 #import "MainViewController.h"
 #import "JSO.h"
-#import "JSO_Boolean.h"
 
 #define WIDTH    [UIScreen mainScreen].bounds.size.width
 #define HEIGHT   [UIScreen mainScreen].bounds.size.height
@@ -26,7 +25,12 @@
 //    NSString *str = @"{\"name\":\"Twotigers\"}";
     
     UILabel *lbl = [[UILabel alloc] init];
-    lbl.frame = CGRectMake(0, 0, WIDTH, 25);
+
+    //multiline:
+    lbl.lineBreakMode = NSLineBreakByWordWrapping;
+    lbl.numberOfLines = 20;
+    
+    lbl.frame = CGRectMake(0, 0, WIDTH, 200);
     lbl.center = CGPointMake(WIDTH/2, HEIGHT/2);
     lbl.textAlignment = NSTextAlignmentCenter;
 //    lable.text = [NSString stringWithFormat:@"%@", str];
@@ -36,13 +40,30 @@
 //    $b=new JSO_Boolean;
 //    echo ($b->fromString($s))->toString();
     
-    NSString *s = @"true";
+    //TODO (@shuanghua): get s from a input box;
+    //NSString *s = @"true"; //PASS
+    //NSString *s = @"false"; //PASS
+    //NSString *s = @"null";//test null //PASS
+    //NSString *s = @"\"\"";//empty string test //PASS
+    //NSString *s = @"[1,2,3]";//simple array  //PASS
+    NSString *s = @"{\"k1\":\"v1\"}";//simple object//PASS
+    //NSString *s = @"{k1:\"v1\"}";//error need to handle exception
+    
+
+    //lbl.text= [JSO id2s:[JSO s2id:s]];
+    JSO *o=[JSO s2o:s];
+    NSString *ss=[JSO o2s:o];
+     NSLog(@"%@", ss);
+    lbl.text= ss;
+    
+    
+    
     
     //$o=JSO::s2o(s);
-    JSO *o = [JSO o2s:s];
+    //JSO *o = [JSO s2o:s];
     
     //$lbl->text = JSO::o2s(o);
-    lbl.text= [JSO s2o:o];
+    //lbl.text= [JSO o2s:o];
     
 //    JSO_Boolean *b = [[JSO_Boolean alloc] init];
 //    [b fromString:s];

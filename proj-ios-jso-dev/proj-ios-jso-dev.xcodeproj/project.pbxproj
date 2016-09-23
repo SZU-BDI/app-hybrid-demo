@@ -15,12 +15,6 @@
 		1F16DAD71D95283B00C23138 /* proj_ios_jso_devUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16DAD61D95283B00C23138 /* proj_ios_jso_devUITests.m */; };
 		1F16DAE81D95284900C23138 /* JSO.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16DAE51D95284900C23138 /* JSO.m */; };
 		1F16DAEC1D9528B000C23138 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16DAEB1D9528B000C23138 /* MainViewController.m */; };
-		1F16DAF21D95314E00C23138 /* JSO_Boolean.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16DAF11D95314E00C23138 /* JSO_Boolean.m */; };
-		1F16DAF51D9536F600C23138 /* JSO_Null.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16DAF41D9536F600C23138 /* JSO_Null.m */; };
-		1F16DAF81D95370000C23138 /* JSO_String.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16DAF71D95370000C23138 /* JSO_String.m */; };
-		1F16DAFB1D95370900C23138 /* JSO_Number.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16DAFA1D95370900C23138 /* JSO_Number.m */; };
-		1F16DAFE1D95371500C23138 /* JSO_Dictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16DAFD1D95371500C23138 /* JSO_Dictionary.m */; };
-		1F16DB011D95372100C23138 /* JSO_Array.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16DB001D95372100C23138 /* JSO_Array.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,18 +52,6 @@
 		1F16DAE51D95284900C23138 /* JSO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSO.m; sourceTree = "<group>"; };
 		1F16DAEA1D9528B000C23138 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		1F16DAEB1D9528B000C23138 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		1F16DAF01D95314E00C23138 /* JSO_Boolean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSO_Boolean.h; sourceTree = "<group>"; };
-		1F16DAF11D95314E00C23138 /* JSO_Boolean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSO_Boolean.m; sourceTree = "<group>"; };
-		1F16DAF31D9536F600C23138 /* JSO_Null.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSO_Null.h; sourceTree = "<group>"; };
-		1F16DAF41D9536F600C23138 /* JSO_Null.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSO_Null.m; sourceTree = "<group>"; };
-		1F16DAF61D95370000C23138 /* JSO_String.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSO_String.h; sourceTree = "<group>"; };
-		1F16DAF71D95370000C23138 /* JSO_String.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSO_String.m; sourceTree = "<group>"; };
-		1F16DAF91D95370900C23138 /* JSO_Number.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSO_Number.h; sourceTree = "<group>"; };
-		1F16DAFA1D95370900C23138 /* JSO_Number.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSO_Number.m; sourceTree = "<group>"; };
-		1F16DAFC1D95371500C23138 /* JSO_Dictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSO_Dictionary.h; sourceTree = "<group>"; };
-		1F16DAFD1D95371500C23138 /* JSO_Dictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSO_Dictionary.m; sourceTree = "<group>"; };
-		1F16DAFF1D95372100C23138 /* JSO_Array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSO_Array.h; sourceTree = "<group>"; };
-		1F16DB001D95372100C23138 /* JSO_Array.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSO_Array.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,18 +104,6 @@
 			children = (
 				1F16DAE41D95284900C23138 /* JSO.h */,
 				1F16DAE51D95284900C23138 /* JSO.m */,
-				1F16DAF01D95314E00C23138 /* JSO_Boolean.h */,
-				1F16DAF11D95314E00C23138 /* JSO_Boolean.m */,
-				1F16DAF31D9536F600C23138 /* JSO_Null.h */,
-				1F16DAF41D9536F600C23138 /* JSO_Null.m */,
-				1F16DAF61D95370000C23138 /* JSO_String.h */,
-				1F16DAF71D95370000C23138 /* JSO_String.m */,
-				1F16DAF91D95370900C23138 /* JSO_Number.h */,
-				1F16DAFA1D95370900C23138 /* JSO_Number.m */,
-				1F16DAFC1D95371500C23138 /* JSO_Dictionary.h */,
-				1F16DAFD1D95371500C23138 /* JSO_Dictionary.m */,
-				1F16DAFF1D95372100C23138 /* JSO_Array.h */,
-				1F16DB001D95372100C23138 /* JSO_Array.m */,
 				1F16DAB41D95283A00C23138 /* AppDelegate.h */,
 				1F16DAB51D95283A00C23138 /* AppDelegate.m */,
 				1F16DAEA1D9528B000C23138 /* MainViewController.h */,
@@ -301,15 +271,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F16DB011D95372100C23138 /* JSO_Array.m in Sources */,
 				1F16DAE81D95284900C23138 /* JSO.m in Sources */,
-				1F16DAF81D95370000C23138 /* JSO_String.m in Sources */,
 				1F16DAB61D95283A00C23138 /* AppDelegate.m in Sources */,
-				1F16DAFB1D95370900C23138 /* JSO_Number.m in Sources */,
 				1F16DAEC1D9528B000C23138 /* MainViewController.m in Sources */,
-				1F16DAF51D9536F600C23138 /* JSO_Null.m in Sources */,
-				1F16DAFE1D95371500C23138 /* JSO_Dictionary.m in Sources */,
-				1F16DAF21D95314E00C23138 /* JSO_Boolean.m in Sources */,
 				1F16DAB31D95283A00C23138 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
