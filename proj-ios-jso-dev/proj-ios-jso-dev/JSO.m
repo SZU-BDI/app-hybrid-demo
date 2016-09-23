@@ -11,13 +11,29 @@
 // 抽象类
 @implementation JSO
 
-- (void)toString
-{
++ (JSO *)o2s:(NSString *)str{
+    // subclass doing 该方法必须有返回值
+    return nil;
+}
+
++ (NSString *)s2o:(JSO *)jso{
+    // subclass doing 该方法必须有返回值
+    return @"";
+}
+
+- (void)toString{
     // subclass doing
 }
 
-- (void)fromString:(NSString *)str
-{
+- (void)fromString:(NSString *)str{
+    // subclass doing
+}
+
+- (JSO *)getChild:(NSString *)key{
+    // subclass doing  该方法必须有返回值
+    return nil;
+}
+- (void)setChild:(JSO *)jso forKey:(NSString *)key{
     // subclass doing
 }
 

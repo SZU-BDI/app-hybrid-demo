@@ -10,7 +10,13 @@
 
 @interface JSO : NSObject
 
++ (JSO *)o2s:(NSString *)str;
++ (NSString *)s2o:(JSO *)jso;
+
 - (void)toString;
 - (void)fromString:(NSString *)str;
+
+- (JSO *)getChild:(NSString *)key;
+- (void)setChild:(JSO *)jso forKey:(NSString *)key;
 
 @end
