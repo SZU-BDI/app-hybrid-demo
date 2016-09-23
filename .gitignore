@@ -10,6 +10,8 @@ local.properties
 *.plist
 *.xcscheme
 *.xcbkptlist
+xcuserdata/
+xcuserdata
 build
 
 testproj-android-core/szu.bdi.hybrid.coretest/szu.bdi.hybrid.coretest-release.zip

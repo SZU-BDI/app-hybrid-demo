@@ -10,5 +10,7 @@ local.properties
 *.plist
 *.xcscheme
 *.xcbkptlist
+xcuserdata/
+xcuserdata
 build
 
