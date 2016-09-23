@@ -8,6 +8,8 @@
 
 #import "MainViewController.h"
 
+#define WIDTH    [UIScreen mainScreen].bounds.size.width
+#define HEIGHT   [UIScreen mainScreen].bounds.size.height
 @interface MainViewController ()
 
 @end
@@ -18,6 +20,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    NSString *str = @"{\"name\":\"Twotigers\"}";
+    
+    UILabel *lable = [[UILabel alloc] init];
+    lable.frame = CGRectMake(0, 0, WIDTH, 25);
+    lable.center = CGPointMake(WIDTH/2, HEIGHT/2);
+    lable.textAlignment = NSTextAlignmentCenter;
+    lable.text = [NSString stringWithFormat:@"%@", str];
+    [self.view addSubview:lable];
 }
 
 - (void)didReceiveMemoryWarning {
