@@ -11,6 +11,7 @@
 // 抽象类
 @implementation JSO
 
+//class static method o2s
 + (JSO *)o2s:(NSString *)str{
     // subclass doing 该方法必须有返回值
     return nil;
@@ -18,7 +19,7 @@
 
 + (NSString *)s2o:(JSO *)jso{
     // subclass doing 该方法必须有返回值
-    return @"";
+    return @"null";
 }
 
 - (void)toString{
