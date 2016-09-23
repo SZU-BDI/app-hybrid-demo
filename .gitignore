@@ -9,7 +9,9 @@ local.properties
 *.xcuserstate
 *.plist
 *.xcscheme
-
+*.xcbkptlist
+Breakpoints_v2.xcbkptlist
 build
+
 testproj-android-core/szu.bdi.hybrid.coretest/szu.bdi.hybrid.coretest-release.zip
 testproj-android-core/szu.bdi.hybrid.coretest/szu.bdi.hybrid.coretest-release.apk

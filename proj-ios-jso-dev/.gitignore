@@ -1,0 +1,15 @@
+.DS_Store
+local.properties
+*.iml
+*.rar
+*.iml
+*.swp
+*.un~
+*.xctest
+*.xcuserstate
+*.plist
+*.xcscheme
+*.xcbkptlist
+Breakpoints_v2.xcbkptlist
+build
+

@@ -47,13 +47,18 @@
     //NSString *s = @"\"\"";//empty string test //PASS
     //NSString *s = @"[1,2,3]";//simple array  //PASS
     NSString *s = @"{\"k1\":\"v1\"}";//simple object//PASS
-    //NSString *s = @"{k1:\"v1\"}";//error need to handle exception
+    
+    //NSString *s = @"{k1:\"v1\"}";//expected null //PASS
+    //TODO 后面可以在 s2o 那里定义 【会抛出异常】，这样使用者就要自行处理可能抛出的异常“JSON 格式不标准！”
     
 
     //lbl.text= [JSO id2s:[JSO s2id:s]];
     JSO *o=[JSO s2o:s];
+    
     NSString *ss=[JSO o2s:o];
+    
      NSLog(@"%@", ss);
+    
     lbl.text= ss;
     
     

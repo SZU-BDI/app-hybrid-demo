@@ -19,19 +19,28 @@
     
     NSData *data = [s dataUsingEncoding:NSUTF8StringEncoding];
     NSError *error = nil;
+    
     id result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
+//    id result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
+
     if (!result) {
         NSLog(@"%@", error.description);
     }
     return result;
 }
 
+//TODO 增加一个参数 “是否抛出异常" 默认值是 否
 + (NSString *)id2s:(id)idid
 {
     NSError *error;
-    NSData *result = [NSJSONSerialization dataWithJSONObject:idid options:NSJSONReadingAllowFragments|NSJSONWritingPrettyPrinted error:&error];
+
+//    NSData *result = [NSJSONSerialization dataWithJSONObject:idid options:NSJSONWritingPrettyPrinted error:&error];
+    if (idid==nil) return @"null";
+    
+    NSData *result = [NSJSONSerialization dataWithJSONObject:idid options:0 error:&error];
     if (!result) {
         NSLog(@"%@", error.description);
+        //TODO 抛出异常
     }
    
     NSString *rt= [[NSString alloc] initWithData:result encoding:NSUTF8StringEncoding];
