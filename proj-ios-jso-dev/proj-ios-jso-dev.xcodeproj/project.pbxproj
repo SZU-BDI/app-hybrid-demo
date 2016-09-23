@@ -15,6 +15,7 @@
 		1F16DAD71D95283B00C23138 /* proj_ios_jso_devUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16DAD61D95283B00C23138 /* proj_ios_jso_devUITests.m */; };
 		1F16DAE81D95284900C23138 /* JSO.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16DAE51D95284900C23138 /* JSO.m */; };
 		1F16DAEC1D9528B000C23138 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16DAEB1D9528B000C23138 /* MainViewController.m */; };
+		1F16DAF21D95314E00C23138 /* JSO_Boolean.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16DAF11D95314E00C23138 /* JSO_Boolean.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,8 @@
 		1F16DAE51D95284900C23138 /* JSO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSO.m; sourceTree = "<group>"; };
 		1F16DAEA1D9528B000C23138 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		1F16DAEB1D9528B000C23138 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		1F16DAF01D95314E00C23138 /* JSO_Boolean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSO_Boolean.h; sourceTree = "<group>"; };
+		1F16DAF11D95314E00C23138 /* JSO_Boolean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSO_Boolean.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,8 @@
 			children = (
 				1F16DAE41D95284900C23138 /* JSO.h */,
 				1F16DAE51D95284900C23138 /* JSO.m */,
+				1F16DAF01D95314E00C23138 /* JSO_Boolean.h */,
+				1F16DAF11D95314E00C23138 /* JSO_Boolean.m */,
 				1F16DAB41D95283A00C23138 /* AppDelegate.h */,
 				1F16DAB51D95283A00C23138 /* AppDelegate.m */,
 				1F16DAEA1D9528B000C23138 /* MainViewController.h */,
@@ -274,6 +279,7 @@
 				1F16DAE81D95284900C23138 /* JSO.m in Sources */,
 				1F16DAB61D95283A00C23138 /* AppDelegate.m in Sources */,
 				1F16DAEC1D9528B000C23138 /* MainViewController.m in Sources */,
+				1F16DAF21D95314E00C23138 /* JSO_Boolean.m in Sources */,
 				1F16DAB31D95283A00C23138 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

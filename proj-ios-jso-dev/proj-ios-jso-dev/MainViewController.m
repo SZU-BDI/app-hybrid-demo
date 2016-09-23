@@ -7,6 +7,8 @@
 //
 
 #import "MainViewController.h"
+#import "JSO.h"
+#import "JSO_Boolean.h"
 
 #define WIDTH    [UIScreen mainScreen].bounds.size.width
 #define HEIGHT   [UIScreen mainScreen].bounds.size.height
@@ -29,6 +31,15 @@
     lable.textAlignment = NSTextAlignmentCenter;
     lable.text = [NSString stringWithFormat:@"%@", str];
     [self.view addSubview:lable];
+    
+//    $s='true';
+//    $b=new JSO_Boolean;
+//    echo ($b->fromString($s))->toString();
+    
+    BOOL s = true;
+    JSO_Boolean *b = [[JSO_Boolean alloc] init];
+    [b fromString:[NSString stringWithFormat:@"%id", s]];
+    [b toString];
 }
 
 - (void)didReceiveMemoryWarning {
