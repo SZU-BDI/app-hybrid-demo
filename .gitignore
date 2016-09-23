@@ -1,13 +1,15 @@
-<<<<<<< HEAD
 .DS_Store
 local.properties
 *.iml
 *.rar
-=======
 *.iml
+*.swp
+*.un~
+*.xctest
+*.xcuserstate
+*.plist
+*.xcscheme
+
 build
-
 testproj-android-core/szu.bdi.hybrid.coretest/szu.bdi.hybrid.coretest-release.zip
-
 testproj-android-core/szu.bdi.hybrid.coretest/szu.bdi.hybrid.coretest-release.apk
->>>>>>> 269dd79417253b222ef00b40aeb8c8e7ecc3f50e
