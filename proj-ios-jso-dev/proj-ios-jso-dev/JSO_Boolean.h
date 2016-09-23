@@ -9,5 +9,5 @@
 #import "JSO.h"
 
 @interface JSO_Boolean : JSO
-
+@property (nonatomic, copy) NSString *jsoString;
 @end

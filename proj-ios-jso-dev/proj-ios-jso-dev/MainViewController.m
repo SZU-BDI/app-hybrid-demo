@@ -36,10 +36,13 @@
 //    $b=new JSO_Boolean;
 //    echo ($b->fromString($s))->toString();
     
-    BOOL s = true;
+    NSString *s = @"true";
     JSO_Boolean *b = [[JSO_Boolean alloc] init];
-    [b fromString:[NSString stringWithFormat:@"%id", s]];
+    [b fromString:s];
     [b toString];
+    
+    lable.text = b.jsoString;
+    
 }
 
 - (void)didReceiveMemoryWarning {

@@ -8,16 +8,17 @@
 
 #import "JSO_Boolean.h"
 
+
 @implementation JSO_Boolean
 
 - (void)toString
 {
-    NSLog(@"=%@", [NSString stringWithFormat:@"%@", self]);
+    NSLog(@"%@", [NSString stringWithFormat:@"%@", _jsoString]);
 }
 
 - (void)fromString:(NSString *)str
 {
-    NSLog(@"=%@", str);
+    _jsoString = str;
 }
 
 @end
