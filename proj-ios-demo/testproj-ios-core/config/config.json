@@ -1,0 +1,36 @@
+{
+    "ui_mapping":{
+        
+        "UiRoot":{
+            
+            "type":"WebView",
+            "topbar":"N",
+            "class":"WebViewUi",
+            "url":"root.htm"
+        },
+        "UiContent":{
+            
+            "type":"WebView",
+            "topbar":"Y",
+            "class":"WebViewUi"
+        },
+        "UiHome":{
+            
+            "type": "Native",
+            "class": "NativeUi"
+        }
+    },
+    
+    "api_mapping":{
+        
+        "_app_activity_open": "ApiActivityOpen",
+        "_app_activity_close": "ApiActivityClose"
+    },
+    
+    "api_auth":{
+        
+        "UiRoot": {
+            "root.htm": ["_app_activity_open","_app_activity_close"]
+        }
+    }
+}
