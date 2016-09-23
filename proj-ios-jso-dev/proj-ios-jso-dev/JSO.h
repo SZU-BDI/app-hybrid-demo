@@ -15,12 +15,12 @@
 + (id)s2id:(NSString *)s;
 + (NSString *)id2s:(id)id;
 
-+ (JSO *)s2o:(NSString *)str;
-+ (NSString *)o2s:(JSO *)jso;
++ (JSO *)s2o:(NSString *)s;
++ (NSString *)o2s:(JSO *)o;
 
 
 - (NSString *)toString;
-- (void)fromString:(NSString *)str;
+- (void)fromString:(NSString *)s;
 
 //TODO:
 - (JSO *)getChild:(NSString *)key;

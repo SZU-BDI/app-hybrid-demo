@@ -55,6 +55,10 @@
     //lbl.text= [JSO id2s:[JSO s2id:s]];
     JSO *o=[JSO s2o:s];
     
+    JSO *o2=[o getChild:@"k1"];
+    NSString *s2=[JSO o2s:o2];
+    NSLog(@"%@", s2);
+    
     NSString *ss=[JSO o2s:o];
     
      NSLog(@"%@", ss);
