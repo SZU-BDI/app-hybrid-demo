@@ -28,7 +28,9 @@
     NSError *error;
     
     if (idid==nil) return @"null";
-    
+    if( [idid isKindOfClass:[NSString class]]){
+        return (NSString *)idid;
+    }
     @try
     {
         //$result = NSJSONSerialization::dataWithJSONObject( $idid, $options=0, &$error);//don't use NSJSONWritingPrettyPrinted
@@ -92,10 +94,9 @@
 //TODO 临时实现的，还要优化！！！
 - (JSO *)getChild:(NSString *)key{
     id idid=[self valueForKey:@"innerid"];
-    id subid=[idid valueForKey:key];//...
+    id subid=[idid valueForKey:key];
     
     if(subid!=nil){
-//        NSString *s=[JSO id2s:subid];
         //$o=new JSO;
         JSO *o=[[JSO alloc] init];
         
@@ -105,13 +106,8 @@
     }else{
         return nil;
     }
-    //    //$o=new JSO;
-    //    JSO *o=[[JSO alloc] init];
-    //
-    //    //$o->setValue("innerid",$idid);
-    //    [o setValue:subid forKey:@"innerid"];
-    
 }
+
 //TODO
 - (void)setChild:(JSO *)jso forKey:(NSString *)key{
     // subclass doing
