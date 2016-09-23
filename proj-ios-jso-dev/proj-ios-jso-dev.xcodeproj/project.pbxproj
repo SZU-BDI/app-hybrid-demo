@@ -14,7 +14,6 @@
 		1F16DACC1D95283B00C23138 /* proj_ios_jso_devTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16DACB1D95283B00C23138 /* proj_ios_jso_devTests.m */; };
 		1F16DAD71D95283B00C23138 /* proj_ios_jso_devUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16DAD61D95283B00C23138 /* proj_ios_jso_devUITests.m */; };
 		1F16DAE81D95284900C23138 /* JSO.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16DAE51D95284900C23138 /* JSO.m */; };
-		1F16DAE91D95284900C23138 /* JSODoing.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16DAE71D95284900C23138 /* JSODoing.m */; };
 		1F16DAEC1D9528B000C23138 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16DAEB1D9528B000C23138 /* MainViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -51,8 +50,6 @@
 		1F16DAD81D95283B00C23138 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F16DAE41D95284900C23138 /* JSO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSO.h; sourceTree = "<group>"; };
 		1F16DAE51D95284900C23138 /* JSO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSO.m; sourceTree = "<group>"; };
-		1F16DAE61D95284900C23138 /* JSODoing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSODoing.h; sourceTree = "<group>"; };
-		1F16DAE71D95284900C23138 /* JSODoing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSODoing.m; sourceTree = "<group>"; };
 		1F16DAEA1D9528B000C23138 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		1F16DAEB1D9528B000C23138 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,8 +104,6 @@
 			children = (
 				1F16DAE41D95284900C23138 /* JSO.h */,
 				1F16DAE51D95284900C23138 /* JSO.m */,
-				1F16DAE61D95284900C23138 /* JSODoing.h */,
-				1F16DAE71D95284900C23138 /* JSODoing.m */,
 				1F16DAB41D95283A00C23138 /* AppDelegate.h */,
 				1F16DAB51D95283A00C23138 /* AppDelegate.m */,
 				1F16DAEA1D9528B000C23138 /* MainViewController.h */,
@@ -277,7 +272,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F16DAE81D95284900C23138 /* JSO.m in Sources */,
-				1F16DAE91D95284900C23138 /* JSODoing.m in Sources */,
 				1F16DAB61D95283A00C23138 /* AppDelegate.m in Sources */,
 				1F16DAEC1D9528B000C23138 /* MainViewController.m in Sources */,
 				1F16DAB31D95283A00C23138 /* main.m in Sources */,
@@ -498,6 +492,7 @@
 				1F16DADD1D95283B00C23138 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1F16DADE1D95283B00C23138 /* Build configuration list for PBXNativeTarget "proj-ios-jso-devTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +501,7 @@
 				1F16DAE01D95283B00C23138 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1F16DAE11D95283B00C23138 /* Build configuration list for PBXNativeTarget "proj-ios-jso-devUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +510,7 @@
 				1F16DAE31D95283B00C23138 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

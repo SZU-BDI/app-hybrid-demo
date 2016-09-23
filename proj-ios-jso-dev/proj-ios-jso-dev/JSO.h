@@ -10,30 +10,7 @@
 
 @interface JSO : NSObject
 
-- (void)testAction;
-
-@end
-
-@interface JSODictionary : JSO
-
-@end
-
-@interface JSOArray : JSO
-
-@end
-
-@interface JSONumber : JSO
-
-@end
-
-@interface JSOString : JSO
-
-@end
-
-@interface JSONull : JSO
-
-@end
-
-@interface JSOBollean : JSO
+- (void)toString;
+- (void)fromString:(NSString *)str;
 
 @end
