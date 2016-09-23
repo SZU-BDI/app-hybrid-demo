@@ -27,21 +27,6 @@
     self.window.rootViewController = mainVC;
     [self.window makeKeyAndVisible];
     
-//    JSODoing *jsoDoing = [[JSODoing alloc] init];
-//    JSO *jso1 = [[JSODictionary alloc] init];
-//    JSO *jso2 = [[JSOArray alloc] init];
-//    JSO *jso3 = [[JSONumber alloc] init];
-//    JSO *jso4 = [[JSOString alloc] init];
-//    JSO *jso5 = [[JSONull alloc] init];
-//    JSO *jso6 = [[JSOBollean alloc] init];
-//    
-//    [jsoDoing doTestAction:jso1];
-//    [jsoDoing doTestAction:jso2];
-//    [jsoDoing doTestAction:jso3];
-//    [jsoDoing doTestAction:jso4];
-//    [jsoDoing doTestAction:jso5];
-//    [jsoDoing doTestAction:jso6];
-    
     return YES;
 }
 

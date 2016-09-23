@@ -23,25 +23,28 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     
-    NSString *str = @"{\"name\":\"Twotigers\"}";
+//    NSString *str = @"{\"name\":\"Twotigers\"}";
     
-    UILabel *lable = [[UILabel alloc] init];
-    lable.frame = CGRectMake(0, 0, WIDTH, 25);
-    lable.center = CGPointMake(WIDTH/2, HEIGHT/2);
-    lable.textAlignment = NSTextAlignmentCenter;
-    lable.text = [NSString stringWithFormat:@"%@", str];
-    [self.view addSubview:lable];
+    UILabel *lbl = [[UILabel alloc] init];
+    lbl.frame = CGRectMake(0, 0, WIDTH, 25);
+    lbl.center = CGPointMake(WIDTH/2, HEIGHT/2);
+    lbl.textAlignment = NSTextAlignmentCenter;
+//    lable.text = [NSString stringWithFormat:@"%@", str];
+    [self.view addSubview:lbl];
     
 //    $s='true';
 //    $b=new JSO_Boolean;
 //    echo ($b->fromString($s))->toString();
     
     NSString *s = @"true";
+    //$o=JSO::s2o(s);
+    
+    
     JSO_Boolean *b = [[JSO_Boolean alloc] init];
     [b fromString:s];
     [b toString];
-    
-    lable.text = b.jsoString;
+
+    lbl.text = b.jsoString;
     
 }
 
