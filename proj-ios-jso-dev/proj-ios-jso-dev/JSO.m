@@ -8,21 +8,16 @@
 
 #import "JSO.h"
 
-// 抽象类
 @implementation JSO
 
-
 //@ref https://danielsaidi.wordpress.com/2012/07/04/handling-json-in-ios/
+
 + (id)s2id:(NSString *)s
 {
-    //TODO shuanghu, 要补异常处理（解析失败时）
-    
     NSData *data = [s dataUsingEncoding:NSUTF8StringEncoding];
     NSError *error = nil;
     
     id result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
-//    id result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
-
     if (!result) {
         NSLog(@"%@", error.description);
     }
@@ -61,7 +56,6 @@
 }
 
 - (NSString *)toString{
-    // subclass doing
     return [JSO o2s:self];
 }
 
