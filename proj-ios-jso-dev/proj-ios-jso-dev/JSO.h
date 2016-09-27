@@ -9,11 +9,12 @@
 #import <Foundation/Foundation.h>
 
 @interface JSO : NSObject{
- id innerid;//store the obj here
+    id innerid;//store the obj here
+    id k8;
 }
 
 + (id)s2id:(NSString *)s;
-+ (NSString *)id2s:(id)id;
++ (NSString *)id2s:(id)idid FlagThrowEx:(BOOL)flag;
 
 + (JSO *)s2o:(NSString *)s;
 + (NSString *)o2s:(JSO *)o;
@@ -24,6 +25,7 @@
 
 //TODO:
 - (JSO *)getChild:(NSString *)key;
-- (void)setChild:(JSO *)jso forKey:(NSString *)key;
+//- (void)setChild:(JSO *)jso forKey:(NSString *)key;
+- (void)setChild:(NSString *)child forKey:(NSString *)key;
 
 @end
