@@ -1,31 +1,24 @@
-//
-//  JSO.h
-//  AsiaWeiLuy
-//
-//  Created by 双虎 on 16/8/30.
-//  Copyright © 2016年 Megadata. All rights reserved.
-//
+//https://github.com/SZU-BDI/app-hybrid-demo/blob/master/proj-ios-jso-dev/proj-ios-jso-dev/JSO.h
+//Author: 双虎, Wanjo Chan
 
 #import <Foundation/Foundation.h>
 
 @interface JSO : NSObject{
-    id innerid;//store the obj here
-    id k8;
+    id _innerid;
 }
 
 + (id)s2id:(NSString *)s;
-+ (NSString *)id2s:(id)idid FlagThrowEx:(BOOL)flag;
++ (NSString *)id2s:(id)idid,...;
 
 + (JSO *)s2o:(NSString *)s;
 + (NSString *)o2s:(JSO *)o;
 
-
 - (NSString *)toString;
 - (void)fromString:(NSString *)s;
 
-//TODO:
-- (JSO *)getChild:(NSString *)key;
-//- (void)setChild:(JSO *)jso forKey:(NSString *)key;
-- (void)setChild:(NSString *)child forKey:(NSString *)key;
+- (JSO *)getChild:(NSString *)k;
+- (void)setChild:(NSString *)k JSO:(JSO *)o;
+- (JSO *)getChildByPath:(NSString *)path;
+- (void)removeChild:(NSString *)k;
 
 @end

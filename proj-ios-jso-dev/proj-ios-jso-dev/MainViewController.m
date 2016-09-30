@@ -39,7 +39,7 @@
 }
 
 - (void)setKeyValue:(NSNotification*)notification{
-
+    
     NSString *s = [NSString stringWithFormat:@"%@",notification.object];
     JSO *o = [JSO s2o:s];
     NSString *ss = [JSO o2s:o];
@@ -48,7 +48,7 @@
 }
 
 - (void)serializationAction{
- 
+    
     //    $s='true';
     //    $b=new JSO_Boolean;
     //    echo ($b->fromString($s))->toString();
@@ -73,20 +73,20 @@
 
 - (void)showValueForKey{
     
-    NSString *key = [NSString stringWithFormat:@"%@", _keyField.text];
-    NSString *s = [NSString stringWithFormat:@"%@", _jsonLabel.text];
-    
+    //NSString *key = [NSString stringWithFormat:@"%@", _keyField.text];
+    //NSString *s = [NSString stringWithFormat:@"%@", _jsonLabel.text];
+    NSString *k = _keyField.text;
+    NSString *s = _jsonLabel.text;
     JSO *o = [JSO s2o:s];
-    JSO *o2 =[o getChild:key];
-    
+    JSO *o2 =[o getChild:k];
+//    JSO *o2 =[o getChildByPath:k];
     NSString *ss = [JSO o2s:o2];
-    NSLog(@"取出 %@ 对应的值：%@", key, ss);
-    _valueLabel.text = [NSString stringWithFormat:@"取出 %@ 的值为：%@", key, ss];//test display k1's value
-    
+    NSLog(@"取出 %@ 对应的值：%@", k, ss);
+    _valueLabel.text=ss;
 }
 
 - (void)setJsoChildForKey{
-   
+    
     // 不规范
     // NSString *value = @"\"[1,2,{\"o\":\"haha\"}]";
     // NSString *value = @"123";
@@ -94,26 +94,35 @@
     // 规范
     // NSString *value = @"[1,2,{\"o\":\"haha\"}]";
     
+    NSString *ttt =_field.text;
     NSString *key = [NSString stringWithFormat:@"%@", _setKeyField.text];
     NSString *value = [NSString stringWithFormat:@"%@", _setValueField.text];
-//    NSString *keyValue = [NSString stringWithFormat:@"{%@:%@}", _setKeyField.text, _setValueField.text];
     
-    JSO *o = [[JSO alloc] init];
-//    NSString *sValue = [JSO o2s:oValue];
-//    NSLog(@"---%@", sValue);
+    JSO *o1 = [JSO s2o:ttt];
+    JSO *o2 = [JSO s2o:value];
     
-//    JSO *oKey = [JSO s2o:key];
-//    NSString *sKey = [JSO o2s:oKey];
-//    NSLog(@"+++%@", sKey);
+    [o1 setChild:key JSO:o2];
+    NSString *s1=[JSO o2s:o1];
+    _field.text=s1;
     
-        [o setChild:value forKey:key];
-//
-//    if ([ss isEqualToString:@"null"] || ss == nil) {
-//        NSLog(@"value 不规范");
-//    }
-//    else{
-//        [o setChild:o forKey:@"k8"];
-//    }
+    //    NSString *keyValue = [NSString stringWithFormat:@"{%@:%@}", _setKeyField.text, _setValueField.text];
+    
+    //JSO *o = [[JSO alloc] init];
+    //    NSString *sValue = [JSO o2s:oValue];
+    //    NSLog(@"---%@", sValue);
+    
+    //    JSO *oKey = [JSO s2o:key];
+    //    NSString *sKey = [JSO o2s:oKey];
+    //    NSLog(@"+++%@", sKey);
+    
+    //[o setChild:key JSO:o];
+    //
+    //    if ([ss isEqualToString:@"null"] || ss == nil) {
+    //        NSLog(@"value 不规范");
+    //    }
+    //    else{
+    //        [o setChild:o forKey:@"k8"];
+    //    }
 }
 
 - (void)showAlertMessage:(NSString *)message{
@@ -155,8 +164,8 @@
     _field.backgroundColor = [UIColor whiteColor];
     _field.placeholder = @"Input json string";
     
-    // 默认json
-    _field.text = @"{\"k1\":[1,2,{\"o\":\"haha\"}]}";
+    // test json
+    _field.text = @"{\"k6\":1,\"k7\":2.22,\"k3\":true,\"k4\":0,\"k5\":false,\"k1\":[1,2,{\"o\":\"haha\"}],\"k2\":{\"k21\":21,\"k22\":false,\"k23\":true}}";
     [self.view addSubview:_field];
     
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -175,7 +184,7 @@
     _keyField.placeholder = @"Input key";
     
     // 默认key值
-    _keyField.text = @"k1";
+    _keyField.text = @"k3";
     [self.view addSubview:_keyField];
     
     UIButton *keyBtn = [UIButton buttonWithType:UIButtonTypeCustom];
