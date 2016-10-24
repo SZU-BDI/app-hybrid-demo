@@ -24,6 +24,7 @@ public class MainActivity extends Activity {
 
     public static void main(final Activity _entryAct) {
         Log.v(LOGTAG, "main()");
+//        _entryAct.startActivity(new Intent(_entryAct, SplashActivity.class));
 
         //IMPORTANT...STORE the app context into the hybrid service for later use.
         HybridTools.setAppContext(_entryAct.getApplicationContext());
@@ -70,7 +71,7 @@ public class MainActivity extends Activity {
             String app_cache_dir_s = app_cache_dir_f.getAbsolutePath();
             File root_htm_f = new File(app_cache_dir_s + "/web/root.htm");
 
-//TODO if exists, check file size...
+            //TODO if exists, check file size...
             //TODO also check the version, if version different, copy too!
 
             if (!root_htm_f.exists() || !"N".equals(isFirstLoad) || !app_ver_saved.equals(app_ver)) {
@@ -89,29 +90,19 @@ public class MainActivity extends Activity {
                 //important: store the localWebRoot for later usage
                 HybridTools.localWebRoot = app_cache_dir_s + "/web/";
 
-								//HybridUi testUi = HybridTools.getHybruidUi("UiRoot");//从config.json中找到UiRoot对应的类，并实例后返回
-								//HybridTools.startUi("UiEntry", "{topbar:true}", testUi);//把这个实例显示出来，命名为 uiEntry，发送参数为 topbar:true
+                //HybridUi testUi = HybridTools.getHybruidUi("UiRoot");//从config.json中找到UiRoot对应的类，并实例后返回
+                //HybridTools.startUi("UiEntry", "{topbar:true}", testUi);//把这个实例显示出来，命名为 uiEntry，发送参数为 topbar:true
 
                 HybridTools.startUi("UiRoot", "", _entryAct);
 
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        //call a splash to cover the UI for view seconds
                         _entryAct.startActivity(new Intent(_entryAct, SplashActivity.class));
-
-                        //TODO
-                        // to run a longtime backgroup service if needed...
-                        //Intent bg = new Intent(getApplicationContext(), DemoBackgroundService.class);
-                        //_entryAct.startService(bg);
-
-                        //close the entry act (so that the UiRoot is on top now)
                         _entryAct.finish();
                     }
                 }, 1);
-
             }
-
         }
     }
 

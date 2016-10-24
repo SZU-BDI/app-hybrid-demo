@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest
-    package="szu.bdi.hybrid.demo"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    package="szu.bdi.hybrid.demo"
     android:installLocation="internalOnly">
 
     <!-- android:allowBackup="true" -->
@@ -11,7 +10,7 @@
     <!-- android:theme="@style/MyActionBarStyle" -->
     <!-- tools:replace="android:allowBackup" -->
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application android:name=".HybridDemoApplication">
 
@@ -19,24 +18,22 @@
         <!-- TOOL:  http://www.iconres.com/tool/drawable.php -->
         <activity
             android:name=".MainActivity"
-            android:theme="@style/android:Theme.Translucent.NoTitleBar.Fullscreen"
-            >
+            android:theme="@style/android:Theme.Translucent.NoTitleBar.Fullscreen">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <!-- register the other HybridUI -->
         <activity
             android:name=".SplashActivity"
-            android:theme="@style/android:Theme.Light.NoTitleBar"
-            />
-        <activity android:name="szu.bdi.hybrid.core.HybridUi"/>
-        <activity android:name="szu.bdi.hybrid.core.SimpleWebViewUi"/>
+            android:theme="@style/android:Theme.Light.NoTitleBar" />
 
-        <activity android:name="szu.bdi.hybrid.demo.UiHome"/>
+        <!-- register HybridUIs -->
+        <!--<activity android:name="szu.bdi.hybrid.core.HybridUi"/>-->
+        <activity android:name="szu.bdi.hybrid.core.SimpleWebViewUi" />
+        <activity android:name="szu.bdi.hybrid.demo.UiHome" />
     </application>
 
 </manifest>
