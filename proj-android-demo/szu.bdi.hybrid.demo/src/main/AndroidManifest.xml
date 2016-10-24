@@ -34,7 +34,7 @@
             android:theme="@style/android:Theme.Light.NoTitleBar"
             />
         <activity android:name="szu.bdi.hybrid.core.HybridUi"/>
-        <activity android:name="szu.bdi.hybrid.core.WebViewUi"/>
+        <activity android:name="szu.bdi.hybrid.core.SimpleWebViewUi"/>
 
         <activity android:name="szu.bdi.hybrid.demo.UiHome"/>
     </application>
