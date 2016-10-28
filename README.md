@@ -9,6 +9,11 @@ Combine with app-hybrid-core, we need to:
 2. API:  _demo_get_phone_info() as a demo api call for webview to get the phone info
 3. SHELL SCRIPT: build/pack/sign the target apk/ipa to build\ base on {$proj}\config.json
 
+# 【CHS】说明
+
+我们不是要取代 cordova/crosswalk 这种体量的项目！ 我们要的是简单配置、简单代码就能跑起来的 webview/hybrid app！
+
+
 # Folder and Files
 
 * $proj/../../app-hybrid-core/
