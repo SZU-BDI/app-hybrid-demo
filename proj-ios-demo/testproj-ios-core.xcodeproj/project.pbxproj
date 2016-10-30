@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F2596BA1D7809DF001524C4 /* JSODoing.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2596B91D7809DF001524C4 /* JSODoing.m */; };
 		1F5228821D76DCD00065E494 /* JSO.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5228751D76DCD00065E494 /* JSO.m */; };
 		1F647D481D1A329300602779 /* apitest.htm in Resources */ = {isa = PBXBuildFile; fileRef = 1F647D431D1A329300602779 /* apitest.htm */; };
 		1F647D491D1A329300602779 /* root.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1F647D441D1A329300602779 /* root.gif */; };
@@ -41,8 +40,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1F2596B81D7809DF001524C4 /* JSODoing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSODoing.h; sourceTree = "<group>"; };
-		1F2596B91D7809DF001524C4 /* JSODoing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSODoing.m; sourceTree = "<group>"; };
 		1F5228741D76DCD00065E494 /* JSO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSO.h; sourceTree = "<group>"; };
 		1F5228751D76DCD00065E494 /* JSO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSO.m; sourceTree = "<group>"; };
 		1F647D431D1A329300602779 /* apitest.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = apitest.htm; sourceTree = "<group>"; };
@@ -104,10 +101,9 @@
 			children = (
 				1F5228741D76DCD00065E494 /* JSO.h */,
 				1F5228751D76DCD00065E494 /* JSO.m */,
-				1F2596B81D7809DF001524C4 /* JSODoing.h */,
-				1F2596B91D7809DF001524C4 /* JSODoing.m */,
 			);
 			name = JSO;
+			path = "../../lib-ios-jso";
 			sourceTree = "<group>";
 		};
 		1F647D421D1A329300602779 /* assets */ = {
@@ -397,7 +393,6 @@
 				9EF476411D0E4771004032F7 /* HybridApi.m in Sources */,
 				9EF476441D0E4771004032F7 /* WebViewJavascriptBridge.m in Sources */,
 				9EF476601D0EB00B004032F7 /* WebViewUi.m in Sources */,
-				1F2596BA1D7809DF001524C4 /* JSODoing.m in Sources */,
 				9EF4763F1D0E4771004032F7 /* ApiActivityClose.m in Sources */,
 				1F5228821D76DCD00065E494 /* JSO.m in Sources */,
 				9EF4765F1D0EB00B004032F7 /* NativeUi.m in Sources */,

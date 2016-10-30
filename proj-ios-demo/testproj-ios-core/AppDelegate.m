@@ -10,7 +10,7 @@
 #import "HybridTools.h"
 #import "HybridUi.h"
 
-#import "JSODoing.h"
+//#import "JSODoing.h"
 #import "JSO.h"
 
 @interface AppDelegate ()
@@ -22,21 +22,21 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    JSODoing *jsoDoing = [[JSODoing alloc] init];
-    
-    JSO *jso1 = [[JSODictionary alloc] init];
-    JSO *jso2 = [[JSOArray alloc] init];
-    JSO *jso3 = [[JSONumber alloc] init];
-    JSO *jso4 = [[JSOString alloc] init];
-
-//    把NSString 转换成 JSO
-  //  如果s不是规范json抛出 JSOError
-
-    
-    [jsoDoing doTestAction:jso1];
-    [jsoDoing doTestAction:jso2];
-    [jsoDoing doTestAction:jso3];
-    [jsoDoing doTestAction:jso4];
+//    JSODoing *jsoDoing = [[JSODoing alloc] init];
+//    
+//    JSO *jso1 = [[JSODictionary alloc] init];
+//    JSO *jso2 = [[JSOArray alloc] init];
+//    JSO *jso3 = [[JSONumber alloc] init];
+//    JSO *jso4 = [[JSOString alloc] init];
+//
+////    把NSString 转换成 JSO
+//  //  如果s不是规范json抛出 JSOError
+//
+//    
+//    [jsoDoing doTestAction:jso1];
+//    [jsoDoing doTestAction:jso2];
+//    [jsoDoing doTestAction:jso3];
+//    [jsoDoing doTestAction:jso4];
 
     
     
