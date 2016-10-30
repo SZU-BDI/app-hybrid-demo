@@ -337,7 +337,6 @@
 				TargetAttributes = {
 					3F4179C01D0515A600B934C5 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = 9966L897A3;
 					};
 					3F4179D91D0515A600B934C5 = {
 						CreatedOnToolsVersion = 6.4;
@@ -531,7 +530,7 @@
 				INFOPLIST_FILE = "testproj-ios-core/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = info.cmptech.Hybrid;
+				PRODUCT_BUNDLE_IDENTIFIER = info.cmptech.hybrid.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -546,7 +545,7 @@
 				INFOPLIST_FILE = "testproj-ios-core/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = info.cmptech.Hybrid;
+				PRODUCT_BUNDLE_IDENTIFIER = info.cmptech.hybrid.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

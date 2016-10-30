@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "8521458FCE24AB77B68FA7DA5C76AE18C51DE230",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "96E62C1E463DFB441B894309CDB2932E6C86D565" : 0,
+    "8521458FCE24AB77B68FA7DA5C76AE18C51DE230" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "E009DEA8-D716-4796-8A5C-6E008A386202",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "96E62C1E463DFB441B894309CDB2932E6C86D565" : "app-hybrid-core\/",
+    "8521458FCE24AB77B68FA7DA5C76AE18C51DE230" : "app-hybrid-demo\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "testproj-ios-core",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "proj-ios-demo\/testproj-ios-core.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/SZU-BDI\/app-hybrid-demo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8521458FCE24AB77B68FA7DA5C76AE18C51DE230"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/SZU-BDI\/app-hybrid-core.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "96E62C1E463DFB441B894309CDB2932E6C86D565"
+    }
+  ]
+}
