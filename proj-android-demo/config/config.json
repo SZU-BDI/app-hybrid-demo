@@ -1,10 +1,10 @@
 {
   //map the api to the implement class
   "api_mapping": {
+    "_app_web": "szu.bdi.hybrid.core.ApiTestTODO",
     "_app_activity_open": "szu.bdi.hybrid.core.ApiUiOpen",
     "_app_activity_close": "szu.bdi.hybrid.core.ApiUiClose"
   },
-
   "app_ver": "1",
   //map the ui to the class (used by szu.bdi.hybrid.core.ApiUiOpen)
   "ui_mapping": {
@@ -25,11 +25,11 @@
       "class": "szu.bdi.hybrid.core.SimpleWebViewUi"
     }
   },
-
   //auth-binding: api to ui (used by callHandler()). * TODO improve better pattern in furture
   "api_auth": {
     "UiRoot": {
       "root.htm": [
+        "_app_web",
         "_app_activity_open",
         "_app_activity_close"
       ]
