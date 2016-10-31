@@ -1,0 +1,37 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "8521458FCE24AB77B68FA7DA5C76AE18C51DE230",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "96E62C1E463DFB441B894309CDB2932E6C86D565" : 0,
+    "8521458FCE24AB77B68FA7DA5C76AE18C51DE230" : 0,
+    "F132950660500D9F4D2C15B15FA05A6F857AA02F" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "BB96AA9C-CA9F-44A0-BFFB-5387E7E99B66",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "96E62C1E463DFB441B894309CDB2932E6C86D565" : "app-hybrid-core\/",
+    "8521458FCE24AB77B68FA7DA5C76AE18C51DE230" : "app-hybrid-demo\/",
+    "F132950660500D9F4D2C15B15FA05A6F857AA02F" : "lib-ios-jso\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "iosproject",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "proj-ios-demo\/iosproject.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/SZU-BDI\/app-hybrid-demo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8521458FCE24AB77B68FA7DA5C76AE18C51DE230"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/SZU-BDI\/app-hybrid-core.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "96E62C1E463DFB441B894309CDB2932E6C86D565"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/SZU-BDI\/lib-ios-jso.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F132950660500D9F4D2C15B15FA05A6F857AA02F"
+    }
+  ]
+}
