@@ -16,16 +16,16 @@
 		3F4179D21D0515A600B934C5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F4179D11D0515A600B934C5 /* Images.xcassets */; };
 		3F4179D51D0515A600B934C5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F4179D31D0515A600B934C5 /* LaunchScreen.xib */; };
 		3F4179E11D0515A600B934C5 /* testproj_ios_coreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4179E01D0515A600B934C5 /* testproj_ios_coreTests.m */; };
-		9EF4763F1D0E4771004032F7 /* ApiActivityClose.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EF4762A1D0E4771004032F7 /* ApiActivityClose.m */; };
-		9EF476401D0E4771004032F7 /* ApiActivityOpen.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EF4762D1D0E4771004032F7 /* ApiActivityOpen.m */; };
-		9EF476411D0E4771004032F7 /* HybridApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EF476311D0E4771004032F7 /* HybridApi.m */; };
-		9EF476421D0E4771004032F7 /* HybridTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EF476341D0E4771004032F7 /* HybridTools.m */; };
-		9EF476431D0E4771004032F7 /* HybridUi.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EF476371D0E4771004032F7 /* HybridUi.m */; };
-		9EF476441D0E4771004032F7 /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EF4763A1D0E4771004032F7 /* WebViewJavascriptBridge.m */; };
-		9EF476451D0E4771004032F7 /* WebViewJavascriptBridge_JS.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EF4763C1D0E4771004032F7 /* WebViewJavascriptBridge_JS.m */; };
-		9EF476461D0E4771004032F7 /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EF4763E1D0E4771004032F7 /* WebViewJavascriptBridgeBase.m */; };
-		9EF4765F1D0EB00B004032F7 /* NativeUi.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EF4765B1D0EB00B004032F7 /* NativeUi.m */; };
-		9EF476601D0EB00B004032F7 /* WebViewUi.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EF4765E1D0EB00B004032F7 /* WebViewUi.m */; };
+		8EBFF3EE1DC6CF3600AFF2AC /* ApiActivityClose.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFF3D81DC6CF3600AFF2AC /* ApiActivityClose.m */; };
+		8EBFF3EF1DC6CF3600AFF2AC /* ApiActivityOpen.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFF3DB1DC6CF3600AFF2AC /* ApiActivityOpen.m */; };
+		8EBFF3F01DC6CF3600AFF2AC /* HybridApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFF3DE1DC6CF3600AFF2AC /* HybridApi.m */; };
+		8EBFF3F11DC6CF3600AFF2AC /* HybridTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFF3E01DC6CF3600AFF2AC /* HybridTools.m */; };
+		8EBFF3F21DC6CF3600AFF2AC /* HybridUi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFF3E21DC6CF3600AFF2AC /* HybridUi.m */; };
+		8EBFF3F31DC6CF3600AFF2AC /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFF3E51DC6CF3600AFF2AC /* WebViewJavascriptBridge.m */; };
+		8EBFF3F41DC6CF3600AFF2AC /* WebViewJavascriptBridge_JS.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFF3E71DC6CF3600AFF2AC /* WebViewJavascriptBridge_JS.m */; };
+		8EBFF3F51DC6CF3600AFF2AC /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFF3E91DC6CF3600AFF2AC /* WebViewJavascriptBridgeBase.m */; };
+		8EBFF3F61DC6CF3600AFF2AC /* NativeUi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFF3EB1DC6CF3600AFF2AC /* NativeUi.m */; };
+		8EBFF3F71DC6CF3600AFF2AC /* WebViewUi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFF3ED1DC6CF3600AFF2AC /* WebViewUi.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,26 +54,26 @@
 		3F4179DA1D0515A600B934C5 /* testproj-ios-coreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "testproj-ios-coreTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F4179DF1D0515A600B934C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F4179E01D0515A600B934C5 /* testproj_ios_coreTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testproj_ios_coreTests.m; sourceTree = "<group>"; };
-		9EF476291D0E4771004032F7 /* ApiActivityClose.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiActivityClose.h; sourceTree = "<group>"; };
-		9EF4762A1D0E4771004032F7 /* ApiActivityClose.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiActivityClose.m; sourceTree = "<group>"; };
-		9EF4762C1D0E4771004032F7 /* ApiActivityOpen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiActivityOpen.h; sourceTree = "<group>"; };
-		9EF4762D1D0E4771004032F7 /* ApiActivityOpen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiActivityOpen.m; sourceTree = "<group>"; };
-		9EF476301D0E4771004032F7 /* HybridApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HybridApi.h; path = HybridApi/HybridApi.h; sourceTree = "<group>"; };
-		9EF476311D0E4771004032F7 /* HybridApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HybridApi.m; path = HybridApi/HybridApi.m; sourceTree = "<group>"; };
-		9EF476331D0E4771004032F7 /* HybridTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HybridTools.h; path = HybridTools/HybridTools.h; sourceTree = "<group>"; };
-		9EF476341D0E4771004032F7 /* HybridTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HybridTools.m; path = HybridTools/HybridTools.m; sourceTree = "<group>"; };
-		9EF476361D0E4771004032F7 /* HybridUi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HybridUi.h; path = HybridUi/HybridUi.h; sourceTree = "<group>"; };
-		9EF476371D0E4771004032F7 /* HybridUi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HybridUi.m; path = HybridUi/HybridUi.m; sourceTree = "<group>"; };
-		9EF476391D0E4771004032F7 /* WebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge.h; sourceTree = "<group>"; };
-		9EF4763A1D0E4771004032F7 /* WebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge.m; sourceTree = "<group>"; };
-		9EF4763B1D0E4771004032F7 /* WebViewJavascriptBridge_JS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge_JS.h; sourceTree = "<group>"; };
-		9EF4763C1D0E4771004032F7 /* WebViewJavascriptBridge_JS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge_JS.m; sourceTree = "<group>"; };
-		9EF4763D1D0E4771004032F7 /* WebViewJavascriptBridgeBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridgeBase.h; sourceTree = "<group>"; };
-		9EF4763E1D0E4771004032F7 /* WebViewJavascriptBridgeBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridgeBase.m; sourceTree = "<group>"; };
-		9EF4765A1D0EB00B004032F7 /* NativeUi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeUi.h; sourceTree = "<group>"; };
-		9EF4765B1D0EB00B004032F7 /* NativeUi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeUi.m; sourceTree = "<group>"; };
-		9EF4765D1D0EB00B004032F7 /* WebViewUi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewUi.h; sourceTree = "<group>"; };
-		9EF4765E1D0EB00B004032F7 /* WebViewUi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewUi.m; sourceTree = "<group>"; };
+		8EBFF3D71DC6CF3600AFF2AC /* ApiActivityClose.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiActivityClose.h; sourceTree = "<group>"; };
+		8EBFF3D81DC6CF3600AFF2AC /* ApiActivityClose.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiActivityClose.m; sourceTree = "<group>"; };
+		8EBFF3DA1DC6CF3600AFF2AC /* ApiActivityOpen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiActivityOpen.h; sourceTree = "<group>"; };
+		8EBFF3DB1DC6CF3600AFF2AC /* ApiActivityOpen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiActivityOpen.m; sourceTree = "<group>"; };
+		8EBFF3DD1DC6CF3600AFF2AC /* HybridApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HybridApi.h; sourceTree = "<group>"; };
+		8EBFF3DE1DC6CF3600AFF2AC /* HybridApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HybridApi.m; sourceTree = "<group>"; };
+		8EBFF3DF1DC6CF3600AFF2AC /* HybridTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HybridTools.h; sourceTree = "<group>"; };
+		8EBFF3E01DC6CF3600AFF2AC /* HybridTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HybridTools.m; sourceTree = "<group>"; };
+		8EBFF3E11DC6CF3600AFF2AC /* HybridUi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HybridUi.h; sourceTree = "<group>"; };
+		8EBFF3E21DC6CF3600AFF2AC /* HybridUi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HybridUi.m; sourceTree = "<group>"; };
+		8EBFF3E41DC6CF3600AFF2AC /* WebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge.h; sourceTree = "<group>"; };
+		8EBFF3E51DC6CF3600AFF2AC /* WebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge.m; sourceTree = "<group>"; };
+		8EBFF3E61DC6CF3600AFF2AC /* WebViewJavascriptBridge_JS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge_JS.h; sourceTree = "<group>"; };
+		8EBFF3E71DC6CF3600AFF2AC /* WebViewJavascriptBridge_JS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge_JS.m; sourceTree = "<group>"; };
+		8EBFF3E81DC6CF3600AFF2AC /* WebViewJavascriptBridgeBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridgeBase.h; sourceTree = "<group>"; };
+		8EBFF3E91DC6CF3600AFF2AC /* WebViewJavascriptBridgeBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridgeBase.m; sourceTree = "<group>"; };
+		8EBFF3EA1DC6CF3600AFF2AC /* NativeUi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeUi.h; sourceTree = "<group>"; };
+		8EBFF3EB1DC6CF3600AFF2AC /* NativeUi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeUi.m; sourceTree = "<group>"; };
+		8EBFF3EC1DC6CF3600AFF2AC /* WebViewUi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewUi.h; sourceTree = "<group>"; };
+		8EBFF3ED1DC6CF3600AFF2AC /* WebViewUi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewUi.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,23 +94,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1F5228731D76DCC00065E494 /* lib-JSO */ = {
+		1F5228731D76DCC00065E494 /* link-lib-JSO */ = {
 			isa = PBXGroup;
 			children = (
 				1F5228741D76DCD00065E494 /* JSO.h */,
 				1F5228751D76DCD00065E494 /* JSO.m */,
 			);
-			name = "lib-JSO";
+			name = "link-lib-JSO";
 			path = "../../lib-ios-jso";
 			sourceTree = "<group>";
 		};
-		1F647D421D1A329300602779 /* assets */ = {
+		1F647D421D1A329300602779 /* link-assets */ = {
 			isa = PBXGroup;
 			children = (
 				1F647D441D1A329300602779 /* root.gif */,
 				1F647D451D1A329300602779 /* root.htm */,
 			);
-			name = assets;
+			name = "link-assets";
 			path = ../assetsHybridDemo/web;
 			sourceTree = "<group>";
 		};
@@ -125,12 +125,10 @@
 		3F4179B81D0515A600B934C5 = {
 			isa = PBXGroup;
 			children = (
-				9EF476271D0E4771004032F7 /* lib-ios */,
-				1F5228731D76DCC00065E494 /* lib-JSO */,
-				1F647D421D1A329300602779 /* assets */,
+				8EBFF3D51DC6CF3600AFF2AC /* link-lib-ios */,
+				1F5228731D76DCC00065E494 /* link-lib-JSO */,
+				1F647D421D1A329300602779 /* link-assets */,
 				1F647D461D1A329300602779 /* config */,
-				9EF476591D0EB00B004032F7 /* NativeUi */,
-				9EF4765C1D0EB00B004032F7 /* WebViewUi */,
 				3F4179C31D0515A600B934C5 /* testproj-ios-core */,
 				3F4179DD1D0515A600B934C5 /* testproj-ios-coreTests */,
 				3F4179C21D0515A600B934C5 /* Products */,
@@ -184,78 +182,64 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		9EF476271D0E4771004032F7 /* lib-ios */ = {
+		8EBFF3D51DC6CF3600AFF2AC /* link-lib-ios */ = {
 			isa = PBXGroup;
 			children = (
-				9EF4762B1D0E4771004032F7 /* _app_activity_open */,
-				9EF476281D0E4771004032F7 /* _app_activity_close */,
-				9EF4762E1D0E4771004032F7 /* szu-bdi-hybrid-core */,
+				8EBFF3D61DC6CF3600AFF2AC /* _app_activity_close */,
+				8EBFF3D91DC6CF3600AFF2AC /* _app_activity_open */,
+				8EBFF3DC1DC6CF3600AFF2AC /* szu-bdi-hybrid-core */,
 			);
-			name = "lib-ios";
+			name = "link-lib-ios";
 			path = "../../app-hybrid-core/lib-ios";
 			sourceTree = "<group>";
 		};
-		9EF476281D0E4771004032F7 /* _app_activity_close */ = {
+		8EBFF3D61DC6CF3600AFF2AC /* _app_activity_close */ = {
 			isa = PBXGroup;
 			children = (
-				9EF476291D0E4771004032F7 /* ApiActivityClose.h */,
-				9EF4762A1D0E4771004032F7 /* ApiActivityClose.m */,
+				8EBFF3D71DC6CF3600AFF2AC /* ApiActivityClose.h */,
+				8EBFF3D81DC6CF3600AFF2AC /* ApiActivityClose.m */,
 			);
 			path = _app_activity_close;
 			sourceTree = "<group>";
 		};
-		9EF4762B1D0E4771004032F7 /* _app_activity_open */ = {
+		8EBFF3D91DC6CF3600AFF2AC /* _app_activity_open */ = {
 			isa = PBXGroup;
 			children = (
-				9EF4762C1D0E4771004032F7 /* ApiActivityOpen.h */,
-				9EF4762D1D0E4771004032F7 /* ApiActivityOpen.m */,
+				8EBFF3DA1DC6CF3600AFF2AC /* ApiActivityOpen.h */,
+				8EBFF3DB1DC6CF3600AFF2AC /* ApiActivityOpen.m */,
 			);
 			path = _app_activity_open;
 			sourceTree = "<group>";
 		};
-		9EF4762E1D0E4771004032F7 /* szu-bdi-hybrid-core */ = {
+		8EBFF3DC1DC6CF3600AFF2AC /* szu-bdi-hybrid-core */ = {
 			isa = PBXGroup;
 			children = (
-				9EF476301D0E4771004032F7 /* HybridApi.h */,
-				9EF476311D0E4771004032F7 /* HybridApi.m */,
-				9EF476361D0E4771004032F7 /* HybridUi.h */,
-				9EF476371D0E4771004032F7 /* HybridUi.m */,
-				9EF476331D0E4771004032F7 /* HybridTools.h */,
-				9EF476341D0E4771004032F7 /* HybridTools.m */,
-				9EF476381D0E4771004032F7 /* JavascriptBridge */,
+				8EBFF3DD1DC6CF3600AFF2AC /* HybridApi.h */,
+				8EBFF3DE1DC6CF3600AFF2AC /* HybridApi.m */,
+				8EBFF3DF1DC6CF3600AFF2AC /* HybridTools.h */,
+				8EBFF3E01DC6CF3600AFF2AC /* HybridTools.m */,
+				8EBFF3E11DC6CF3600AFF2AC /* HybridUi.h */,
+				8EBFF3E21DC6CF3600AFF2AC /* HybridUi.m */,
+				8EBFF3E31DC6CF3600AFF2AC /* JsBridge */,
+				8EBFF3EA1DC6CF3600AFF2AC /* NativeUi.h */,
+				8EBFF3EB1DC6CF3600AFF2AC /* NativeUi.m */,
+				8EBFF3EC1DC6CF3600AFF2AC /* WebViewUi.h */,
+				8EBFF3ED1DC6CF3600AFF2AC /* WebViewUi.m */,
 			);
 			path = "szu-bdi-hybrid-core";
 			sourceTree = "<group>";
 		};
-		9EF476381D0E4771004032F7 /* JavascriptBridge */ = {
+		8EBFF3E31DC6CF3600AFF2AC /* JsBridge */ = {
 			isa = PBXGroup;
 			children = (
-				9EF476391D0E4771004032F7 /* WebViewJavascriptBridge.h */,
-				9EF4763A1D0E4771004032F7 /* WebViewJavascriptBridge.m */,
-				9EF4763B1D0E4771004032F7 /* WebViewJavascriptBridge_JS.h */,
-				9EF4763C1D0E4771004032F7 /* WebViewJavascriptBridge_JS.m */,
-				9EF4763D1D0E4771004032F7 /* WebViewJavascriptBridgeBase.h */,
-				9EF4763E1D0E4771004032F7 /* WebViewJavascriptBridgeBase.m */,
+				8EBFF3E41DC6CF3600AFF2AC /* WebViewJavascriptBridge.h */,
+				8EBFF3E51DC6CF3600AFF2AC /* WebViewJavascriptBridge.m */,
+				8EBFF3E61DC6CF3600AFF2AC /* WebViewJavascriptBridge_JS.h */,
+				8EBFF3E71DC6CF3600AFF2AC /* WebViewJavascriptBridge_JS.m */,
+				8EBFF3E81DC6CF3600AFF2AC /* WebViewJavascriptBridgeBase.h */,
+				8EBFF3E91DC6CF3600AFF2AC /* WebViewJavascriptBridgeBase.m */,
 			);
-			path = JavascriptBridge;
-			sourceTree = "<group>";
-		};
-		9EF476591D0EB00B004032F7 /* NativeUi */ = {
-			isa = PBXGroup;
-			children = (
-				9EF4765A1D0EB00B004032F7 /* NativeUi.h */,
-				9EF4765B1D0EB00B004032F7 /* NativeUi.m */,
-			);
-			path = NativeUi;
-			sourceTree = "<group>";
-		};
-		9EF4765C1D0EB00B004032F7 /* WebViewUi */ = {
-			isa = PBXGroup;
-			children = (
-				9EF4765D1D0EB00B004032F7 /* WebViewUi.h */,
-				9EF4765E1D0EB00B004032F7 /* WebViewUi.m */,
-			);
-			path = WebViewUi;
+			path = JsBridge;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,18 +345,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F4179CA1D0515A600B934C5 /* AppDelegate.m in Sources */,
-				9EF476461D0E4771004032F7 /* WebViewJavascriptBridgeBase.m in Sources */,
-				9EF476401D0E4771004032F7 /* ApiActivityOpen.m in Sources */,
-				9EF476411D0E4771004032F7 /* HybridApi.m in Sources */,
-				9EF476441D0E4771004032F7 /* WebViewJavascriptBridge.m in Sources */,
-				9EF476601D0EB00B004032F7 /* WebViewUi.m in Sources */,
-				9EF4763F1D0E4771004032F7 /* ApiActivityClose.m in Sources */,
+				8EBFF3F31DC6CF3600AFF2AC /* WebViewJavascriptBridge.m in Sources */,
+				8EBFF3F11DC6CF3600AFF2AC /* HybridTools.m in Sources */,
 				1F5228821D76DCD00065E494 /* JSO.m in Sources */,
-				9EF4765F1D0EB00B004032F7 /* NativeUi.m in Sources */,
-				9EF476451D0E4771004032F7 /* WebViewJavascriptBridge_JS.m in Sources */,
-				9EF476421D0E4771004032F7 /* HybridTools.m in Sources */,
+				8EBFF3F41DC6CF3600AFF2AC /* WebViewJavascriptBridge_JS.m in Sources */,
+				8EBFF3F71DC6CF3600AFF2AC /* WebViewUi.m in Sources */,
+				8EBFF3F51DC6CF3600AFF2AC /* WebViewJavascriptBridgeBase.m in Sources */,
+				8EBFF3F61DC6CF3600AFF2AC /* NativeUi.m in Sources */,
+				8EBFF3EF1DC6CF3600AFF2AC /* ApiActivityOpen.m in Sources */,
+				8EBFF3EE1DC6CF3600AFF2AC /* ApiActivityClose.m in Sources */,
+				8EBFF3F21DC6CF3600AFF2AC /* HybridUi.m in Sources */,
+				8EBFF3F01DC6CF3600AFF2AC /* HybridApi.m in Sources */,
 				3F4179C71D0515A600B934C5 /* main.m in Sources */,
-				9EF476431D0E4771004032F7 /* HybridUi.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

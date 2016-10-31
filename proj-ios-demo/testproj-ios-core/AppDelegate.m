@@ -14,7 +14,6 @@
 #import "JSO.h"
 
 @interface AppDelegate ()
-
 @end
 
 @implementation AppDelegate
