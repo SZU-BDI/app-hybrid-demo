@@ -71,6 +71,7 @@ public class MainActivity extends Activity {
             //TODO if exists, check file size...
             //TODO also check the version, if version different, copy too!
 
+            //TODO 加多一个判断 config.json和root.htm 的时间？
             if (!root_htm_f.exists() || !"N".equals(isFirstLoad) || !app_ver_saved.equals(app_ver)) {
                 Log.v(LOGTAG, "copy files to " + app_cache_dir_s);
                 HybridTools.copyAssetFolder(HybridTools.getAppContext().getAssets(), "web", app_cache_dir_s + "/web");
