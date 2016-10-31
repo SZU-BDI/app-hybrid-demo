@@ -17,6 +17,7 @@
         "UiHome":{
             
             "type": "Native",
+            "topbar":"Y",
             "class": "NativeUi"
         }
     },
