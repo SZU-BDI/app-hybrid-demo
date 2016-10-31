@@ -10,21 +10,16 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
 </head>
 <body>
-<h2>root.htm</h2>
+<h2>root</h2>
 <div id='loading'>
     <table width="100%" height="100%" border="3">
         <tr height="30%">
             <td align="center" valign="bottom">
-                <!--
-                <a href="javascript:alert('test alert');">alert</a>
-                <a href="javascript:alert(typeof AndroidWebView);">typeof AndroidWebView</a>
-                <a href
-                ="javascript:alert(AndroidWebView._send('testcmd','testid','testparam'));"
-                >_AndroidWebView._send</a>
-                <a href
-                           ="javascript:alert(AndroidWebView._send);"
-                        >alert AndroidWebView._send</a>-->
+
                 <a href="javascript:alert('content');">alert</a><br/>
+
+                <a href="javascript:test_web();">Test web()</a>&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+
                 <a href="javascript:test_app_activity_open_1();">
                     _app_activity_open (topbar:Y)</a>&nbsp;&nbsp;&nbsp;&nbsp;<br/>
                 <a href="javascript:test_app_activity_open_2();">
@@ -38,6 +33,7 @@
                 <a href="javascript:test_app_activity_open_6();">
                     _app_activity_open (UiHome topbar:N)</a>&nbsp;&nbsp;&nbsp;&nbsp;<br/>
                 <a href="javascript:test_app_activity_close();">Test test_app_activity_close</a>&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+
 
                 <script>
 function s2o(strJson){ try{ var myjson=null; return (new Function('return '+strJson))(); }catch(ex){} };
@@ -220,11 +216,11 @@ alert(o2s(rt));
 });
 }
 
-
-
-
-
-
+function test_web(){
+window.cmpjsbridge.callHandler('_app_web', {"url":"http://jump.ws"},function( rt ){
+alert(o2s(rt));
+});
+}
                 </script>
                 <img id="loading_gif" src='root.gif' onclick='location.reload();'/></td>
         </tr>

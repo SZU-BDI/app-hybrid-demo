@@ -27,7 +27,7 @@ public class MainActivity extends Activity {
 //        _entryAct.startActivity(new Intent(_entryAct, SplashActivity.class));
 
         //IMPORTANT...STORE the app context into the hybrid service for later use.
-        HybridTools.setAppContext(_entryAct.getApplicationContext());
+        //HybridTools.setAppContext(_entryAct.getApplicationContext());
 
         int _sdk_int = android.os.Build.VERSION.SDK_INT;
 
@@ -36,7 +36,7 @@ public class MainActivity extends Activity {
             HybridTools.quickShowMsgMain("Your Phone is too old...");
         }
 
-        HybridTools.uiNeedNetworkPolicyHack();
+        AppTools.uiNeedNetworkPolicyHack();
 
         final String sJsonConf = HybridTools.readAssetInStr("config.json");
         final JSONObject o = HybridTools.s2o(sJsonConf);
@@ -45,7 +45,7 @@ public class MainActivity extends Activity {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     Log.v(LOGTAG, "config.json=" + sJsonConf);
-                    HybridTools.KillAppSelf();//violent
+                    AppTools.KillAppSelf();//violent
                 }
             });
         } else {
@@ -59,9 +59,6 @@ public class MainActivity extends Activity {
             if (app_ver_saved == null) app_ver_saved = "";
 
             String isFirstLoad = HybridTools.getSavedSetting(_appContext, "APP", "isFirstLoad");
-
-            HybridTools.saveSetting(_appContext, "APP", "isFirstLoad", "N");
-            HybridTools.saveSetting(_appContext, "APP", "app_ver", app_ver);
 
             //isFirstLoad = "";//test only
             //HybridTools.quickShowMsgMain("isFirstLoad=" + isFirstLoad);
@@ -83,10 +80,13 @@ public class MainActivity extends Activity {
                 HybridTools.appAlert(_entryAct, "Failed Init", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        HybridTools.KillAppSelf();//so violent
+                        AppTools.KillAppSelf();//so violent
                     }
                 });
             } else {
+                HybridTools.saveSetting(_appContext, "APP", "isFirstLoad", "N");
+                HybridTools.saveSetting(_appContext, "APP", "app_ver", app_ver);
+
                 //important: store the localWebRoot for later usage
                 HybridTools.localWebRoot = app_cache_dir_s + "/web/";
 
