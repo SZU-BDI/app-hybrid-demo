@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1F5228821D76DCD00065E494 /* JSO.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5228751D76DCD00065E494 /* JSO.m */; };
-		1F647D481D1A329300602779 /* apitest.htm in Resources */ = {isa = PBXBuildFile; fileRef = 1F647D431D1A329300602779 /* apitest.htm */; };
 		1F647D491D1A329300602779 /* root.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1F647D441D1A329300602779 /* root.gif */; };
 		1F647D4A1D1A329300602779 /* root.htm in Resources */ = {isa = PBXBuildFile; fileRef = 1F647D451D1A329300602779 /* root.htm */; };
 		1F647D4B1D1A329300602779 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F647D471D1A329300602779 /* config.json */; };
@@ -42,7 +41,6 @@
 /* Begin PBXFileReference section */
 		1F5228741D76DCD00065E494 /* JSO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSO.h; sourceTree = "<group>"; };
 		1F5228751D76DCD00065E494 /* JSO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSO.m; sourceTree = "<group>"; };
-		1F647D431D1A329300602779 /* apitest.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = apitest.htm; sourceTree = "<group>"; };
 		1F647D441D1A329300602779 /* root.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = root.gif; sourceTree = "<group>"; };
 		1F647D451D1A329300602779 /* root.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = root.htm; sourceTree = "<group>"; };
 		1F647D471D1A329300602779 /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config.json; sourceTree = "<group>"; };
@@ -60,12 +58,12 @@
 		9EF4762A1D0E4771004032F7 /* ApiActivityClose.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiActivityClose.m; sourceTree = "<group>"; };
 		9EF4762C1D0E4771004032F7 /* ApiActivityOpen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiActivityOpen.h; sourceTree = "<group>"; };
 		9EF4762D1D0E4771004032F7 /* ApiActivityOpen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiActivityOpen.m; sourceTree = "<group>"; };
-		9EF476301D0E4771004032F7 /* HybridApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HybridApi.h; sourceTree = "<group>"; };
-		9EF476311D0E4771004032F7 /* HybridApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HybridApi.m; sourceTree = "<group>"; };
-		9EF476331D0E4771004032F7 /* HybridTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HybridTools.h; sourceTree = "<group>"; };
-		9EF476341D0E4771004032F7 /* HybridTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HybridTools.m; sourceTree = "<group>"; };
-		9EF476361D0E4771004032F7 /* HybridUi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HybridUi.h; sourceTree = "<group>"; };
-		9EF476371D0E4771004032F7 /* HybridUi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HybridUi.m; sourceTree = "<group>"; };
+		9EF476301D0E4771004032F7 /* HybridApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HybridApi.h; path = HybridApi/HybridApi.h; sourceTree = "<group>"; };
+		9EF476311D0E4771004032F7 /* HybridApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HybridApi.m; path = HybridApi/HybridApi.m; sourceTree = "<group>"; };
+		9EF476331D0E4771004032F7 /* HybridTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HybridTools.h; path = HybridTools/HybridTools.h; sourceTree = "<group>"; };
+		9EF476341D0E4771004032F7 /* HybridTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HybridTools.m; path = HybridTools/HybridTools.m; sourceTree = "<group>"; };
+		9EF476361D0E4771004032F7 /* HybridUi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HybridUi.h; path = HybridUi/HybridUi.h; sourceTree = "<group>"; };
+		9EF476371D0E4771004032F7 /* HybridUi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HybridUi.m; path = HybridUi/HybridUi.m; sourceTree = "<group>"; };
 		9EF476391D0E4771004032F7 /* WebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge.h; sourceTree = "<group>"; };
 		9EF4763A1D0E4771004032F7 /* WebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge.m; sourceTree = "<group>"; };
 		9EF4763B1D0E4771004032F7 /* WebViewJavascriptBridge_JS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge_JS.h; sourceTree = "<group>"; };
@@ -96,24 +94,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1F5228731D76DCC00065E494 /* JSO */ = {
+		1F5228731D76DCC00065E494 /* lib-JSO */ = {
 			isa = PBXGroup;
 			children = (
 				1F5228741D76DCD00065E494 /* JSO.h */,
 				1F5228751D76DCD00065E494 /* JSO.m */,
 			);
-			name = JSO;
+			name = "lib-JSO";
 			path = "../../lib-ios-jso";
 			sourceTree = "<group>";
 		};
 		1F647D421D1A329300602779 /* assets */ = {
 			isa = PBXGroup;
 			children = (
-				1F647D431D1A329300602779 /* apitest.htm */,
 				1F647D441D1A329300602779 /* root.gif */,
 				1F647D451D1A329300602779 /* root.htm */,
 			);
-			path = assets;
+			name = assets;
+			path = ../assetsHybridDemo/web;
 			sourceTree = "<group>";
 		};
 		1F647D461D1A329300602779 /* config */ = {
@@ -127,12 +125,12 @@
 		3F4179B81D0515A600B934C5 = {
 			isa = PBXGroup;
 			children = (
-				1F5228731D76DCC00065E494 /* JSO */,
+				9EF476271D0E4771004032F7 /* lib-ios */,
+				1F5228731D76DCC00065E494 /* lib-JSO */,
 				1F647D421D1A329300602779 /* assets */,
 				1F647D461D1A329300602779 /* config */,
 				9EF476591D0EB00B004032F7 /* NativeUi */,
 				9EF4765C1D0EB00B004032F7 /* WebViewUi */,
-				9EF476271D0E4771004032F7 /* lib-ios */,
 				3F4179C31D0515A600B934C5 /* testproj-ios-core */,
 				3F4179DD1D0515A600B934C5 /* testproj-ios-coreTests */,
 				3F4179C21D0515A600B934C5 /* Products */,
@@ -218,39 +216,15 @@
 		9EF4762E1D0E4771004032F7 /* szu-bdi-hybrid-core */ = {
 			isa = PBXGroup;
 			children = (
-				9EF476381D0E4771004032F7 /* JavascriptBridge */,
-				9EF476351D0E4771004032F7 /* HybridUi */,
-				9EF4762F1D0E4771004032F7 /* HybridApi */,
-				9EF476321D0E4771004032F7 /* HybridTools */,
-			);
-			path = "szu-bdi-hybrid-core";
-			sourceTree = "<group>";
-		};
-		9EF4762F1D0E4771004032F7 /* HybridApi */ = {
-			isa = PBXGroup;
-			children = (
 				9EF476301D0E4771004032F7 /* HybridApi.h */,
 				9EF476311D0E4771004032F7 /* HybridApi.m */,
-			);
-			path = HybridApi;
-			sourceTree = "<group>";
-		};
-		9EF476321D0E4771004032F7 /* HybridTools */ = {
-			isa = PBXGroup;
-			children = (
-				9EF476331D0E4771004032F7 /* HybridTools.h */,
-				9EF476341D0E4771004032F7 /* HybridTools.m */,
-			);
-			path = HybridTools;
-			sourceTree = "<group>";
-		};
-		9EF476351D0E4771004032F7 /* HybridUi */ = {
-			isa = PBXGroup;
-			children = (
 				9EF476361D0E4771004032F7 /* HybridUi.h */,
 				9EF476371D0E4771004032F7 /* HybridUi.m */,
+				9EF476331D0E4771004032F7 /* HybridTools.h */,
+				9EF476341D0E4771004032F7 /* HybridTools.m */,
+				9EF476381D0E4771004032F7 /* JavascriptBridge */,
 			);
-			path = HybridUi;
+			path = "szu-bdi-hybrid-core";
 			sourceTree = "<group>";
 		};
 		9EF476381D0E4771004032F7 /* JavascriptBridge */ = {
@@ -365,7 +339,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F647D491D1A329300602779 /* root.gif in Resources */,
-				1F647D481D1A329300602779 /* apitest.htm in Resources */,
 				3F4179D51D0515A600B934C5 /* LaunchScreen.xib in Resources */,
 				1F647D4A1D1A329300602779 /* root.htm in Resources */,
 				3F4179D21D0515A600B934C5 /* Images.xcassets in Resources */,
