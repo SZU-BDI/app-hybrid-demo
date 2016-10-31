@@ -33,7 +33,7 @@
 		1F647D441D1A329300602779 /* root.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = root.gif; sourceTree = "<group>"; };
 		1F647D451D1A329300602779 /* root.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = root.htm; sourceTree = "<group>"; };
 		1F647D471D1A329300602779 /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config.json; sourceTree = "<group>"; };
-		3F4179C11D0515A600B934C5 /* iosproject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosproject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F4179C11D0515A600B934C5 /* iosproject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = iosproject.app; path = "/Users/wanjochan/Downloads/github/app-hybrid-demo/proj-ios-demo/build/Debug-iphoneos/iosproject.app"; sourceTree = "<absolute>"; };
 		8EBFF3D71DC6CF3600AFF2AC /* ApiActivityClose.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiActivityClose.h; sourceTree = "<group>"; };
 		8EBFF3D81DC6CF3600AFF2AC /* ApiActivityClose.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiActivityClose.m; sourceTree = "<group>"; };
 		8EBFF3DA1DC6CF3600AFF2AC /* ApiActivityOpen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiActivityOpen.h; sourceTree = "<group>"; };
@@ -108,16 +108,7 @@
 				8EBFF3D51DC6CF3600AFF2AC /* link-lib-ios */,
 				1F5228731D76DCC00065E494 /* link-lib-JSO */,
 				1F647D421D1A329300602779 /* link-assets */,
-				3F4179C21D0515A600B934C5 /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		3F4179C21D0515A600B934C5 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				3F4179C11D0515A600B934C5 /* iosproject.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		8EBFF3D51DC6CF3600AFF2AC /* link-lib-ios */ = {
@@ -235,7 +226,7 @@
 				Base,
 			);
 			mainGroup = 3F4179B81D0515A600B934C5;
-			productRefGroup = 3F4179C21D0515A600B934C5 /* Products */;
+			productRefGroup = 3F4179B81D0515A600B934C5;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
