@@ -9,8 +9,6 @@
 #import "AppDelegate.h"
 #import "HybridTools.h"
 #import "HybridUi.h"
-
-//#import "JSODoing.h"
 #import "JSO.h"
 
 @interface AppDelegate ()
@@ -21,28 +19,14 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    // 通过config.json 获取配置
+    // get config.json form HybridTools
     [HybridTools initAppConfig];
     
     // initial the app window:
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    // 启动UiRoot
+    // start UiRoot
     [HybridTools startUi:@"UiRoot" strInitParam:nil objCaller:nil];
-    
-//    // 通过config.json 获取配置
-//    [self getAppConfig];
-//    
-//    // initial the app window:
-//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-//    
-//    // 读取配置，获取UiRoot
-//    NSDictionary *appConfig = [[NSUserDefaults standardUserDefaults] objectForKey:@"config"];
-//    HybridUi *ui = [HybridTools buildHybridUi:(NSString *)(appConfig[@"ui_mapping"][@"UiRoot"][@"class"])];
-//    ui.isTopBar = ui.isTopBar = ([appConfig[@"ui_mapping"][@"UiRoot"][@"topbar"] isEqualToString:@"Y"])? YES : NO;
-//
-//    // set the app window root as nav(binded with the hybrid(ui-root)):
-//    self.window.rootViewController = ui.topBar;
     
     // show the window:
     [self.window makeKeyAndVisible];
