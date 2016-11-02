@@ -16,7 +16,7 @@
         <tr height="30%">
             <td align="center" valign="bottom">
 
-                <a href="javascript:alert('content');">alert</a><br/>
+                <a href="javascript:alert('content');">alert test?</a><br/>
 
                 <a href="javascript:test_web();">Test web()</a>&nbsp;&nbsp;&nbsp;&nbsp;<br/>
 
@@ -119,14 +119,17 @@ this.app_type=app_type;
 //iOS JS-BRIDGE
 this.ios_js_bridge=function(callback) {
 if (window.WebViewJavascriptBridge) { return callback(WebViewJavascriptBridge); }
+alert("?? WebViewJavascriptBridge ??");
+return null;
 if (window.WVJBCallbacks) { return window.WVJBCallbacks.push(callback); }
 window.WVJBCallbacks = [callback];
 var WVJBIframe = document.createElement('iframe');
 WVJBIframe.style.display = 'none';
-WVJBIframe.src = 'wvjbscheme://__BRIDGE_LOADED__';
+WVJBIframe.src = 'jsb1://__BRIDGE_LOADED__';
 document.documentElement.appendChild(WVJBIframe);
 setTimeout(function() { document.documentElement.removeChild(WVJBIframe) }, 0)
 };
+
 
 //Android JS-BRIDGE
 this.android_js_bridge=function(callback){
@@ -248,8 +251,8 @@ alert(o2s(a)+";"+o2s(b));
 	//var _u='http://app.jump.ws/'+_appid+'/');//production
 	var _u='http://app.jump.ws/'+_appid+'/?'+Math.random();//dev
 	window.isRootLoaded=false;
-	document.writeln('<script src="'+_u+'">'+'</scr'+'ipt>');
-	stage.innerHTML=''+window.location.href+'<br/>Checking Network... ';
+	//document.writeln('<script src="'+_u+'">'+'</scr'+'ipt>');
+	//stage.innerHTML=''+window.location.href+'<br/>Checking Network... ';
 	/*
 	var _tm_check_root = setTimeout(function(){
 		if(window.isRootLoaded==false){

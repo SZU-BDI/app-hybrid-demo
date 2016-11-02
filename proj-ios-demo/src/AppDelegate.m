@@ -34,62 +34,6 @@
     return YES;
 }
 
-//- (void)getAppConfig{
-//    
-//    // 检查app是否为首次安装或者升级
-//    [self installationAndUpgradeForTheFirstTime];
-//    
-//    // 获取文件(config.json)的路径
-//    NSString *filePath = [[NSBundle mainBundle]pathForResource:@"config"ofType:@"json"];
-//    // 读取数据
-//    NSData *jsonData = [[NSData alloc]initWithContentsOfFile:filePath];
-//    // 把json数据转换成Dictionary
-//    NSError *error;
-//    NSDictionary *jsonContent = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&error];
-//    
-//    // 若配置没有缓存，则缓存
-//    if (![self determineWhetherTheCacheConfiguration]) {
-//        NSLog(@"配置缓存不存在，做缓存。");
-//        // 持久化获取的配置，以config为key （）
-//        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-//        [userDefaults setObject:jsonContent forKey:@"config"];
-//        [userDefaults synchronize];
-//    }
-//}
-//
-//- (void)installationAndUpgradeForTheFirstTime{
-//    
-//    // 获取当前版本号
-//    NSString *currentVersion = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
-//    // 获取储存的最后版本号
-//    NSString *finalVersion = [[NSUserDefaults standardUserDefaults] objectForKey:@"finalVersion"];
-//    
-//    if (![currentVersion isEqualToString:finalVersion]) {
-//        NSLog(@"App重新安装或者升级，如果配置缓存存在，则删除");
-//        if ([self determineWhetherTheCacheConfiguration]) {
-//            NSLog(@"检查发现配置缓存存在 --> 删除配置");
-//            NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-//            [userDefaults removeObjectForKey:@"config"];
-//            [userDefaults synchronize];
-//        }
-//    }
-//    
-//    // 存储当前版本号为最后的版本号。
-//    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-//    [userDefaults setObject:currentVersion forKey:@"finalVersion"];
-//    [userDefaults synchronize];
-//    
-//}
-//
-//- (BOOL)determineWhetherTheCacheConfiguration{
-//    
-//    NSDictionary *appConfig = [[NSUserDefaults standardUserDefaults] objectForKey:@"config"];
-//    if (appConfig) {
-//        return YES;
-//    }else{
-//        return NO;
-//    }
-//}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -113,4 +57,61 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+
+//- (void)getAppConfig{
+//
+//    // 检查app是否为首次安装或者升级
+//    [self installationAndUpgradeForTheFirstTime];
+//
+//    // 获取文件(config.json)的路径
+//    NSString *filePath = [[NSBundle mainBundle]pathForResource:@"config"ofType:@"json"];
+//    // 读取数据
+//    NSData *jsonData = [[NSData alloc]initWithContentsOfFile:filePath];
+//    // 把json数据转换成Dictionary
+//    NSError *error;
+//    NSDictionary *jsonContent = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&error];
+//
+//    // 若配置没有缓存，则缓存
+//    if (![self determineWhetherTheCacheConfiguration]) {
+//        NSLog(@"配置缓存不存在，做缓存。");
+//        // 持久化获取的配置，以config为key （）
+//        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+//        [userDefaults setObject:jsonContent forKey:@"config"];
+//        [userDefaults synchronize];
+//    }
+//}
+//
+//- (void)installationAndUpgradeForTheFirstTime{
+//
+//    // 获取当前版本号
+//    NSString *currentVersion = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
+//    // 获取储存的最后版本号
+//    NSString *finalVersion = [[NSUserDefaults standardUserDefaults] objectForKey:@"finalVersion"];
+//
+//    if (![currentVersion isEqualToString:finalVersion]) {
+//        NSLog(@"App重新安装或者升级，如果配置缓存存在，则删除");
+//        if ([self determineWhetherTheCacheConfiguration]) {
+//            NSLog(@"检查发现配置缓存存在 --> 删除配置");
+//            NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+//            [userDefaults removeObjectForKey:@"config"];
+//            [userDefaults synchronize];
+//        }
+//    }
+//
+//    // 存储当前版本号为最后的版本号。
+//    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+//    [userDefaults setObject:currentVersion forKey:@"finalVersion"];
+//    [userDefaults synchronize];
+//
+//}
+//
+//- (BOOL)determineWhetherTheCacheConfiguration{
+//
+//    NSDictionary *appConfig = [[NSUserDefaults standardUserDefaults] objectForKey:@"config"];
+//    if (appConfig) {
+//        return YES;
+//    }else{
+//        return NO;
+//    }
+//}
 @end
