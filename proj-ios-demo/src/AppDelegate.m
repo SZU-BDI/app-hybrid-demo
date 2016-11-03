@@ -26,7 +26,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     // start UiRoot
-    [HybridTools startUi:@"UiRoot" strInitParam:nil objCaller:nil];
+    [HybridTools startUi:@"UiRoot" strInitParam:nil objCaller:nil callback:nil];
     
     // show the window:
     [self.window makeKeyAndVisible];
