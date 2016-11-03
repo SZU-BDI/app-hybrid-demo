@@ -12,6 +12,7 @@
 		1F647D4A1D1A329300602779 /* root.htm in Resources */ = {isa = PBXBuildFile; fileRef = 1F647D451D1A329300602779 /* root.htm */; };
 		1F647D4B1D1A329300602779 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F647D471D1A329300602779 /* config.json */; };
 		8EA8911F1DC9BD7600036F75 /* WebViewJavascriptBridge.js in Resources */ = {isa = PBXBuildFile; fileRef = 8EA8911E1DC9BD7600036F75 /* WebViewJavascriptBridge.js */; };
+		8EA891211DCA133D00036F75 /* cmpjsbridge.js in Resources */ = {isa = PBXBuildFile; fileRef = 8EA891201DCA133D00036F75 /* cmpjsbridge.js */; };
 		8EBFF3EE1DC6CF3600AFF2AC /* ApiActivityClose.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFF3D81DC6CF3600AFF2AC /* ApiActivityClose.m */; };
 		8EBFF3EF1DC6CF3600AFF2AC /* ApiActivityOpen.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFF3DB1DC6CF3600AFF2AC /* ApiActivityOpen.m */; };
 		8EBFF3F01DC6CF3600AFF2AC /* HybridApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFF3DE1DC6CF3600AFF2AC /* HybridApi.m */; };
@@ -34,6 +35,7 @@
 		1F647D451D1A329300602779 /* root.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = root.htm; sourceTree = "<group>"; };
 		1F647D471D1A329300602779 /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config.json; sourceTree = "<group>"; };
 		8EA8911E1DC9BD7600036F75 /* WebViewJavascriptBridge.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = WebViewJavascriptBridge.js; path = "../../app-hybrid-core/assetsJsBridge/WebViewJavascriptBridge.js"; sourceTree = "<group>"; };
+		8EA891201DCA133D00036F75 /* cmpjsbridge.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = cmpjsbridge.js; sourceTree = "<group>"; };
 		8EBFF3D71DC6CF3600AFF2AC /* ApiActivityClose.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiActivityClose.h; sourceTree = "<group>"; };
 		8EBFF3D81DC6CF3600AFF2AC /* ApiActivityClose.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiActivityClose.m; sourceTree = "<group>"; };
 		8EBFF3DA1DC6CF3600AFF2AC /* ApiActivityOpen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiActivityOpen.h; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 		1F647D421D1A329300602779 /* link-assets */ = {
 			isa = PBXGroup;
 			children = (
+				8EA891201DCA133D00036F75 /* cmpjsbridge.js */,
 				1F647D441D1A329300602779 /* root.gif */,
 				1F647D451D1A329300602779 /* root.htm */,
 			);
@@ -216,7 +219,7 @@
 		3F4179B91D0515A600B934C5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = szu.bdi;
 				TargetAttributes = {
 					3F4179C01D0515A600B934C5 = {
@@ -249,6 +252,7 @@
 			files = (
 				8ECC9ABE1DC6DE9C00D88779 /* Images.xcassets in Resources */,
 				1F647D491D1A329300602779 /* root.gif in Resources */,
+				8EA891211DCA133D00036F75 /* cmpjsbridge.js in Resources */,
 				8EA8911F1DC9BD7600036F75 /* WebViewJavascriptBridge.js in Resources */,
 				1F647D4A1D1A329300602779 /* root.htm in Resources */,
 				8ECC9ABD1DC6DE9C00D88779 /* LaunchScreen.xib in Resources */,
@@ -305,8 +309,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -329,7 +335,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -350,8 +356,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -367,7 +375,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -383,7 +391,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = info.cmptech.hybrid.demo;
 				PRODUCT_NAME = iosproject;
@@ -399,7 +407,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = info.cmptech.hybrid.demo;
 				PRODUCT_NAME = iosproject;
