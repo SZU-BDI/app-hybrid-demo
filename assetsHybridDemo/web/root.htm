@@ -15,6 +15,7 @@
     <table width="100%" height="100%" border="3">
         <tr height="30%">
             <td align="center" valign="bottom">
+                <a href="javascript:test_androidjsb()">test_androidjsb()</a>
 							<a href="20161104.index.html">test 20161104</a><br/>
 <a href="https://almsaeedstudio.com/themes/AdminLTE/index2.html">adminlte</a><br/>
                 <a href="javascript:alert('content');">alert test?</a><br/>
@@ -38,7 +39,11 @@
 <script src='cmpjsbridge.js'></script>
                 <script>
 
-
+function test_androidjsb(){
+//alert(typeof androidjsb);
+//alert(androidjsb.getVersion("haha"));
+alert(androidjsb.js2app("idid","_app_web","datadata"));
+}
 function test_app_activity_open_1(){
 window.cmpjsbridge.callHandler('_app_activity_open', {topbar:'Y',address:'http://app.jump.ws/core/apitest.htm?'+Math.random()},function( rt ){
 alert('open1='+o2s(rt));

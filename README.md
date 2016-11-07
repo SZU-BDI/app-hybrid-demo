@@ -1,6 +1,16 @@
 # app-hybrid-demo
 Demo of app-hybrid
 
+# Current Status
+
+## android
+apk in 37K that have a native webview...
+(in future rhino/nashorn javascript engine may patch...)
+
+## ios
+basic ok, but in future JsPatch should be applied to extend
+
+
 # Project Target
 
 Combine with app-hybrid-core, we need to:
