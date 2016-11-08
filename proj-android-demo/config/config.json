@@ -1,11 +1,12 @@
 {
   //map the api to the implement class
   "api_mapping": {
-    "_app_web": "szu.bdi.hybrid.core.ApiTestTODO",
+    "_app_todo": "szu.bdi.hybrid.core.ApiTestTODO",
+    "_app_web": "szu.bdi.hybrid.core.ApiWebRequest",
     "_app_activity_open": "szu.bdi.hybrid.core.ApiUiOpen",
     "_app_activity_close": "szu.bdi.hybrid.core.ApiUiClose"
   },
-  "app_ver": "0.0.13",
+  "app_ver": "0.0.26",
   //map the ui to the class (used by szu.bdi.hybrid.core.ApiUiOpen)
   "ui_mapping": {
     "UiRoot": {
