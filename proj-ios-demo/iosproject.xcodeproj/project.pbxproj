@@ -18,10 +18,8 @@
 		8EBFF3F01DC6CF3600AFF2AC /* HybridApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFF3DE1DC6CF3600AFF2AC /* HybridApi.m */; };
 		8EBFF3F11DC6CF3600AFF2AC /* HybridTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFF3E01DC6CF3600AFF2AC /* HybridTools.m */; };
 		8EBFF3F21DC6CF3600AFF2AC /* HybridUi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFF3E21DC6CF3600AFF2AC /* HybridUi.m */; };
-		8EBFF3F31DC6CF3600AFF2AC /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFF3E51DC6CF3600AFF2AC /* WebViewJavascriptBridge.m */; };
-		8EBFF3F51DC6CF3600AFF2AC /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFF3E91DC6CF3600AFF2AC /* WebViewJavascriptBridgeBase.m */; };
 		8EBFF3F61DC6CF3600AFF2AC /* NativeUi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFF3EB1DC6CF3600AFF2AC /* NativeUi.m */; };
-		8EBFF3F71DC6CF3600AFF2AC /* WebViewUi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFF3ED1DC6CF3600AFF2AC /* WebViewUi.m */; };
+		8EBFF3F71DC6CF3600AFF2AC /* SimpleWebViewUi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFF3ED1DC6CF3600AFF2AC /* SimpleWebViewUi.m */; };
 		8ECC9ABE1DC6DE9C00D88779 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8ECC9ABA1DC6DE9C00D88779 /* Images.xcassets */; };
 		8ECC9ABF1DC6DE9C00D88779 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ECC9ABB1DC6DE9C00D88779 /* main.m */; };
 		8ED44CD11DD304E800811674 /* MyLaunchStoryBoard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ED44CD01DD304E800811674 /* MyLaunchStoryBoard.xib */; };
@@ -45,18 +43,15 @@
 		8EBFF3E01DC6CF3600AFF2AC /* HybridTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HybridTools.m; sourceTree = "<group>"; };
 		8EBFF3E11DC6CF3600AFF2AC /* HybridUi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HybridUi.h; sourceTree = "<group>"; };
 		8EBFF3E21DC6CF3600AFF2AC /* HybridUi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HybridUi.m; sourceTree = "<group>"; };
-		8EBFF3E41DC6CF3600AFF2AC /* WebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge.h; sourceTree = "<group>"; };
-		8EBFF3E51DC6CF3600AFF2AC /* WebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge.m; sourceTree = "<group>"; };
-		8EBFF3E81DC6CF3600AFF2AC /* WebViewJavascriptBridgeBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridgeBase.h; sourceTree = "<group>"; };
-		8EBFF3E91DC6CF3600AFF2AC /* WebViewJavascriptBridgeBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridgeBase.m; sourceTree = "<group>"; };
 		8EBFF3EA1DC6CF3600AFF2AC /* NativeUi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeUi.h; sourceTree = "<group>"; };
 		8EBFF3EB1DC6CF3600AFF2AC /* NativeUi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeUi.m; sourceTree = "<group>"; };
-		8EBFF3EC1DC6CF3600AFF2AC /* WebViewUi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewUi.h; sourceTree = "<group>"; };
-		8EBFF3ED1DC6CF3600AFF2AC /* WebViewUi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewUi.m; sourceTree = "<group>"; };
+		8EBFF3EC1DC6CF3600AFF2AC /* SimpleWebViewUi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleWebViewUi.h; sourceTree = "<group>"; };
+		8EBFF3ED1DC6CF3600AFF2AC /* SimpleWebViewUi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleWebViewUi.m; sourceTree = "<group>"; };
 		8ECC9ABA1DC6DE9C00D88779 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8ECC9ABB1DC6DE9C00D88779 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8ED24ABA1DC9783B00D40DCD /* iosproject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosproject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ED44CD01DD304E800811674 /* MyLaunchStoryBoard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyLaunchStoryBoard.xib; sourceTree = "<group>"; };
+		8ED44CD21DD3169600811674 /* Hybrid.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Hybrid.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +147,7 @@
 		8EBFF3DC1DC6CF3600AFF2AC /* szu-bdi-hybrid-core */ = {
 			isa = PBXGroup;
 			children = (
+				8ED44CD21DD3169600811674 /* Hybrid.h */,
 				8EBFF3DD1DC6CF3600AFF2AC /* HybridApi.h */,
 				8EBFF3DE1DC6CF3600AFF2AC /* HybridApi.m */,
 				8EBFF3DF1DC6CF3600AFF2AC /* HybridTools.h */,
@@ -160,22 +156,10 @@
 				8EBFF3E21DC6CF3600AFF2AC /* HybridUi.m */,
 				8EBFF3EA1DC6CF3600AFF2AC /* NativeUi.h */,
 				8EBFF3EB1DC6CF3600AFF2AC /* NativeUi.m */,
-				8EBFF3EC1DC6CF3600AFF2AC /* WebViewUi.h */,
-				8EBFF3ED1DC6CF3600AFF2AC /* WebViewUi.m */,
-				8EBFF3E31DC6CF3600AFF2AC /* JsBridge */,
+				8EBFF3EC1DC6CF3600AFF2AC /* SimpleWebViewUi.h */,
+				8EBFF3ED1DC6CF3600AFF2AC /* SimpleWebViewUi.m */,
 			);
 			path = "szu-bdi-hybrid-core";
-			sourceTree = "<group>";
-		};
-		8EBFF3E31DC6CF3600AFF2AC /* JsBridge */ = {
-			isa = PBXGroup;
-			children = (
-				8EBFF3E41DC6CF3600AFF2AC /* WebViewJavascriptBridge.h */,
-				8EBFF3E51DC6CF3600AFF2AC /* WebViewJavascriptBridge.m */,
-				8EBFF3E81DC6CF3600AFF2AC /* WebViewJavascriptBridgeBase.h */,
-				8EBFF3E91DC6CF3600AFF2AC /* WebViewJavascriptBridgeBase.m */,
-			);
-			path = JsBridge;
 			sourceTree = "<group>";
 		};
 		8ECC9AB51DC6DE9C00D88779 /* src */ = {
@@ -262,11 +246,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EBFF3F31DC6CF3600AFF2AC /* WebViewJavascriptBridge.m in Sources */,
 				8EBFF3F11DC6CF3600AFF2AC /* HybridTools.m in Sources */,
 				1F5228821D76DCD00065E494 /* JSO.m in Sources */,
-				8EBFF3F71DC6CF3600AFF2AC /* WebViewUi.m in Sources */,
-				8EBFF3F51DC6CF3600AFF2AC /* WebViewJavascriptBridgeBase.m in Sources */,
+				8EBFF3F71DC6CF3600AFF2AC /* SimpleWebViewUi.m in Sources */,
 				8EBFF3F61DC6CF3600AFF2AC /* NativeUi.m in Sources */,
 				8EBFF3EF1DC6CF3600AFF2AC /* ApiActivityOpen.m in Sources */,
 				8ECC9ABF1DC6DE9C00D88779 /* main.m in Sources */,

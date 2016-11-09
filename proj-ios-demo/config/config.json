@@ -5,7 +5,7 @@
             
             "type":"WebView",
             "topbar":"N",
-            "class":"WebViewUi",
+            "class":"SimpleWebViewUi",
             "url":"root.htm"
         },
         "UiContent":{
