@@ -1,11 +1,3 @@
-//
-//  AppDelegate.m
-//  testproj-ios-core
-//
-//  Created by 双虎 on 16/6/2.
-//  Copyright © 2016年 Cmptech. All rights reserved.
-//
-
 #import "AppDelegate.h"
 #import "HybridTools.h"
 #import "HybridUi.h"
@@ -17,19 +9,18 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    
     // get config.json form HybridTools
-    [HybridTools initAppConfig];
-    
-    // initial the app window:
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    
-    // start UiRoot
-    [HybridTools startUi:@"UiRoot" strInitParam:nil objCaller:nil callback:nil];
-    
-    // show the window:
-    [self.window makeKeyAndVisible];
+//    [HybridTools initAppConfig];
+//    
+//    // initial the app window:
+//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//    //self.window = [UIWindow alloc];
+//    
+//    // start UiRoot
+//    [HybridTools startUi:@"UiRoot" strInitParam:nil objCaller:nil callback:nil];
+//    
+//    // show the window:
+//    [self.window makeKeyAndVisible];
     
     return YES;
 }
