@@ -1,3 +1,4 @@
+//NOTS: this file is no use anymore, but keep as a stub anyway...
 #import <UIKit/UIKit.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
