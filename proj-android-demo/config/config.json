@@ -13,9 +13,14 @@
       "mode": "WebView",
       "topbar": "N",
       "address": "root.htm",
-      "class": "szu.bdi.hybrid.core.SimpleWebViewUi"
+      "class": "szu.bdi.hybrid.core.SimpleHybridWebViewUi"
     },
     "UiContent": {
+      "mode": "WebView",
+      "topbar": "Y",
+      "class": "szu.bdi.hybrid.core.SimpleHybridWebViewUi"
+    },
+    "OtherContent": {
       "mode": "WebView",
       "topbar": "Y",
       "class": "szu.bdi.hybrid.core.SimpleWebViewUi"
@@ -23,7 +28,7 @@
     "UiHome": {
       "mode": "WebView",
       "topbar": "Y",
-      "class": "szu.bdi.hybrid.core.SimpleWebViewUi"
+      "class": "szu.bdi.hybrid.core.SimpleHybridWebViewUi"
     }
   },
   //auth-binding: api to ui (used by callHandler()). * TODO improve better pattern in furture
