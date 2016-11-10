@@ -1,34 +1,34 @@
 {
   //map the api to the implement class
   "api_mapping": {
-    "_app_todo": "szu.bdi.hybrid.core.ApiTestTODO",
-    "_app_web": "szu.bdi.hybrid.core.ApiWebRequest",
-    "_app_activity_open": "szu.bdi.hybrid.core.ApiUiOpen",
-    "_app_activity_close": "szu.bdi.hybrid.core.ApiUiClose"
+    "_app_todo": "szu.bdi.hybrid.core.eg.ApiTestTODO",
+    "_app_web": "szu.bdi.hybrid.core.eg.ApiWebRequest",
+    "_app_activity_open": "szu.bdi.hybrid.core.eg.ApiUiOpen",
+    "_app_activity_close": "szu.bdi.hybrid.core.eg.ApiUiClose"
   },
   "app_ver": "0.0.27",
-  //map the ui to the class (used by szu.bdi.hybrid.core.ApiUiOpen)
+  //map the ui to the class (used by szu.bdi.hybrid.core.eg.ApiUiOpen)
   "ui_mapping": {
     "UiRoot": {
       "mode": "WebView",
       "topbar": "N",
       "address": "root.htm",
-      "class": "szu.bdi.hybrid.core.SimpleHybridWebViewUi"
+      "class": "szu.bdi.hybrid.core.eg.SimpleHybridWebViewUi"
     },
     "UiContent": {
       "mode": "WebView",
       "topbar": "Y",
-      "class": "szu.bdi.hybrid.core.SimpleHybridWebViewUi"
+      "class": "szu.bdi.hybrid.core.eg.SimpleHybridWebViewUi"
     },
     "OtherContent": {
       "mode": "WebView",
       "topbar": "Y",
-      "class": "szu.bdi.hybrid.core.SimpleWebViewUi"
+      "class": "szu.bdi.hybrid.core.eg.SimpleWebViewUi"
     },
     "UiHome": {
       "mode": "WebView",
       "topbar": "Y",
-      "class": "szu.bdi.hybrid.core.SimpleHybridWebViewUi"
+      "class": "szu.bdi.hybrid.core.eg.SimpleHybridWebViewUi"
     }
   },
   //auth-binding: api to ui (used by callHandler()). * TODO improve better pattern in furture

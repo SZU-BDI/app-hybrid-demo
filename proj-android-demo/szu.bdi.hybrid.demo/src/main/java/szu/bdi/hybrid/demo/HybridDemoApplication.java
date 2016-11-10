@@ -1,10 +1,6 @@
 package szu.bdi.hybrid.demo;
 
-import android.app.Application;
-import android.util.Log;
-
-import szu.bdi.hybrid.core.HybridApplication;
-import szu.bdi.hybrid.core.HybridTools;
+import szu.bdi.hybrid.core.eg.HybridApplication;
 
 //NOTES: must have an applicaton, otherwise data e.g.  app context maybe cleaned up by GC !!!!
 
