@@ -31,6 +31,7 @@
 		1F647D441D1A329300602779 /* root.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = root.gif; sourceTree = "<group>"; };
 		1F647D451D1A329300602779 /* root.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = root.htm; sourceTree = "<group>"; };
 		1F647D471D1A329300602779 /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config.json; sourceTree = "<group>"; };
+		8E869A981DD3E36B00285FA1 /* HybridWebViewUi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HybridWebViewUi.h; sourceTree = "<group>"; };
 		8EA8911E1DC9BD7600036F75 /* WebViewJavascriptBridge.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = WebViewJavascriptBridge.js; path = "../../app-hybrid-core/assetsJsBridge/WebViewJavascriptBridge.js"; sourceTree = "<group>"; };
 		8EA891201DCA133D00036F75 /* cmpjsbridge.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = cmpjsbridge.js; sourceTree = "<group>"; };
 		8EBFF3D71DC6CF3600AFF2AC /* ApiActivityClose.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiActivityClose.h; sourceTree = "<group>"; };
@@ -158,6 +159,7 @@
 				8EBFF3EB1DC6CF3600AFF2AC /* NativeUi.m */,
 				8EBFF3EC1DC6CF3600AFF2AC /* SimpleWebViewUi.h */,
 				8EBFF3ED1DC6CF3600AFF2AC /* SimpleWebViewUi.m */,
+				8E869A981DD3E36B00285FA1 /* HybridWebViewUi.h */,
 			);
 			path = "szu-bdi-hybrid-core";
 			sourceTree = "<group>";
