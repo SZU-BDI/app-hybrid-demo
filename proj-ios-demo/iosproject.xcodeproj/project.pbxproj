@@ -11,6 +11,7 @@
 		1F647D491D1A329300602779 /* root.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1F647D441D1A329300602779 /* root.gif */; };
 		1F647D4A1D1A329300602779 /* root.htm in Resources */ = {isa = PBXBuildFile; fileRef = 1F647D451D1A329300602779 /* root.htm */; };
 		1F647D4B1D1A329300602779 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F647D471D1A329300602779 /* config.json */; };
+		8E869A9A1DD3F6F700285FA1 /* CMPHybridWebViewUi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E869A991DD3F6F700285FA1 /* CMPHybridWebViewUi.m */; };
 		8EA8911F1DC9BD7600036F75 /* WebViewJavascriptBridge.js in Resources */ = {isa = PBXBuildFile; fileRef = 8EA8911E1DC9BD7600036F75 /* WebViewJavascriptBridge.js */; };
 		8EA891211DCA133D00036F75 /* cmpjsbridge.js in Resources */ = {isa = PBXBuildFile; fileRef = 8EA891201DCA133D00036F75 /* cmpjsbridge.js */; };
 		8EBFF3EE1DC6CF3600AFF2AC /* ApiActivityClose.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFF3D81DC6CF3600AFF2AC /* ApiActivityClose.m */; };
@@ -32,6 +33,7 @@
 		1F647D451D1A329300602779 /* root.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = root.htm; sourceTree = "<group>"; };
 		1F647D471D1A329300602779 /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config.json; sourceTree = "<group>"; };
 		8E869A981DD3E36B00285FA1 /* CMPHybridWebViewUi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMPHybridWebViewUi.h; sourceTree = "<group>"; };
+		8E869A991DD3F6F700285FA1 /* CMPHybridWebViewUi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMPHybridWebViewUi.m; sourceTree = "<group>"; };
 		8EA8911E1DC9BD7600036F75 /* WebViewJavascriptBridge.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = WebViewJavascriptBridge.js; path = "../../app-hybrid-core/assetsJsBridge/WebViewJavascriptBridge.js"; sourceTree = "<group>"; };
 		8EA891201DCA133D00036F75 /* cmpjsbridge.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = cmpjsbridge.js; sourceTree = "<group>"; };
 		8EBFF3D71DC6CF3600AFF2AC /* ApiActivityClose.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiActivityClose.h; sourceTree = "<group>"; };
@@ -52,7 +54,6 @@
 		8ECC9ABB1DC6DE9C00D88779 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8ED24ABA1DC9783B00D40DCD /* iosproject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosproject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ED44CD01DD304E800811674 /* MyLaunchStoryBoard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyLaunchStoryBoard.xib; sourceTree = "<group>"; };
-		8ED44CD21DD3169600811674 /* CMPHybrid.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMPHybrid.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,7 +149,6 @@
 		8EBFF3DC1DC6CF3600AFF2AC /* szu-bdi-hybrid-core */ = {
 			isa = PBXGroup;
 			children = (
-				8ED44CD21DD3169600811674 /* CMPHybrid.h */,
 				8EBFF3DD1DC6CF3600AFF2AC /* CMPHybridApi.h */,
 				8EBFF3DE1DC6CF3600AFF2AC /* CMPHybridApi.m */,
 				8EBFF3DF1DC6CF3600AFF2AC /* CMPHybridTools.h */,
@@ -160,6 +160,7 @@
 				8EBFF3EC1DC6CF3600AFF2AC /* CMPSimpleWebViewUi.h */,
 				8EBFF3ED1DC6CF3600AFF2AC /* CMPSimpleWebViewUi.m */,
 				8E869A981DD3E36B00285FA1 /* CMPHybridWebViewUi.h */,
+				8E869A991DD3F6F700285FA1 /* CMPHybridWebViewUi.m */,
 			);
 			path = "szu-bdi-hybrid-core";
 			sourceTree = "<group>";
@@ -248,6 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E869A9A1DD3F6F700285FA1 /* CMPHybridWebViewUi.m in Sources */,
 				8EBFF3F11DC6CF3600AFF2AC /* CMPHybridTools.m in Sources */,
 				1F5228821D76DCD00065E494 /* JSO.m in Sources */,
 				8EBFF3F71DC6CF3600AFF2AC /* CMPSimpleWebViewUi.m in Sources */,
