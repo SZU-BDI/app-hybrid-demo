@@ -15,11 +15,11 @@
 		8EA891211DCA133D00036F75 /* cmpjsbridge.js in Resources */ = {isa = PBXBuildFile; fileRef = 8EA891201DCA133D00036F75 /* cmpjsbridge.js */; };
 		8EBFF3EE1DC6CF3600AFF2AC /* ApiActivityClose.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFF3D81DC6CF3600AFF2AC /* ApiActivityClose.m */; };
 		8EBFF3EF1DC6CF3600AFF2AC /* ApiActivityOpen.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFF3DB1DC6CF3600AFF2AC /* ApiActivityOpen.m */; };
-		8EBFF3F01DC6CF3600AFF2AC /* HybridApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFF3DE1DC6CF3600AFF2AC /* HybridApi.m */; };
-		8EBFF3F11DC6CF3600AFF2AC /* HybridTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFF3E01DC6CF3600AFF2AC /* HybridTools.m */; };
-		8EBFF3F21DC6CF3600AFF2AC /* HybridUi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFF3E21DC6CF3600AFF2AC /* HybridUi.m */; };
-		8EBFF3F61DC6CF3600AFF2AC /* NativeUi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFF3EB1DC6CF3600AFF2AC /* NativeUi.m */; };
-		8EBFF3F71DC6CF3600AFF2AC /* SimpleWebViewUi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFF3ED1DC6CF3600AFF2AC /* SimpleWebViewUi.m */; };
+		8EBFF3F01DC6CF3600AFF2AC /* CMPHybridApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFF3DE1DC6CF3600AFF2AC /* CMPHybridApi.m */; };
+		8EBFF3F11DC6CF3600AFF2AC /* CMPHybridTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFF3E01DC6CF3600AFF2AC /* CMPHybridTools.m */; };
+		8EBFF3F21DC6CF3600AFF2AC /* CMPHybridUi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFF3E21DC6CF3600AFF2AC /* CMPHybridUi.m */; };
+		8EBFF3F61DC6CF3600AFF2AC /* CMPNativeUi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFF3EB1DC6CF3600AFF2AC /* CMPNativeUi.m */; };
+		8EBFF3F71DC6CF3600AFF2AC /* CMPSimpleWebViewUi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFF3ED1DC6CF3600AFF2AC /* CMPSimpleWebViewUi.m */; };
 		8ECC9ABE1DC6DE9C00D88779 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8ECC9ABA1DC6DE9C00D88779 /* Images.xcassets */; };
 		8ECC9ABF1DC6DE9C00D88779 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ECC9ABB1DC6DE9C00D88779 /* main.m */; };
 		8ED44CD11DD304E800811674 /* MyLaunchStoryBoard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ED44CD01DD304E800811674 /* MyLaunchStoryBoard.xib */; };
@@ -31,28 +31,28 @@
 		1F647D441D1A329300602779 /* root.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = root.gif; sourceTree = "<group>"; };
 		1F647D451D1A329300602779 /* root.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = root.htm; sourceTree = "<group>"; };
 		1F647D471D1A329300602779 /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config.json; sourceTree = "<group>"; };
-		8E869A981DD3E36B00285FA1 /* HybridWebViewUi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HybridWebViewUi.h; sourceTree = "<group>"; };
+		8E869A981DD3E36B00285FA1 /* CMPHybridWebViewUi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMPHybridWebViewUi.h; sourceTree = "<group>"; };
 		8EA8911E1DC9BD7600036F75 /* WebViewJavascriptBridge.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = WebViewJavascriptBridge.js; path = "../../app-hybrid-core/assetsJsBridge/WebViewJavascriptBridge.js"; sourceTree = "<group>"; };
 		8EA891201DCA133D00036F75 /* cmpjsbridge.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = cmpjsbridge.js; sourceTree = "<group>"; };
 		8EBFF3D71DC6CF3600AFF2AC /* ApiActivityClose.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiActivityClose.h; sourceTree = "<group>"; };
 		8EBFF3D81DC6CF3600AFF2AC /* ApiActivityClose.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiActivityClose.m; sourceTree = "<group>"; };
 		8EBFF3DA1DC6CF3600AFF2AC /* ApiActivityOpen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiActivityOpen.h; sourceTree = "<group>"; };
 		8EBFF3DB1DC6CF3600AFF2AC /* ApiActivityOpen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiActivityOpen.m; sourceTree = "<group>"; };
-		8EBFF3DD1DC6CF3600AFF2AC /* HybridApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HybridApi.h; sourceTree = "<group>"; };
-		8EBFF3DE1DC6CF3600AFF2AC /* HybridApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HybridApi.m; sourceTree = "<group>"; };
-		8EBFF3DF1DC6CF3600AFF2AC /* HybridTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HybridTools.h; sourceTree = "<group>"; };
-		8EBFF3E01DC6CF3600AFF2AC /* HybridTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HybridTools.m; sourceTree = "<group>"; };
-		8EBFF3E11DC6CF3600AFF2AC /* HybridUi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HybridUi.h; sourceTree = "<group>"; };
-		8EBFF3E21DC6CF3600AFF2AC /* HybridUi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HybridUi.m; sourceTree = "<group>"; };
-		8EBFF3EA1DC6CF3600AFF2AC /* NativeUi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeUi.h; sourceTree = "<group>"; };
-		8EBFF3EB1DC6CF3600AFF2AC /* NativeUi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeUi.m; sourceTree = "<group>"; };
-		8EBFF3EC1DC6CF3600AFF2AC /* SimpleWebViewUi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleWebViewUi.h; sourceTree = "<group>"; };
-		8EBFF3ED1DC6CF3600AFF2AC /* SimpleWebViewUi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleWebViewUi.m; sourceTree = "<group>"; };
+		8EBFF3DD1DC6CF3600AFF2AC /* CMPHybridApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMPHybridApi.h; sourceTree = "<group>"; };
+		8EBFF3DE1DC6CF3600AFF2AC /* CMPHybridApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMPHybridApi.m; sourceTree = "<group>"; };
+		8EBFF3DF1DC6CF3600AFF2AC /* CMPHybridTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMPHybridTools.h; sourceTree = "<group>"; };
+		8EBFF3E01DC6CF3600AFF2AC /* CMPHybridTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMPHybridTools.m; sourceTree = "<group>"; };
+		8EBFF3E11DC6CF3600AFF2AC /* CMPHybridUi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMPHybridUi.h; sourceTree = "<group>"; };
+		8EBFF3E21DC6CF3600AFF2AC /* CMPHybridUi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMPHybridUi.m; sourceTree = "<group>"; };
+		8EBFF3EA1DC6CF3600AFF2AC /* CMPNativeUi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMPNativeUi.h; sourceTree = "<group>"; };
+		8EBFF3EB1DC6CF3600AFF2AC /* CMPNativeUi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMPNativeUi.m; sourceTree = "<group>"; };
+		8EBFF3EC1DC6CF3600AFF2AC /* CMPSimpleWebViewUi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMPSimpleWebViewUi.h; sourceTree = "<group>"; };
+		8EBFF3ED1DC6CF3600AFF2AC /* CMPSimpleWebViewUi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMPSimpleWebViewUi.m; sourceTree = "<group>"; };
 		8ECC9ABA1DC6DE9C00D88779 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8ECC9ABB1DC6DE9C00D88779 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8ED24ABA1DC9783B00D40DCD /* iosproject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosproject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ED44CD01DD304E800811674 /* MyLaunchStoryBoard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyLaunchStoryBoard.xib; sourceTree = "<group>"; };
-		8ED44CD21DD3169600811674 /* Hybrid.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Hybrid.h; sourceTree = "<group>"; };
+		8ED44CD21DD3169600811674 /* CMPHybrid.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMPHybrid.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,18 +148,18 @@
 		8EBFF3DC1DC6CF3600AFF2AC /* szu-bdi-hybrid-core */ = {
 			isa = PBXGroup;
 			children = (
-				8ED44CD21DD3169600811674 /* Hybrid.h */,
-				8EBFF3DD1DC6CF3600AFF2AC /* HybridApi.h */,
-				8EBFF3DE1DC6CF3600AFF2AC /* HybridApi.m */,
-				8EBFF3DF1DC6CF3600AFF2AC /* HybridTools.h */,
-				8EBFF3E01DC6CF3600AFF2AC /* HybridTools.m */,
-				8EBFF3E11DC6CF3600AFF2AC /* HybridUi.h */,
-				8EBFF3E21DC6CF3600AFF2AC /* HybridUi.m */,
-				8EBFF3EA1DC6CF3600AFF2AC /* NativeUi.h */,
-				8EBFF3EB1DC6CF3600AFF2AC /* NativeUi.m */,
-				8EBFF3EC1DC6CF3600AFF2AC /* SimpleWebViewUi.h */,
-				8EBFF3ED1DC6CF3600AFF2AC /* SimpleWebViewUi.m */,
-				8E869A981DD3E36B00285FA1 /* HybridWebViewUi.h */,
+				8ED44CD21DD3169600811674 /* CMPHybrid.h */,
+				8EBFF3DD1DC6CF3600AFF2AC /* CMPHybridApi.h */,
+				8EBFF3DE1DC6CF3600AFF2AC /* CMPHybridApi.m */,
+				8EBFF3DF1DC6CF3600AFF2AC /* CMPHybridTools.h */,
+				8EBFF3E01DC6CF3600AFF2AC /* CMPHybridTools.m */,
+				8EBFF3E11DC6CF3600AFF2AC /* CMPHybridUi.h */,
+				8EBFF3E21DC6CF3600AFF2AC /* CMPHybridUi.m */,
+				8EBFF3EA1DC6CF3600AFF2AC /* CMPNativeUi.h */,
+				8EBFF3EB1DC6CF3600AFF2AC /* CMPNativeUi.m */,
+				8EBFF3EC1DC6CF3600AFF2AC /* CMPSimpleWebViewUi.h */,
+				8EBFF3ED1DC6CF3600AFF2AC /* CMPSimpleWebViewUi.m */,
+				8E869A981DD3E36B00285FA1 /* CMPHybridWebViewUi.h */,
 			);
 			path = "szu-bdi-hybrid-core";
 			sourceTree = "<group>";
@@ -248,15 +248,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EBFF3F11DC6CF3600AFF2AC /* HybridTools.m in Sources */,
+				8EBFF3F11DC6CF3600AFF2AC /* CMPHybridTools.m in Sources */,
 				1F5228821D76DCD00065E494 /* JSO.m in Sources */,
-				8EBFF3F71DC6CF3600AFF2AC /* SimpleWebViewUi.m in Sources */,
-				8EBFF3F61DC6CF3600AFF2AC /* NativeUi.m in Sources */,
+				8EBFF3F71DC6CF3600AFF2AC /* CMPSimpleWebViewUi.m in Sources */,
+				8EBFF3F61DC6CF3600AFF2AC /* CMPNativeUi.m in Sources */,
 				8EBFF3EF1DC6CF3600AFF2AC /* ApiActivityOpen.m in Sources */,
 				8ECC9ABF1DC6DE9C00D88779 /* main.m in Sources */,
 				8EBFF3EE1DC6CF3600AFF2AC /* ApiActivityClose.m in Sources */,
-				8EBFF3F21DC6CF3600AFF2AC /* HybridUi.m in Sources */,
-				8EBFF3F01DC6CF3600AFF2AC /* HybridApi.m in Sources */,
+				8EBFF3F21DC6CF3600AFF2AC /* CMPHybridUi.m in Sources */,
+				8EBFF3F01DC6CF3600AFF2AC /* CMPHybridApi.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

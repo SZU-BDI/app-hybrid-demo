@@ -5,20 +5,20 @@
             
             "type":"WebView",
             "topbar":"N",
-            "class":"SimpleWebViewUi",
+            "class":"CMPSimpleWebViewUi",
             "url":"root.htm"
         },
         "UiContent":{
             
             "type":"WebView",
             "topbar":"Y",
-            "class":"WebViewUi"
+            "class":"CMPWebViewUi"
         },
         "UiHome":{
             
             "type": "Native",
             "topbar":"Y",
-            "class": "NativeUi"
+            "class": "CMPNativeUi"
         }
     },
     

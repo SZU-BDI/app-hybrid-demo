@@ -2,7 +2,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "HybridTools.h"
+#import "CMPHybridTools.h"
 
 @interface MyAppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -18,7 +18,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     // start UiRoot from config...
-    [HybridTools startUi:@"UiRoot" strInitParam:nil objCaller:nil callback:nil];
+    [CMPHybridTools startUi:@"UiRoot" strInitParam:nil objCaller:nil callback:nil];
     
     //show the inner UIWindow
     [self.window makeKeyAndVisible];
