@@ -32,10 +32,9 @@
 
         <!-- register HybridUIs -->
         <!--<activity android:name="szu.bdi.hybrid.core.HybridUi"/>-->
-        <activity android:name="szu.bdi.hybrid.core.eg.SimpleWebViewUi" />
-        <activity android:name="szu.bdi.hybrid.core.eg.SimpleHybridWebViewUi" />
+        <activity android:name="szu.bdi.hybrid.core.SimpleHybridWebViewUi" />
 
-        <activity android:name="szu.bdi.hybrid.demo.UiHome" />
+        <activity android:name="szu.bdi.hybrid.demo.ScanUi" />
     </application>
 
 </manifest>

@@ -3,6 +3,7 @@
 #import <UIKit/UIKit.h>
 
 #import "CMPHybridTools.h"
+#import "JSO.h"
 
 @interface MyAppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -28,6 +29,12 @@
     
     //show the inner UIWindow
     [self.window makeKeyAndVisible];
+    
+//    [CMPHybridTools quickShowMsgMain:[JSO o2s:[JSO s2o:@"testonly"]]];
+//    [CMPHybridTools quickShowMsgMain:[JSO o2s:[JSO s2o:@"{x1:11,x2:22}"]]];
+//        NSLog(@" test JSO %@",[[JSO s2o:@"{\"x1\":11,\"x2\":22}"] getChildKeys]);
+    NSLog(@" test JSO %@",[[JSO s2o:@"{\"x1\":11,\"x2\":22}"] getChildKeys]);
+
 #else
     
     NSString *ttl=[NSString stringWithFormat:@"iOS (%@) is not supported", [UIDevice currentDevice].systemVersion];
