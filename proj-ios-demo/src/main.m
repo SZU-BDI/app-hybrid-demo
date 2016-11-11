@@ -12,7 +12,13 @@
 
 @implementation MyAppDelegate
 
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    [CMPHybridTools quitGraceFully];
+}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+#ifdef __IPHONE_8_0
     
     // init a UIWindow with "UIScreen->mainScreen()->bounds()":
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -22,7 +28,18 @@
     
     //show the inner UIWindow
     [self.window makeKeyAndVisible];
+#else
     
+    NSString *ttl=[NSString stringWithFormat:@"iOS (%@) is not supported", [UIDevice currentDevice].systemVersion];
+    UIAlertView *alert = [[UIAlertView alloc]
+                          initWithTitle:ttl
+                          message:@"" delegate:self
+                          cancelButtonTitle:nil
+                          otherButtonTitles:@"OK",
+                          nil
+                          ];
+    [alert show];
+#endif
     return YES;
 }
 @end
