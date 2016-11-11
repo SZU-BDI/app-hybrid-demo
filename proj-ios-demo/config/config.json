@@ -4,7 +4,8 @@
         "UiRoot":{
             
             "type":"WebView",
-            "topbar":"N",
+            "topbar":"Y",
+            "title":"AppHybridDemo",
             "class":"CMPSimpleWebViewUi",
             "url":"root.htm"
         },
