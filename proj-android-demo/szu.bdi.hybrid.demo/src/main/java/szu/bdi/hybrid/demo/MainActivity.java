@@ -1,6 +1,7 @@
 package szu.bdi.hybrid.demo;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -12,9 +13,13 @@ import org.json.JSONObject;
 
 import java.io.File;
 
+import szu.bdi.hybrid.core.HybridCallback;
+import szu.bdi.hybrid.core.HybridHandler;
 import szu.bdi.hybrid.core.HybridTools;
+import szu.bdi.hybrid.core.HybridUi;
+import szu.bdi.hybrid.core.JSO;
 
-public class MainActivity extends Activity {
+public class MainActivity extends HybridUi {
     final private static String LOGTAG = "" + (new Object() {
         public String getClassName() {
             String clazzName = this.getClass().getName();
@@ -22,25 +27,23 @@ public class MainActivity extends Activity {
         }
     }.getClassName());
 
-    public static void main(final Activity _entryAct) {
+    public static void main(final HybridUi _entryAct) {
         Log.v(LOGTAG, "main()");
-//        _entryAct.startActivity(new Intent(_entryAct, SplashActivity.class));
-
-        //IMPORTANT...STORE the app context into the hybrid service for later use.
-        //HybridTools.setAppContext(_entryAct.getApplicationContext());
 
         int _sdk_int = android.os.Build.VERSION.SDK_INT;
 
         if (_sdk_int < Build.VERSION_CODES.KITKAT) {
-            //HybridTools.quickShowMsgMain("Your Phone (API=\" + _sdk_int + \") is too old !!!! ");
-            HybridTools.quickShowMsgMain("Your Phone is too old...");
+            HybridTools.quickShowMsgMain("Your Phone (API=\" + _sdk_int + \") is too old !!!! ");
+//            HybridTools.quickShowMsgMain("Your Phone is too old...");
         }
 
-        AppTools.uiNeedNetworkPolicyHack();
-
+        //AppTools.uiNeedNetworkPolicyHack();
+        HybridTools.startUi("UiRoot", "", _entryAct);
+        /*
         final String sJsonConf = HybridTools.readAssetInStr("config.json");
-        final JSONObject o = HybridTools.s2o(sJsonConf);
-        if (o == null) {
+//        final JSONObject o = HybridTools.s2o(sJsonConf);
+        final JSO o = JSO.s2o(sJsonConf);
+        if (o == null || o.isNull()) {
             HybridTools.appAlert(_entryAct, "Wrong Config File", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
@@ -52,7 +55,7 @@ public class MainActivity extends Activity {
             Context _appContext = HybridTools.getAppContext();
             HybridTools.initAppConfig(o);
 
-            String app_ver = (String) HybridTools.getAppConfig("app_ver");
+            String app_ver = HybridTools.getAppConfig("app_ver").toString();
             if (null == app_ver) app_ver = "";
 
             String app_ver_saved = HybridTools.getSavedSetting(_appContext, "APP", "app_ver");
@@ -105,6 +108,7 @@ public class MainActivity extends Activity {
                 }, 1);
             }
         }
+        */
     }
 
     @Override
@@ -112,7 +116,36 @@ public class MainActivity extends Activity {
         super.onStart();
         Log.v(LOGTAG, ".onStart()");
 
-        main(this);
+//        main(this);
+//        int _sdk_int = android.os.Build.VERSION.SDK_INT;
+//
+//        if (_sdk_int < Build.VERSION_CODES.KITKAT) {
+//            HybridTools.quickShowMsgMain("Your Phone (API=\" + _sdk_int + \") is too old !!!! ");
+////            HybridTools.quickShowMsgMain("Your Phone is too old...");
+//        }
+
+        //AppTools.uiNeedNetworkPolicyHack();
+        final HybridUi _thisHybriUi = this;
+        HybridTools.startUi("UiRoot", "", _thisHybriUi, new HybridCallback() {
+            @Override
+            public void onCallBack(String cbStr) {
+                Log.v(LOGTAG, "onCallBack to ... UiRoot");
+                HybridTools.quickShowMsgMain("Quit...");
+                AppTools.KillAppSelf();
+//                HybridTools.appConfirm(HybridTools.getAppContext(), "QUIT", new AlertDialog.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//                        AppTools.quit(true);
+//                        //jsrst.confirm();
+//                    }
+//                }, new AlertDialog.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//                        //jsrst.cancel();
+//                    }
+//                });
+            }
+        });
     }
 
 }
