@@ -131,7 +131,15 @@ public class MainActivity extends HybridUi {
             public void onCallBack(String cbStr) {
                 Log.v(LOGTAG, "onCallBack to ... UiRoot");
                 HybridTools.quickShowMsgMain("Quit...");
-                AppTools.KillAppSelf();
+
+                _thisHybriUi.finish();
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        AppTools.KillAppSelf();
+                    }
+                }, 2000);
+
 //                HybridTools.appConfirm(HybridTools.getAppContext(), "QUIT", new AlertDialog.OnClickListener() {
 //                    @Override
 //                    public void onClick(DialogInterface dialog, int which) {
