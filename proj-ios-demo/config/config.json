@@ -2,24 +2,22 @@
     "ui_mapping":{
         
         "UiRoot":{
-            
             "type":"WebView",
             "topbar":"Y",
             "title":"AppHybridDemo",
-            "class":"CMPSimpleWebViewUi",
+            "class":"CMPHybridWebViewUi",
             "url":"root.htm"
         },
-        "UiContent":{
-            
-            "type":"WebView",
-            "topbar":"Y",
-            "class":"CMPWebViewUi"
-        },
+
         "UiHome":{
-            
             "type": "Native",
             "topbar":"Y",
             "class": "CMPNativeUi"
+        },
+        "UiContent":{
+            "type":"WebView",
+            "topbar":"Y",
+            "class":"CMPWebViewUi"
         }
     },
     
@@ -33,6 +31,9 @@
         
         "UiRoot": {
             "root.htm": ["_app_activity_open","_app_activity_close"]
+        },
+        "UiHome": {
+            "*": ["_app_activity_save_open","_app_activity_close"]
         }
     }
 }

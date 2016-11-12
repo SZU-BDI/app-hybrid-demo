@@ -20,7 +20,6 @@
 		8EBFF3F11DC6CF3600AFF2AC /* CMPHybridTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFF3E01DC6CF3600AFF2AC /* CMPHybridTools.m */; };
 		8EBFF3F21DC6CF3600AFF2AC /* CMPHybridUi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFF3E21DC6CF3600AFF2AC /* CMPHybridUi.m */; };
 		8EBFF3F61DC6CF3600AFF2AC /* CMPNativeUi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFF3EB1DC6CF3600AFF2AC /* CMPNativeUi.m */; };
-		8EBFF3F71DC6CF3600AFF2AC /* CMPSimpleWebViewUi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFF3ED1DC6CF3600AFF2AC /* CMPSimpleWebViewUi.m */; };
 		8ECC9ABE1DC6DE9C00D88779 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8ECC9ABA1DC6DE9C00D88779 /* Images.xcassets */; };
 		8ECC9ABF1DC6DE9C00D88779 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ECC9ABB1DC6DE9C00D88779 /* main.m */; };
 		8ED44CD11DD304E800811674 /* MyLaunchStoryBoard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ED44CD01DD304E800811674 /* MyLaunchStoryBoard.xib */; };
@@ -48,8 +47,6 @@
 		8EBFF3E21DC6CF3600AFF2AC /* CMPHybridUi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMPHybridUi.m; sourceTree = "<group>"; };
 		8EBFF3EA1DC6CF3600AFF2AC /* CMPNativeUi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMPNativeUi.h; sourceTree = "<group>"; };
 		8EBFF3EB1DC6CF3600AFF2AC /* CMPNativeUi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMPNativeUi.m; sourceTree = "<group>"; };
-		8EBFF3EC1DC6CF3600AFF2AC /* CMPSimpleWebViewUi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMPSimpleWebViewUi.h; sourceTree = "<group>"; };
-		8EBFF3ED1DC6CF3600AFF2AC /* CMPSimpleWebViewUi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMPSimpleWebViewUi.m; sourceTree = "<group>"; };
 		8ECC9ABA1DC6DE9C00D88779 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8ECC9ABB1DC6DE9C00D88779 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8ED24ABA1DC9783B00D40DCD /* iosproject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosproject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,8 +154,6 @@
 				8EBFF3E21DC6CF3600AFF2AC /* CMPHybridUi.m */,
 				8EBFF3EA1DC6CF3600AFF2AC /* CMPNativeUi.h */,
 				8EBFF3EB1DC6CF3600AFF2AC /* CMPNativeUi.m */,
-				8EBFF3EC1DC6CF3600AFF2AC /* CMPSimpleWebViewUi.h */,
-				8EBFF3ED1DC6CF3600AFF2AC /* CMPSimpleWebViewUi.m */,
 				8E869A981DD3E36B00285FA1 /* CMPHybridWebViewUi.h */,
 				8E869A991DD3F6F700285FA1 /* CMPHybridWebViewUi.m */,
 			);
@@ -252,7 +247,6 @@
 				8E869A9A1DD3F6F700285FA1 /* CMPHybridWebViewUi.m in Sources */,
 				8EBFF3F11DC6CF3600AFF2AC /* CMPHybridTools.m in Sources */,
 				1F5228821D76DCD00065E494 /* JSO.m in Sources */,
-				8EBFF3F71DC6CF3600AFF2AC /* CMPSimpleWebViewUi.m in Sources */,
 				8EBFF3F61DC6CF3600AFF2AC /* CMPNativeUi.m in Sources */,
 				8EBFF3EF1DC6CF3600AFF2AC /* ApiActivityOpen.m in Sources */,
 				8ECC9ABF1DC6DE9C00D88779 /* main.m in Sources */,
