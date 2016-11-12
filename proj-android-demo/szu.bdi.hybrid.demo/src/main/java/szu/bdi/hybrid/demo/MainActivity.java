@@ -124,7 +124,7 @@ public class MainActivity extends HybridUi {
 ////            HybridTools.quickShowMsgMain("Your Phone is too old...");
 //        }
 
-        //AppTools.uiNeedNetworkPolicyHack();
+        AppTools.uiNeedNetworkPolicyHack();
         final HybridUi _thisHybriUi = this;
         HybridTools.startUi("UiRoot", "", _thisHybriUi, new HybridCallback() {
             @Override
