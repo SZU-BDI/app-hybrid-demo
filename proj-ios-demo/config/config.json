@@ -29,7 +29,7 @@
         
         "app_ui_open": "ApiUiOpen",
         "app_ui_close": "ApiUiClose",
-        "_app_set_topbar": "ApiAppSetTopbar",
+        "app_set_topbar": "ApiAppSetTopbar",
     },
     
     "api_auth":{

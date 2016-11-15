@@ -26,7 +26,7 @@ void uncaughtExceptionHandler(NSException *exception)
 @implementation MyAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
+   
     NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
     
     NSString * minVer=@"8.0";
@@ -39,7 +39,7 @@ void uncaughtExceptionHandler(NSException *exception)
         self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
         // start UiRoot from config...
-        CMPHybridUi *ui=[CMPHybridTools startUi:@"UiRoot" strInitParam:nil objCaller:nil];
+        CMPHybridUi *ui=[CMPHybridTools startUi:@"UiRoot" initData:nil objCaller:nil];
         //    callback:^(id responseData){
         //        NSLog(@"on startUi callback %@",responseData);
         //    }
