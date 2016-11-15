@@ -6,7 +6,7 @@
             "topbar":"Y",
             "title":"AppHybridDemo",
             "class":"CMPHybridWebViewUi",
-            "url":"root.htm"
+            "address":"root.htm"
         },
 
         "UiHome":{

@@ -27,6 +27,8 @@ void uncaughtExceptionHandler(NSException *exception)
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
    
+    //NSLog(@"TEST JSO %@", [[JSO s2o:@"\"xx  \n\""] toString :YES]);
+    
     NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
     
     NSString * minVer=@"8.0";
