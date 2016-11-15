@@ -26,13 +26,12 @@ window.cmpjsbridge=new (function(){
 			console.log(funcname, data, cb);
 		}
 		if (window.WebViewJavascriptBridge) {
-            window.WebViewJavascriptBridge.callHandler( funcname, data, function( rt ){
+            return window.WebViewJavascriptBridge.callHandler( funcname, data, function( rt ){
                 if (typeof(rt)=='string'){
                     try{ rt=s2o(rt); } catch(ex){};
                 }
                 if (cb) cb(rt);
             });
-            return;
 	    }else{
 		    alert("Not Read.");
 	    }

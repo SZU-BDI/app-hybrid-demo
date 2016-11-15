@@ -23,17 +23,24 @@
     
     "api_mapping":{
         
-        "_app_activity_open": "ApiActivityOpen",
-        "_app_activity_close": "ApiActivityClose"
+        "_app_activity_open": "ApiUiOpen",
+        "_app_activity_close": "ApiUiClose",
+        "_app_set_topbar": "ApiAppSetTopbar",
+        
+        "app_ui_open": "ApiUiOpen",
+        "app_ui_close": "ApiUiClose",
+        "_app_set_topbar": "ApiAppSetTopbar",
     },
     
     "api_auth":{
         
         "UiRoot": {
-            "root.htm": ["_app_activity_open","_app_activity_close"]
+            "root.htm": ["_app_activity_open","_app_activity_close","_app_set_topbar",
+                         "app_ui_open","app_ui_close","app_set_topbar"],
         },
         "UiHome": {
-            "*": ["_app_activity_save_open","_app_activity_close"]
+            "file:\/\/.*": ["_app_activity_open"],
+            "*": ["_app_activity_save_open","_app_activity_close"],
         }
     }
 }

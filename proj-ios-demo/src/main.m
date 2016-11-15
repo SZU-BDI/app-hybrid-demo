@@ -5,6 +5,18 @@
 #import "CMPHybridTools.h"
 #import "JSO.h"
 
+
+void uncaughtExceptionHandler(NSException *exception)
+{
+    NSLog(@"App Crash:\n%@", exception);
+    NSLog(@"Stack Trace:\n%@", [exception callStackSymbols]);
+    [CMPHybridTools
+     quickAlertMsg:[exception reason]
+     callback:^{
+         [CMPHybridTools quitGracefully];
+     }];
+}
+
 @interface MyAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
@@ -13,48 +25,62 @@
 
 @implementation MyAppDelegate
 
--(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    [CMPHybridTools quitGraceFully];
-}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-#ifdef __IPHONE_8_0
+    NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
     
-    // init a UIWindow with "UIScreen->mainScreen()->bounds()":
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    NSString * minVer=@"8.0";
     
-    // start UiRoot from config...
-    [CMPHybridTools startUi:@"UiRoot" strInitParam:nil objCaller:nil callback:nil];
-    
-    //show the inner UIWindow
-    [self.window makeKeyAndVisible];
-    
-//    [CMPHybridTools quickShowMsgMain:[JSO o2s:[JSO s2o:@"testonly"]]];
-//    [CMPHybridTools quickShowMsgMain:[JSO o2s:[JSO s2o:@"{x1:11,x2:22}"]]];
-//        NSLog(@" test JSO %@",[[JSO s2o:@"{\"x1\":11,\"x2\":22}"] getChildKeys]);
-    //NSLog(@" test JSO %@",[[JSO s2o:@"{\"x1\":11,\"x2\":22}"] getChildKeys]);
+    NSComparisonResult order = [[UIDevice currentDevice].systemVersion compare:minVer options: NSNumericSearch];
+    if (  (order == NSOrderedSame || order == NSOrderedDescending)) {
+        //>=minVer
+        
+        // init a UIWindow with "UIScreen->mainScreen()->bounds()":
+        self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
-#else
+        // start UiRoot from config...
+        CMPHybridUi *ui=[CMPHybridTools startUi:@"UiRoot" strInitParam:nil objCaller:nil];
+        //    callback:^(id responseData){
+        //        NSLog(@"on startUi callback %@",responseData);
+        //    }
+        if(ui!=nil){
+            [ui on:@"close" :^(NSString *eventName, id extraData){
+                //responseCallback(extraData);
+                NSLog(@" ui trigger close but no responseCallback here...");
+            }];
+        }
+        [self.window makeKeyAndVisible];
+    } else {
+        //<minVer
+        
+        [CMPHybridTools
+         quickAlertMsg:[NSString stringWithFormat:@"iOS (%@) is not supported", [UIDevice currentDevice].systemVersion]
+         callback:^{
+             [CMPHybridTools quitGracefully];
+         }];
+    }
     
-    NSString *ttl=[NSString stringWithFormat:@"iOS (%@) is not supported", [UIDevice currentDevice].systemVersion];
-    UIAlertView *alert = [[UIAlertView alloc]
-                          initWithTitle:ttl
-                          message:@"" delegate:self
-                          cancelButtonTitle:nil
-                          otherButtonTitles:@"OK",
-                          nil
-                          ];
-    [alert show];
-#endif
     return YES;
 }
 @end
 
+
 int main(int argc, char * argv[]) {
     
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([MyAppDelegate class]));
+        @try {
+            return UIApplicationMain(argc, argv, nil, NSStringFromClass([MyAppDelegate class]));
+        }
+        @catch (NSException *exception) {
+            NSLog(@"main: %@", exception);
+            NSLog(@"main trace: %@", [exception callStackSymbols]);
+            //            [CMPHybridTools
+            //             quickAlertMsg:[exception reason]
+            //             callback:^{
+            //                 [CMPHybridTools quitGracefully];
+            //             }];
+            //main(argc,argv);//haha, don't!
+        }
     }
 }
 

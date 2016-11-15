@@ -45,6 +45,7 @@
     //UiRoot is for main app logic.  which is not needed if cordova/reactnative/nativescript
     "UiRoot": {
       "root.htm": [
+        "_app_pingpong",
         "_app_web",
         "_app_activity_open",
         "_app_activity_close"

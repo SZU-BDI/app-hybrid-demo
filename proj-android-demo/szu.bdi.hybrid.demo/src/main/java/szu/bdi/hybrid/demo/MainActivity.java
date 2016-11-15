@@ -116,16 +116,24 @@ public class MainActivity extends HybridUi {
         super.onStart();
         Log.v(LOGTAG, ".onStart()");
 
+        final HybridUi _thisHybriUi = this;
+
 //        main(this);
-//        int _sdk_int = android.os.Build.VERSION.SDK_INT;
-//
-//        if (_sdk_int < Build.VERSION_CODES.KITKAT) {
-//            HybridTools.quickShowMsgMain("Your Phone (API=\" + _sdk_int + \") is too old !!!! ");
-////            HybridTools.quickShowMsgMain("Your Phone is too old...");
-//        }
+        int _sdk_int = android.os.Build.VERSION.SDK_INT;
+
+        if (_sdk_int < Build.VERSION_CODES.KITKAT) {
+            HybridTools.quickShowMsgMain("Your Phone (API=\" + _sdk_int + \") is too old !!!! ");
+//            HybridTools.quickShowMsgMain("Your Phone is too old...");
+            _thisHybriUi.finish();
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    AppTools.KillAppSelf();
+                }
+            }, 2000);
+        }
 
         AppTools.uiNeedNetworkPolicyHack();
-        final HybridUi _thisHybriUi = this;
         HybridTools.startUi("UiRoot", "", _thisHybriUi, new HybridCallback() {
             @Override
             public void onCallBack(String cbStr) {

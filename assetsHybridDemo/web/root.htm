@@ -36,13 +36,31 @@
                     _app_activity_open (UiHome topbar:N)</a>&nbsp;&nbsp;&nbsp;&nbsp;<br/>
                 <a href="javascript:test_app_activity_close();">Test test_app_activity_close</a>&nbsp;&nbsp;&nbsp;&nbsp;<br/>
 
+app_set_topbar
+<a href="javascript:app_set_topbar('Y');">Y</a>
+<a href="javascript:app_set_topbar('N');">N</a>
+<a href="javascript:app_set_topbar('F');">F</a>
+<a href="javascript:app_set_topbar('M');">M</a>
+<br/>
+
 <script src='cmpjsbridge.js'></script>
                 <script>
 
 function test_nativejsb(){
-if("undefined"!=typeof nativejsb){
-alert(nativejsb.js2app("idid","_app_web","datadata"));
+    var rrr=window.cmpjsbridge.callHandler('_app_pingpong',
+        {},
+    function( rt ){
+        alert('open1='+o2s(rt) +",rrr.getStatus()="+rrr.getStatus());
+        //alert(rrr.getStatus();
+    });
+    alert(rrr.getStatus());
 }
+function app_set_topbar(mode){
+    window.cmpjsbridge.callHandler('app_set_topbar',
+        {"mode":"Y"},
+    function( rt ){
+        alert('open1='+o2s(rt));
+    });
 }
 function test_app_activity_open_1(){
 window.cmpjsbridge.callHandler('_app_activity_open', {"title":Math.random(),topbar:'Y',address:'http://app.jump.ws/core/apitest.htm?'+Math.random()},function( rt ){
@@ -106,7 +124,7 @@ set a timeout checker...
 -->
 <script>
 window.onerror=function(a,b,c){
-alert(o2s(a)+";"+o2s(b));
+    alert(“Error:”+o2s(a)+";"+o2s(b));
 }
 	var _appid='core';//tmp.
 	//var _u='http://app.jump.ws/'+_appid+'/');//production
