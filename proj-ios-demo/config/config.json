@@ -35,8 +35,9 @@
     "api_auth":{
         
         "UiRoot": {
-            "root.htm": ["_app_activity_open","_app_activity_close","_app_set_topbar",
+            "(root.htm)": ["_app_activity_open","_app_activity_close","_app_set_topbar",
                          "app_ui_open","app_ui_close","app_set_topbar"],
+            "(.*)":["_app_activity_close","_app_set_topbar","app_ui_close","app_set_topbar"]
         },
         "UiHome": {
             "file:\/\/.*": ["_app_activity_open"],
