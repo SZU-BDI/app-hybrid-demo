@@ -27,7 +27,7 @@ void uncaughtExceptionHandler(NSException *exception)
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
    
-    //NSLog(@"TEST JSO %@", [[JSO s2o:@"\"xx  \n\""] toString :YES]);
+    //NSLog(@"TEST JSO %@", [[JSO s2o:@"\"xx  \n\"s"] toString :YES]);
     
     NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
     

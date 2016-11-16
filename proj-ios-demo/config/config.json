@@ -3,7 +3,7 @@
         
         "UiRoot":{
             "type":"WebView",
-            "topbar":"Y",
+            "topbar":"N",
             "title":"AppHybridDemo",
             "class":"CMPHybridWebViewUi",
             "address":"root.htm"
