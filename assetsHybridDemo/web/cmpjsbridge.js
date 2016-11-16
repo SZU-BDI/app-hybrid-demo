@@ -33,7 +33,7 @@ window.cmpjsbridge=new (function(){
                 if (cb) cb(rt);
             });
 	    }else{
-		    alert("Not Read.");
+		    alert("App Call Not Ready!");
 	    }
 	}
 });

@@ -25,11 +25,11 @@
         
         "_app_activity_open": "ApiUiOpen",
         "_app_activity_close": "ApiUiClose",
-        "_app_set_topbar": "ApiAppSetTopbar",
+        "_app_set_topbar": "ApiSetTopbar",
         
         "app_ui_open": "ApiUiOpen",
         "app_ui_close": "ApiUiClose",
-        "app_set_topbar": "ApiAppSetTopbar",
+        "app_set_topbar": "ApiSetTopbar",
     },
     
     "api_auth":{
