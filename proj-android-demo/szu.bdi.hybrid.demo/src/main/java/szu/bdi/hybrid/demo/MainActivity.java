@@ -161,6 +161,11 @@ public class MainActivity extends HybridUi {
 //                    }
 //                });
             }
+
+            @Override
+            public void onCallBack(JSO jso) {
+                onCallBack(JSO.o2s(jso));
+            }
         });
     }
 

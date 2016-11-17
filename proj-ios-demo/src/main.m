@@ -28,6 +28,11 @@ void uncaughtExceptionHandler(NSException *exception)
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
    
     //NSLog(@"TEST JSO %@", [[JSO s2o:@"\"xx  \n\"s"] toString :YES]);
+//    JSO * j1=[JSO id2o:@[@1,@2]];
+//    JSO * j2=[JSO id2o:@{@"x":@{}}];
+//    JSO * j3=[JSO id2o:@{@"y":@[@"31",@33]}];
+//    JSO * j5=[[[j2 basicMerge:j1] basicMerge:j3] basicMerge:nil];
+//    NSLog(@"j3= %@ ",[j5 toString]);
     
     NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
     

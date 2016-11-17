@@ -44,11 +44,16 @@
   "api_auth": {
     //UiRoot is for main app logic.  which is not needed if cordova/reactnative/nativescript
     "UiRoot": {
-      "root.htm": [
+      "(root.htm)": [
         "_app_pingpong",
         "_app_web",
         "_app_activity_open",
-        "_app_activity_close"
+        "_app_activity_close",
+        "app_ui_close",
+        "app_ui_open"
+      ],
+      "(.*)":[
+        "_app_activity_close","app_ui_close"
       ]
     },
     "UiGesture": {

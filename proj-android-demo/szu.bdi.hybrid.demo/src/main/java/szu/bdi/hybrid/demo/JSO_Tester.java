@@ -1,6 +1,8 @@
 package szu.bdi.hybrid.demo;
 
 
+import android.annotation.TargetApi;
+import android.os.Build;
 import android.util.Log;
 
 import org.json.JSONObject;
@@ -37,13 +39,14 @@ public class JSO_Tester {
         }
     }.getClassName());
 
+    @TargetApi(Build.VERSION_CODES.KITKAT)
     public static void testSpecial() {
         //Log.v(LOGTAG, "((Object)true).toString?" +((Object)true).toString());
 
         JSO o01 = JSO.s2o(null);
         Log.v(LOGTAG, "JSO.s2o(null)=" + o01);
 
-        Log.v(LOGTAG, "JSO.classNameOf(o01.getValue())=" + HybridTools.classNameOf(o01.getValue()));
+//        Log.v(LOGTAG, "JSO.classNameOf(o01.getValue())=" + HybridTools.classNameOf(o01.getValue()));
 
         ArrayList<Object> oo = new ArrayList<>();
         oo.add(null);
@@ -63,7 +66,7 @@ public class JSO_Tester {
         oo.add("{y,2}");//error
 
         //Log.v(LOGTAG, "oo.toString " + oo.toString());
-        String ss = JSO.o2s(oo);
+        String ss = JSONObject.wrap(oo).toString();
         Log.v(LOGTAG, "ss=JSO.o2s(oo).toString = " + ss);
         Log.v(LOGTAG, "JSO.s2o(ss).toString = " + JSO.s2o(ss).toString());
         //Log.v(LOGTAG, "JSONObject.wrap(oo) " + JSONObject.wrap(oo));
@@ -71,12 +74,12 @@ public class JSO_Tester {
         for (int i = 0; i < oo.size(); i++) {
             Object o = oo.get(i);
             Log.v(LOGTAG, "o=" + JSONObject.wrap(o));
-            String s = JSO.o2s(o);
+            String s = JSONObject.wrap(o).toString();
             JSO jso = JSO.s2o(s);
             Log.v(LOGTAG, "s=o2s(o) = " + s);
             Log.v(LOGTAG, "jso=JSO.s2o(s) = " + jso);
-            Log.v(LOGTAG, "jso.getValue()=" + jso.getValue());
-            Log.v(LOGTAG, "JSO.classNameOf(jso.getValue())=" + HybridTools.classNameOf(jso.getValue()));
+//            Log.v(LOGTAG, "jso.getValue()=" + jso.getValue());
+//            Log.v(LOGTAG, "JSO.classNameOf(jso.getValue())=" + HybridTools.classNameOf(jso.getValue()));
         }
         Log.v(LOGTAG, "done JST_Tester.testSpecial()");
     }
