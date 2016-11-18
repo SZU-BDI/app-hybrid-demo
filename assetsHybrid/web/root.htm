@@ -18,7 +18,7 @@
                 <a href="javascript:test_nativejsb()">test_nativejsb()</a>
 							<a href="20161104.index.html">test 20161104</a><br/>
 <a href="https://almsaeedstudio.com/themes/AdminLTE/index2.html">adminlte</a><br/>
-                <a href="javascript:alert('content');">alert test?</a><br/>
+                <a href="javascript:alert('content' + (typeof window));">alert test?</a><br/>
 
                 <a href="javascript:test_web();">Test web()</a>&nbsp;&nbsp;&nbsp;&nbsp;<br/>
 
@@ -47,13 +47,15 @@ app_set_topbar
                 <script>
 
 function test_nativejsb(){
+    /*
     var rrr=window.cmpjsbridge.callHandler('_app_pingpong',
         {},
     function( rt ){
         alert('open1='+o2s(rt) +",rrr.getStatus()="+rrr.getStatus());
         //alert(rrr.getStatus();
     });
-    alert(rrr.getStatus());
+     */
+    alert(nativejsb.getVersion());
 }
 function app_set_topbar(mode){
     window.cmpjsbridge.callHandler('app_set_topbar',

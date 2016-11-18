@@ -94,7 +94,7 @@ android {
             //res.srcDirs = ['res']
             //manifest.srcFile 'AndroidManifest.xml'
             //wanjo: important, we need the folders as assets:
-            assets.srcDirs = ['../../assetsHybridDemo', '../config']
+            assets.srcDirs = ['../../assetsHybrid', '../config']
         }
     }
     productFlavors {
