@@ -52,7 +52,7 @@ public class AppTools extends HybridTools {
     }
 
     public static void quit(boolean playMedia) {
-        flagAppWorking = false;//wlll affect the bg service
+        //flagAppWorking = false;//wlll affect the bg service
 
         quickShowMsgMain("Quiting...");
         Log.d(LOGTAG, "quit " + playMedia);

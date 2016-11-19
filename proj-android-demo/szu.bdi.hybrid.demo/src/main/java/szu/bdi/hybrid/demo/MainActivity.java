@@ -17,6 +17,7 @@ import szu.bdi.hybrid.core.HybridCallback;
 import szu.bdi.hybrid.core.HybridHandler;
 import szu.bdi.hybrid.core.HybridTools;
 import szu.bdi.hybrid.core.HybridUi;
+import szu.bdi.hybrid.core.HybridUiCallback;
 import szu.bdi.hybrid.core.JSO;
 
 public class MainActivity extends HybridUi {
@@ -134,38 +135,23 @@ public class MainActivity extends HybridUi {
         }
 
         AppTools.uiNeedNetworkPolicyHack();
-        HybridTools.startUi("UiRoot", "", _thisHybriUi, new HybridCallback() {
+        HybridTools.startUi("UiRoot", "", _thisHybriUi, new HybridUiCallback() {
             @Override
-            public void onCallBack(String cbStr) {
-                Log.v(LOGTAG, "onCallBack to ... UiRoot");
-                HybridTools.quickShowMsgMain("Quit...");
+            public void onCallBack(final HybridUi ui) {
+                ui.on("close", new HybridCallback() {
 
-                _thisHybriUi.finish();
-                new Handler().postDelayed(new Runnable() {
                     @Override
-                    public void run() {
-                        AppTools.KillAppSelf();
+                    public void onCallBack(String json_s) {
+
                     }
-                }, 2000);
 
-//                HybridTools.appConfirm(HybridTools.getAppContext(), "QUIT", new AlertDialog.OnClickListener() {
-//                    @Override
-//                    public void onClick(DialogInterface dialog, int which) {
-//                        AppTools.quit(true);
-//                        //jsrst.confirm();
-//                    }
-//                }, new AlertDialog.OnClickListener() {
-//                    @Override
-//                    public void onClick(DialogInterface dialog, int which) {
-//                        //jsrst.cancel();
-//                    }
-//                });
+                    @Override
+                    public void onCallBack(JSO jso) {
+                        ui.finish();
+                    }
+                });
             }
 
-            @Override
-            public void onCallBack(JSO jso) {
-                onCallBack(JSO.o2s(jso));
-            }
         });
     }
 

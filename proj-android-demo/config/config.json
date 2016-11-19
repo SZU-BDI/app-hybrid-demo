@@ -4,7 +4,9 @@
     "_app_pingpong": "szu.bdi.hybrid.core.eg.ApiPingPong",
     "_app_web": "szu.bdi.hybrid.core.eg.ApiWebRequest",
     "_app_activity_open": "szu.bdi.hybrid.core.eg.ApiUiOpen",
-    "_app_activity_close": "szu.bdi.hybrid.core.eg.ApiUiClose"
+    "_app_activity_close": "szu.bdi.hybrid.core.eg.ApiUiClose",
+    "app_ui_open": "szu.bdi.hybrid.core.eg.ApiUiOpen",
+    "app_ui_close": "szu.bdi.hybrid.core.eg.ApiUiClose"
   },
   "app_ver": "0.0.28",
 
