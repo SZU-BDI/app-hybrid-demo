@@ -9,8 +9,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-import szu.bdi.hybrid.core.HybridTools;
-import szu.bdi.hybrid.core.JSO;
+import info.cmptech.JSO;
 
 /*
 

@@ -1,24 +1,17 @@
 package szu.bdi.hybrid.demo;
 
-import android.app.Activity;
+import android.annotation.TargetApi;
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Build;
 import android.os.Handler;
 import android.util.Log;
 
-import org.json.JSONObject;
-
-import java.io.File;
-
+import info.cmptech.JSO;
 import szu.bdi.hybrid.core.HybridCallback;
-import szu.bdi.hybrid.core.HybridHandler;
 import szu.bdi.hybrid.core.HybridTools;
 import szu.bdi.hybrid.core.HybridUi;
 import szu.bdi.hybrid.core.HybridUiCallback;
-import szu.bdi.hybrid.core.JSO;
 
 public class MainActivity extends HybridUi {
     final private static String LOGTAG = "" + (new Object() {
@@ -135,19 +128,34 @@ public class MainActivity extends HybridUi {
         }
 
         AppTools.uiNeedNetworkPolicyHack();
+
         HybridTools.startUi("UiRoot", "", _thisHybriUi, new HybridUiCallback() {
             @Override
             public void onCallBack(final HybridUi ui) {
                 ui.on("close", new HybridCallback() {
-
                     @Override
-                    public void onCallBack(String json_s) {
-
+                    public void onCallBack(String cbStr) {
+                        onCallBack(JSO.s2o(cbStr));
                     }
 
                     @Override
                     public void onCallBack(JSO jso) {
-                        ui.finish();
+                        _thisHybriUi.runOnUiThread(new Runnable() {
+                            @TargetApi(Build.VERSION_CODES.KITKAT)
+                            @Override
+                            public void run() {
+                                HybridTools.appConfirm(//HybridTools.getAppContext()
+                                        ui
+                                        , "Exit ?", new AlertDialog.OnClickListener() {
+                                            @Override
+                                            public void onClick(DialogInterface dialog, int which) {
+                                                _thisHybriUi.finish();
+                                                ui.finish();
+                                                HybridTools.KillAppSelf();
+                                            }
+                                        }, null);
+                            }
+                        });
                     }
                 });
             }

@@ -4,3 +4,6 @@ include ':szu.bdi.hybrid.core'
 project(':szu.bdi.hybrid.core').projectDir = new File(settingsDir,
         '../../app-hybrid-core/lib-android/szu.bdi.hybrid.core')
 
+include ':lib-jso'
+project(':lib-jso').projectDir = new File(settingsDir,
+        '../../lib-jso')
