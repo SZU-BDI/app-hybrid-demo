@@ -133,10 +133,6 @@ public class MainActivity extends HybridUi {
             @Override
             public void onCallBack(final HybridUi ui) {
                 ui.on("close", new HybridCallback() {
-                    @Override
-                    public void onCallBack(String cbStr) {
-                        onCallBack(JSO.s2o(cbStr));
-                    }
 
                     @Override
                     public void onCallBack(JSO jso) {
